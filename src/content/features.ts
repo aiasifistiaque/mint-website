@@ -1,0 +1,162 @@
+import {
+	Archive,
+	Bell,
+	Blocks,
+	Boxes,
+	Building2,
+	ChartLine,
+	Code,
+	Eye,
+	FileUp,
+	Filter,
+	FolderKanban,
+	Fingerprint,
+	Globe,
+	History,
+	Images,
+	KeyRound,
+	LayoutDashboard,
+	LayoutTemplate,
+	Link2,
+	Lock,
+	MonitorSmartphone,
+	PanelLeft,
+	Plug,
+	Search,
+	ShieldCheck,
+	Sigma,
+	SlidersHorizontal,
+	Sparkles,
+	SquareStack,
+	Table2,
+	UserRound,
+	Users,
+	Webhook,
+	type IconType,
+} from '@/components/ui/icons';
+import type { Tone } from '@/lib/tones';
+
+/**
+ * Everything MINT does, grouped — the /features page reads this, and the
+ * product tour picks from it. Add a feature here when it ships (and a line
+ * to content/changelog.ts).
+ */
+
+export type Feature = { icon: IconType; title: string; body: string; guide?: string };
+export type FeatureGroup = { id: string; title: string; lead: string; color: Tone; features: Feature[] };
+
+export const FEATURE_GROUPS: FeatureGroup[] = [
+	{
+		id: 'build',
+		color: 'emerald',
+		title: 'Build',
+		lead: 'Turn what you keep track of into working software.',
+		features: [
+			{
+				icon: Boxes,
+				title: 'Models',
+				body: 'Describe a thing — a customer, a room, an order — and get its table, form, filters and page.',
+				guide: 'models',
+			},
+			{
+				icon: Link2,
+				title: 'Linked records',
+				body: 'Point a booking at its guest and its room. Linked records open from a chip, wherever they appear.',
+				guide: 'models#models-links',
+			},
+			{
+				icon: Sigma,
+				title: 'Formulas',
+				body: 'Fields that calculate themselves from other fields, kept up to date on every change.',
+				guide: 'models#models-fields',
+			},
+			{
+				icon: LayoutTemplate,
+				title: 'Pages',
+				body: 'Columns, filters, form sections and detail-page tabs — tuned in a draft, then published.',
+				guide: 'pages',
+			},
+			{
+				icon: SlidersHorizontal,
+				title: 'Conditional fields',
+				body: 'Show a field only when it applies: a cancellation reason only on cancelled bookings.',
+				guide: 'pages#form',
+			},
+			{
+				icon: PanelLeft,
+				title: 'Sidebar',
+				body: 'Arrange sections and pages, pick their icons, and decide who sees each one.',
+				guide: 'sidebar',
+			},
+			{
+				icon: LayoutDashboard,
+				title: 'Dashboard',
+				body: 'Numbers, charts and recent lists from your models on the project’s home page.',
+				guide: 'dashboard',
+			},
+			{
+				icon: Sparkles,
+				title: 'Build with AI',
+				body: 'Describe a model in a sentence; AI drafts the fields, links and formulas for you to check.',
+				guide: 'connect-ai',
+			},
+		],
+	},
+	{
+		id: 'work',
+		color: 'sky',
+		title: 'Work',
+		lead: 'The everyday tools your team uses in every table.',
+		features: [
+			{ icon: Search, title: 'Search & filters', body: 'Find anything fast, filter by any field, and keep the filters you use.', guide: 'records#find' },
+			{ icon: SquareStack, title: 'Bulk actions', body: 'Edit, archive or merge many rows at once — merges repoint every link.', guide: 'records#bulk' },
+			{ icon: FileUp, title: 'Import & export', body: 'Bring a spreadsheet in, all-or-nothing, and export any view.', guide: 'records' },
+			{ icon: History, title: 'History & undo', body: 'Every change to every record, with who made it and when — and an undo.', guide: 'records#history' },
+			{ icon: Archive, title: 'Archive', body: 'Hide a record everywhere without losing it; bring it back anytime.', guide: 'records#bulk' },
+			{ icon: Bell, title: 'Notifications', body: 'Hear about what matters: a new sign-up, an order from your site, a shared record.' },
+			{ icon: Images, title: 'Media', body: 'A drive for images, videos and files — folders, links and a trash.', guide: 'media' },
+			{ icon: Lock, title: 'Private records', body: 'Records only their owner — or the people they share with — can open.', guide: 'models#models-access' },
+		],
+	},
+	{
+		id: 'team',
+		color: 'amber',
+		title: 'Team',
+		lead: 'Everyone in, each with the right access.',
+		features: [
+			{ icon: Building2, title: 'Organizations', body: 'One for your company, with as many projects as you need.', guide: 'organization' },
+			{ icon: Users, title: 'Roles', body: 'Standard permissions — view, add, edit, delete, build — in plain words.', guide: 'organization#roles' },
+			{ icon: FolderKanban, title: 'Project access', body: 'Give someone every project, or only the ones they work in.', guide: 'organization#project-access' },
+			{ icon: Fingerprint, title: 'Passkeys & two-step', body: 'Sign in with a passkey or an email code on top of a password.', guide: 'account#overview' },
+			{ icon: MonitorSmartphone, title: 'Signed-in devices', body: 'See every device on your account and sign any of them out.', guide: 'account#devices' },
+			{ icon: ShieldCheck, title: 'Isolation', body: 'Every project’s data is scoped to its organization, on every request.' },
+		],
+	},
+	{
+		id: 'live',
+		color: 'cyan',
+		title: 'Go live',
+		lead: 'Your data, on your own site and app.',
+		features: [
+			{ icon: Webhook, title: 'Public API', body: 'Turn on list, read, create, update or delete per model — no server to run.', guide: 'public-api' },
+			{ icon: Filter, title: 'Filters & search', body: 'Paging, sorting, field filters, date ranges and search on every list.', guide: 'public-api#filters' },
+			{ icon: Code, title: 'API reference & tester', body: 'Each project documents its own API, with a tester to try calls live.', guide: 'public-api' },
+			{ icon: UserRound, title: 'Customer accounts', body: 'A drop-in sign-in widget; customers see only their own records.', guide: 'customers' },
+			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
+			{ icon: ChartLine, title: 'Analytics', body: 'Visitors, pages, sources and events — without cookies.', guide: 'analytics' },
+		],
+	},
+	{
+		id: 'ai',
+		color: 'violet',
+		title: 'AI',
+		lead: 'Bring the assistant you already use.',
+		features: [
+			{ icon: Plug, title: 'Connect your AI', body: 'Claude, ChatGPT and other assistants plan and build in a project over MCP.', guide: 'connect-ai' },
+			{ icon: KeyRound, title: 'Project keys', body: 'A key per connection, for one project — see when it was last used, revoke it at once.', guide: 'connect-ai#mcp-keys' },
+			{ icon: Blocks, title: 'Plan, then build', body: 'The assistant drafts a plan you can check before anything is built.', guide: 'connect-ai#conversation' },
+			{ icon: Table2, title: 'Works with your data', body: 'Ask for a dashboard, a filter or a new field on the models you already have.' },
+			{ icon: Eye, title: 'Everything recorded', body: 'Changes made by an assistant land in history like anyone else’s.' },
+		],
+	},
+];
