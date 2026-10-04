@@ -99,9 +99,9 @@ export default function ProductPage() {
 					Join the waitlist
 				</Button>
 				<Button
-					href='/workflow'
+					href='/admin-panel'
 					variant='secondary'>
-					See the workflow
+					Every feature
 				</Button>
 			</PageHero>
 

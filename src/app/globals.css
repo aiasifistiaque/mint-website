@@ -19,8 +19,8 @@
 	--line: #e6e8ef;
 	--line-strong: #d5d8e2;
 	--panel: #ffffff;
-	--ink: #0a0b12;
-	--ink-2: #12141f;
+	--ink: #0d0d0d;
+	--ink-2: #1b1b1b;
 	--accent: #10b981;
 	--accent-soft: #e3f8ef;
 	--accent-fg: #ffffff;
@@ -29,20 +29,21 @@
 	color-scheme: light;
 }
 
+/* Dark: thinkcrypt.dev's neutral black — no blue tint in any surface. */
 [data-theme='dark'] {
-	--bg: #08090c;
-	--bg-subtle: #0d0f13;
-	--bg-muted: #171920;
-	--fg: #ececf1;
-	--fg-muted: #a1a4b0;
-	--fg-faint: #6c707c;
-	--line: #1d2028;
-	--line-strong: #2a2e38;
-	--panel: #111319;
-	--ink: #040508;
-	--ink-2: #0c0e14;
+	--bg: #0d0d0d;
+	--bg-subtle: #121212;
+	--bg-muted: #1f1f1f;
+	--fg: #faf8f1;
+	--fg-muted: #b3b0a7;
+	--fg-faint: #75736d;
+	--line: #232323;
+	--line-strong: #333333;
+	--panel: #1b1b1b;
+	--ink: #060508;
+	--ink-2: #1b1b1b;
 	--accent: #34d399;
-	--accent-soft: #0e2a20;
+	--accent-soft: #0f2a1f;
 	--shadow: 0 1px 2px rgb(0 0 0 / 0.5), 0 12px 40px -12px rgb(0 0 0 / 0.7);
 	--shadow-lg: 0 2px 4px rgb(0 0 0 / 0.5), 0 30px 80px -20px rgb(0 0 0 / 0.85);
 	color-scheme: dark;
@@ -79,7 +80,7 @@ body {
 	background: var(--bg);
 	color: var(--fg);
 	font-family: var(--font-sans);
-	font-weight: 300;
+	font-weight: 250;
 	letter-spacing: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -93,13 +94,29 @@ h3,
 	font-family: var(--font-display);
 }
 
-/* Modernist headlines: light, large, tightly set. */
+/* Modernist headlines: uppercase, extra-light, large. Unlayered, so these
+   beat the tracking utilities on individual headings. */
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
 h1,
 h2 {
 	font-weight: 200;
+	letter-spacing: -0.012em;
+	line-height: 1.04;
+}
+h3 {
+	letter-spacing: 0.02em;
 }
 h1 strong,
 h2 strong {
+	font-weight: 500;
+}
+/* Bold body copy stays readable next to the light weight. */
+strong,
+b {
 	font-weight: 500;
 }
 
@@ -122,9 +139,9 @@ h2 strong {
 /* Header and footer items: small spaced capitals. */
 .caps {
 	text-transform: uppercase;
-	letter-spacing: 0.14em;
+	letter-spacing: 0.16em;
 	font-size: 11.5px;
-	font-weight: 500;
+	font-weight: 300;
 }
 
 /* ------------------------------------------------------------ colour */

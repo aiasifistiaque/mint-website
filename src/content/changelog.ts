@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-04',
+		title: 'Step-by-step workflows',
+		tag: 'New',
+		summary: 'Learn MINT one step at a time: a workflow for each thing you build, and every admin panel feature on one page.',
+		items: [
+			'Build a website: connect Claude or ChatGPT, and the design and backend get built — SEO, analytics and security included',
+			'Build an API, build an admin panel, and how models are built and changed later',
+			'Every admin panel feature, grouped, each linked to its guide',
+			'A new logo, and a deeper black in dark mode',
+		],
+	},
+	{
+		date: '2026-10-04',
 		title: 'Backend as a service, and dark mode',
 		tag: 'Improved',
 		summary: 'The website now tells the whole story: MINT is backend as a service with the admin panel and back office built in.',

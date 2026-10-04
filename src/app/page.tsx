@@ -2,6 +2,7 @@ import { ArrowUpRight, Check, Minus, X } from '@/components/ui/icons';
 import { Accent, Container, Dot, Eyebrow, IconTile, Pill, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import { WaitlistInline } from '@/components/waitlist/WaitlistForm';
 import WorkflowTabs from '@/components/home/WorkflowTabs';
+import FlowCards from '@/components/flow/FlowCards';
 import HeroVisual from '@/components/home/HeroVisual';
 import StepMock from '@/components/mock/StepMock';
 import Pipeline from '@/components/viz/Pipeline';
@@ -76,7 +77,7 @@ export default function Home() {
 						<Pill className='fade-in mb-8'>
 							<Dot /> Backend as a service · early access
 						</Pill>
-						<h1 className='fade-in text-balance text-[46px] font-extralight leading-[0.98] tracking-[-0.05em] [animation-delay:60ms] sm:text-[64px] md:text-[84px]'>
+						<h1 className='fade-in text-balance text-[40px] font-extralight leading-[1] tracking-[-0.05em] [animation-delay:60ms] sm:text-[56px] md:text-[70px]'>
 							{POSITIONING.title} <Accent>{POSITIONING.accent}</Accent>
 						</h1>
 						<p className='fade-in mt-7 max-w-[640px] text-pretty text-[18px] leading-[1.7] text-muted [animation-delay:120ms] md:text-[20px]'>
@@ -212,7 +213,7 @@ export default function Home() {
 						<div
 							key={s.l}
 							className='bg-panel p-6'>
-							<p className={cx('font-display text-[44px] font-medium leading-none tracking-[-0.04em]', s.c)}>{s.v}</p>
+							<p className={cx('font-display text-[44px] font-extralight leading-none tracking-[-0.02em]', s.c)}>{s.v}</p>
 							<p className='mt-2 text-[14px] text-muted'>{s.l}</p>
 						</div>
 					))}
@@ -244,6 +245,21 @@ export default function Home() {
 				<div className='mt-14'>
 					<TextLink href='/workflow'>Walk through the whole workflow</TextLink>
 				</div>
+			</Section>
+
+			{/* ---------------------------------------------- workflows */}
+			<Section id='workflows'>
+				<SectionHead
+					eyebrow='Workflows'
+					color='amber'
+					title={
+						<>
+							A website, an API, an admin panel — <Accent>step by step.</Accent>
+						</>
+					}
+					lead='Each workflow walks through what to do, who does it — you, your AI or MINT — and what you get. Security, SEO and analytics included, so there’s nothing left to worry about.'
+				/>
+				<FlowCards />
 			</Section>
 
 			{/* ------------------------------------------------ who it's for */}

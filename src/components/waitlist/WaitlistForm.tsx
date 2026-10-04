@@ -124,7 +124,7 @@ export const WaitlistInline = ({ className, align = 'left', dark }: { className?
 				<button
 					type='submit'
 					disabled={busy}
-					className='inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-brand px-5 text-[14px] font-semibold text-white shadow-[0_8px_24px_-8px_rgb(99_102_241/0.7)] transition-[filter] hover:brightness-110 disabled:opacity-60'>
+					className='inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-brand px-5 text-[14px] font-normal text-white shadow-[0_8px_24px_-8px_rgb(99_102_241/0.7)] transition-[filter] hover:brightness-110 disabled:opacity-60'>
 					{busy ? <Loader2 className='size-4 animate-spin' /> : null}
 					Join the waitlist
 				</button>
@@ -355,7 +355,7 @@ export const WaitlistFull = () => {
 				<button
 					type='submit'
 					disabled={busy}
-					className='inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-[15px] font-semibold text-white shadow-[0_10px_30px_-8px_rgb(99_102_241/0.6)] transition-[filter] hover:brightness-110 disabled:opacity-60'>
+					className='inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-[15px] font-normal text-white shadow-[0_10px_30px_-8px_rgb(99_102_241/0.6)] transition-[filter] hover:brightness-110 disabled:opacity-60'>
 					{busy && <Loader2 className='size-4 animate-spin' />}
 					Join the waitlist
 					{!busy && <ArrowRight className='size-4' />}

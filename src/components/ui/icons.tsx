@@ -97,6 +97,12 @@ import {
 	TextAa as PhTextAa,
 	Tag as PhTag,
 	Robot as PhRobot,
+	MapPin as PhMapPin,
+	ArrowCounterClockwise as PhArrowCounterClockwise,
+	Columns as PhColumns,
+	Stamp as PhStamp,
+	ArrowsMerge as PhArrowsMerge,
+	Calculator as PhCalculator,
 } from '@phosphor-icons/react/dist/ssr';
 
 export type IconType = ComponentType<IconProps>;
@@ -202,3 +208,9 @@ export const Toggle = make(PhToggleRight, 'duotone');
 export const TextAa = make(PhTextAa, 'duotone');
 export const Tag = make(PhTag, 'duotone');
 export const Robot = make(PhRobot, 'duotone');
+export const MapPin = make(PhMapPin, 'duotone');
+export const Columns = make(PhColumns, 'duotone');
+export const Stamp = make(PhStamp, 'duotone');
+export const Merge = make(PhArrowsMerge, 'duotone');
+export const Calculator = make(PhCalculator, 'duotone');
+export const Undo = make(PhArrowCounterClockwise, 'duotone');

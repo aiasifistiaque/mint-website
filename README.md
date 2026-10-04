@@ -4,8 +4,9 @@ The marketing website for MINT — backend as a service with the admin panel and
 back office built in — a multi-page pitch for the product, with a
 **Join the waitlist** form and links into the app (Log in → dashboard).
 
-Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Outfit and
-JetBrains Mono · Phosphor icons · light and dark mode. Content plan: `docs/CONTENT_PLAN.md`.
+Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Outfit (uppercase
+headings, light body) and JetBrains Mono · Phosphor icons · light and dark mode
+(dark is a neutral black, `#0D0D0D`). Content plan: `docs/CONTENT_PLAN.md`.
 
 ## Run it
 
@@ -28,8 +29,10 @@ npm run dev                  # http://localhost:3100
 |---|---|
 | `/` | The pitch: hero, what you build (backends, APIs, admin panels, websites), blocks or AI, the BaaS stack, workflow pipeline + step-by-step tabs, who it's for, a day with MINT + AI, AI build flow, data flow, comparison, features, FAQ |
 | `/backend` | Backend as a service: the stack, database, visual data editing, API & auth, back-office tools, vs building your own |
-| `/workflow` | The six steps in depth, each with its screen, and the after-launch loop |
+| `/workflow` | The basic workflow: six steps in depth, each with its screen, and the after-launch loop |
+| `/workflow/website`, `/workflow/api`, `/workflow/admin-panel`, `/workflow/models` | Step-by-step workflows (`content/flows.ts`, laid out by `components/flow/FlowPage`, drawings in `components/flow/arts.tsx`) — the header's Workflows menu |
 | `/product` | Admin panel & back office: how it fits together, records, dashboard, data flow, under the hood |
+| `/admin-panel` | Every admin panel feature, grouped (`content/adminPanel.ts`) |
 | `/who-its-for` | Six audiences — today vs with MINT, what they build, what they ask their AI — and the day timeline |
 | `/features` | Every feature, grouped, each linking to its user guide in the app |
 | `/ai` | Connecting an AI assistant (MCP), project keys, safety |
@@ -55,8 +58,9 @@ site in the same piece of work**:
 
 - a new or changed feature → `src/content/features.ts` (and the guide link)
 - anything people would notice → a new entry at the top of `src/content/changelog.ts`
-- a workflow step or screen changes → `src/content/workflow.ts` and its drawing in
-  `src/components/mock/mocks.tsx`
+- a workflow step or screen changes → `src/content/workflow.ts` / `src/content/flows.ts` and its drawing in
+  `src/components/mock/mocks.tsx` / `src/components/flow/arts.tsx`
+- an admin panel feature → `src/content/adminPanel.ts`
 - new kinds of users or uses → `src/content/personas.ts`, `src/content/useCases.ts`
 - AI / API behaviour → `/ai`, `/developers` (snippets come from the app's user guides)
 

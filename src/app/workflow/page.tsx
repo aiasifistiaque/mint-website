@@ -10,6 +10,7 @@ import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 import Pipeline from '@/components/viz/Pipeline';
 import BuildPaths from '@/components/viz/BuildPaths';
+import FlowCards from '@/components/flow/FlowCards';
 
 export const metadata: Metadata = {
 	title: 'Workflow',
@@ -29,7 +30,7 @@ export default function WorkflowPage() {
 	return (
 		<>
 			<PageHero
-				eyebrow='The workflow'
+				eyebrow='The basic workflow'
 				color='violet'
 				title={
 					<>
@@ -56,6 +57,20 @@ export default function WorkflowPage() {
 				</Reveal>
 			</Container>
 
+			<Section className='border-t border-line'>
+				<SectionHead
+					eyebrow='More workflows'
+					color='amber'
+					title={
+						<>
+							Building something specific? <Accent>Follow its workflow.</Accent>
+						</>
+					}
+					lead='Step-by-step guides for a website, an API, an admin panel — and how models are built and changed.'
+				/>
+				<FlowCards except='/workflow' />
+			</Section>
+
 			<Section tone='subtle'>
 				<SectionHead
 					align='center'
@@ -78,7 +93,7 @@ export default function WorkflowPage() {
 						<Link
 							key={s.id}
 							href={`#${s.id}`}
-							className='flex shrink-0 items-center gap-2 rounded-full px-3 py-1.5 text-[13px] text-muted transition-colors hover:bg-subtle hover:text-fg'>
+							className='caps flex shrink-0 items-center gap-2 rounded-full px-3 py-1.5 !text-[10.5px] text-muted transition-colors hover:bg-subtle hover:text-fg'>
 							<span className={cx('size-2 rounded-full', tone(s.color).bg)} />
 							{s.title}
 						</Link>

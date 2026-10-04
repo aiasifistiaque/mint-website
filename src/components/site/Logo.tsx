@@ -1,57 +1,87 @@
 import Link from 'next/link';
+import { cx } from '@/components/ui';
 
-/** The mark: a white leaf on the brand gradient. */
-export const Mark = ({ size = 22 }: { size?: number }) => (
+/**
+ * The mark: an "M" drawn in one stroke on the brand gradient, with the AI's
+ * spark resting between its peaks. app/icon.svg is the same drawing.
+ */
+export const Mark = ({ size = 22, className }: { size?: number; className?: string }) => (
 	<svg
 		width={size}
 		height={size}
-		viewBox='0 0 22 22'
-		aria-hidden>
+		viewBox='0 0 32 32'
+		aria-hidden
+		className={className}>
 		<defs>
 			<linearGradient
 				id='mint-mark'
-				x1='0'
-				y1='0'
-				x2='22'
-				y2='22'
+				x1='2'
+				y1='2'
+				x2='30'
+				y2='30'
 				gradientUnits='userSpaceOnUse'>
 				<stop stopColor='#10b981' />
 				<stop
-					offset='0.5'
+					offset='0.45'
 					stopColor='#06b6d4'
 				/>
 				<stop
 					offset='1'
-					stopColor='#8b5cf6'
+					stopColor='#7c3aed'
+				/>
+			</linearGradient>
+			<linearGradient
+				id='mint-mark-sheen'
+				x1='16'
+				y1='0'
+				x2='16'
+				y2='18'
+				gradientUnits='userSpaceOnUse'>
+				<stop
+					stopColor='#fff'
+					stopOpacity='0.28'
+				/>
+				<stop
+					offset='1'
+					stopColor='#fff'
+					stopOpacity='0'
 				/>
 			</linearGradient>
 		</defs>
 		<rect
-			width='22'
-			height='22'
-			rx='6.5'
+			width='32'
+			height='32'
+			rx='9.5'
 			fill='url(#mint-mark)'
 		/>
-		<path
-			d='M6 16C6 10.2 10.2 6 16 6C16 11.8 11.8 16 6 16Z'
-			fill='#fff'
+		<rect
+			width='32'
+			height='32'
+			rx='9.5'
+			fill='url(#mint-mark-sheen)'
 		/>
 		<path
-			d='M6.6 15.4L12.2 9.8'
-			stroke='url(#mint-mark)'
-			strokeWidth='1.3'
+			d='M9.5 22.5V10.5L16 17L22.5 10.5V22.5'
+			fill='none'
+			stroke='#fff'
+			strokeWidth='2.6'
 			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
+		<path
+			d='M16 6.6Q16.45 9.05 18.9 9.5Q16.45 9.95 16 12.4Q15.55 9.95 13.1 9.5Q15.55 9.05 16 6.6Z'
+			fill='#fff'
 		/>
 	</svg>
 );
 
-const Logo = () => (
+const Logo = ({ className }: { className?: string }) => (
 	<Link
 		href='/'
 		aria-label='MINT home'
-		className='font-display inline-flex items-center gap-2 text-[18px] font-medium tracking-[-0.04em]'>
-		<Mark size={26} />
-		<span>mint</span>
+		className={cx('inline-flex items-center gap-2.5', className)}>
+		<Mark size={28} />
+		<span className='text-[15px] font-light uppercase tracking-[0.34em]'>Mint</span>
 	</Link>
 );
 

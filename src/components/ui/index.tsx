@@ -103,8 +103,8 @@ type ButtonProps = {
 };
 
 const BUTTON = {
-	base: 'group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-[background,color,border-color,box-shadow,transform] duration-200 active:scale-[0.98]',
-	primary: 'bg-ink text-white shadow-[0_8px_24px_-8px_rgb(10_11_18/0.5)] hover:shadow-[0_10px_30px_-6px_rgb(99_102_241/0.55)] dark:bg-white dark:text-ink',
+	base: 'group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-normal transition-[background,color,border-color,box-shadow,transform] duration-200 active:scale-[0.98]',
+	primary: 'bg-ink text-white shadow-[0_8px_24px_-8px_rgb(13_13_13/0.5)] hover:shadow-[0_10px_30px_-6px_rgb(99_102_241/0.55)] dark:bg-white dark:text-ink',
 	brand: 'bg-brand text-white shadow-[0_10px_30px_-8px_rgb(99_102_241/0.6)] hover:brightness-110',
 	secondary: 'border border-line-strong bg-panel text-fg hover:border-fg/30',
 	ghost: 'text-muted hover:text-fg',
@@ -145,7 +145,7 @@ export const Button = ({ href, children, variant = 'primary', size = 'md', arrow
 export const TextLink = ({ href, children, className }: { href: string; children: ReactNode; className?: string }) => {
 	const external = isExternal(href);
 	const Icon = external ? ArrowUpRight : ArrowRight;
-	const cls = cx('group inline-flex items-center gap-1.5 text-[14.5px] font-semibold underline-offset-4 hover:underline', className);
+	const cls = cx('group inline-flex items-center gap-1.5 text-[14.5px] font-normal underline-offset-4 hover:underline', className);
 	const inner = (
 		<>
 			{children}
@@ -172,7 +172,7 @@ export const TextLink = ({ href, children, className }: { href: string; children
 export const Pill = ({ children, className }: { children: ReactNode; className?: string }) => (
 	<span
 		className={cx(
-			'inline-flex items-center gap-2 rounded-full border border-line bg-panel/80 px-3.5 py-1.5 text-[13px] font-medium text-muted shadow-panel',
+			'inline-flex items-center gap-2 rounded-full border border-line bg-panel/80 px-3.5 py-1.5 text-[13px] font-normal text-muted shadow-panel',
 			className
 		)}>
 		{children}
@@ -235,7 +235,7 @@ export const PageHero = ({
 		<Container className={cx('relative pb-20 pt-20 md:pb-28 md:pt-28', !!aside && 'grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]')}>
 			<Reveal className='max-w-[780px]'>
 				<Eyebrow color={color}>{eyebrow}</Eyebrow>
-				<h1 className='text-balance text-[42px] font-extralight leading-[1.02] tracking-[-0.045em] md:text-[66px]'>{title}</h1>
+				<h1 className='text-balance text-[40px] font-extralight leading-[1.02] tracking-[-0.045em] md:text-[58px]'>{title}</h1>
 				<p className='mt-6 max-w-[620px] text-pretty text-[18.5px] leading-[1.7] text-muted'>{lead}</p>
 				{children && <div className='mt-10 flex flex-wrap items-center gap-3'>{children}</div>}
 			</Reveal>

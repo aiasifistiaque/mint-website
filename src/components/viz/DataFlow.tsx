@@ -162,7 +162,7 @@ const DataFlow = ({ dark }: { dark?: boolean }) => {
 					width={CORE.w}
 					height={CORE.h}
 					rx='24'
-					fill={dark ? '#12141f' : 'var(--panel)'}
+					fill={dark ? 'var(--ink-2)' : 'var(--panel)'}
 				/>
 				<text
 					x={CORE.x + 22}

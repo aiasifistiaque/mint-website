@@ -2,18 +2,101 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { Menu, X } from '@/components/ui/icons';
-import { NAV } from '@/content/site';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronDown, Menu, X } from '@/components/ui/icons';
+import { NAV, type NavItem } from '@/content/site';
 import { APP, SIGNUPS_OPEN } from '@/lib/config';
+import { tone } from '@/lib/tones';
 import { buttonClass, cx } from '@/components/ui';
 import Logo from './Logo';
 import ThemeToggle from './ThemeToggle';
 
 /**
- * Sticky header: the pages, then the way into the app — Log in (the app sends
- * anyone already signed in on to their dashboard) and Join the waitlist.
+ * Sticky header: the pages — Admin panel and Workflows open menus — then the
+ * way into the app: Log in (the app sends anyone already signed in on to
+ * their dashboard) and Join the waitlist.
  */
+
+const NAV_LINK = 'caps inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 !font-light transition-colors';
+
+/** A header item with a menu: opens on hover, on click and from the keyboard. */
+const Dropdown = ({ item, active }: { item: NavItem; active: boolean }) => {
+	const [open, setOpen] = useState(false);
+	const ref = useRef<HTMLDivElement>(null);
+	const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
+	const pathname = usePathname();
+	const children = item.children!;
+	const wide = children.length > 3;
+
+	useEffect(() => setOpen(false), [pathname]);
+
+	useEffect(() => {
+		if (!open) return;
+		const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+		const onClick = (e: MouseEvent) => !ref.current?.contains(e.target as Node) && setOpen(false);
+		document.addEventListener('keydown', onKey);
+		document.addEventListener('mousedown', onClick);
+		return () => {
+			document.removeEventListener('keydown', onKey);
+			document.removeEventListener('mousedown', onClick);
+		};
+	}, [open]);
+
+	const enter = () => {
+		clearTimeout(timer.current);
+		setOpen(true);
+	};
+	const leave = () => {
+		timer.current = setTimeout(() => setOpen(false), 120);
+	};
+
+	return (
+		<div
+			ref={ref}
+			className='relative'
+			onMouseEnter={enter}
+			onMouseLeave={leave}>
+			<button
+				type='button'
+				aria-expanded={open}
+				aria-haspopup='true'
+				onClick={() => setOpen(o => !o)}
+				className={cx(NAV_LINK, active || open ? 'bg-soft text-fg' : 'text-muted hover:text-fg')}>
+				{item.label}
+				<ChevronDown className={cx('size-2.5 opacity-60 transition-transform duration-200', open && 'rotate-180')} />
+			</button>
+			{open && (
+				<div className='fade-in absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3'>
+					<div className={cx('rounded-2xl border border-line bg-panel p-2 shadow-float', wide ? 'grid w-[620px] grid-cols-2 gap-1' : 'w-[360px]')}>
+						{children.map(c => {
+							const t = tone(c.color);
+							const here = pathname === c.href;
+							return (
+								<Link
+									key={c.href}
+									href={c.href}
+									className={cx(
+										'group flex gap-3.5 rounded-xl p-3 transition-colors hover:bg-subtle',
+										here && 'bg-subtle',
+										wide && c === children[0] && 'col-span-2 border-b border-line pb-4'
+									)}>
+									<span className={cx('inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br text-white', t.grad)}>
+										<c.icon className='size-[18px]' />
+									</span>
+									<span className='min-w-0'>
+										<span className='caps block !text-[11px] !font-normal text-fg'>{c.label}</span>
+										<span className='mt-1 block text-[13px] leading-snug text-muted'>{c.blurb}</span>
+									</span>
+								</Link>
+							);
+						})}
+					</div>
+				</div>
+			)}
+		</div>
+	);
+};
+
 const Header = () => {
 	const pathname = usePathname();
 	const [open, setOpen] = useState(false);
@@ -36,46 +119,52 @@ const Header = () => {
 		};
 	}, [open]);
 
-	const active = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+	const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+	const itemActive = (n: NavItem) => isActive(n.href) || !!n.children?.some(c => isActive(c.href));
 
 	return (
 		<header
 			className={cx(
 				'sticky top-0 z-40 transition-[background,border-color] duration-300',
-				scrolled || open ? 'border-b border-line bg-bg/[0.97] shadow-[0_1px_0_rgb(0_0_0/0.02)]' : 'border-b border-transparent bg-transparent'
+				scrolled || open ? 'border-b border-line bg-bg shadow-[0_1px_0_rgb(0_0_0/0.02)]' : 'border-b border-transparent bg-transparent'
 			)}>
-			<div className='mx-auto flex h-16 w-full max-w-[1160px] items-center gap-8 px-5 md:px-8'>
+			<div className='mx-auto flex h-16 w-full max-w-[1200px] items-center gap-6 px-5 md:px-8'>
 				<Logo />
-				<nav className='hidden flex-1 items-center gap-1 lg:flex'>
-					{NAV.map(n => (
-						<Link
-							key={n.href}
-							href={n.href}
-							className={cx(
-								'caps rounded-full px-3.5 py-2 transition-colors',
-								active(n.href) ? 'bg-soft font-medium text-fg' : 'text-muted hover:text-fg'
-							)}>
-							{n.label}
-						</Link>
-					))}
+				<nav className='hidden flex-1 items-center gap-0.5 lg:flex'>
+					{NAV.map(n =>
+						n.children ? (
+							<Dropdown
+								key={n.href}
+								item={n}
+								active={itemActive(n)}
+							/>
+						) : (
+							<Link
+								key={n.href}
+								href={n.href}
+								className={cx(NAV_LINK, itemActive(n) ? 'bg-soft text-fg' : 'text-muted hover:text-fg')}>
+								{n.label}
+							</Link>
+						)
+					)}
 				</nav>
 				<div className='ml-auto hidden items-center gap-1.5 lg:flex'>
 					<ThemeToggle className='mr-1' />
 					<a
 						href={APP.login}
-						className={buttonClass('ghost', 'sm', 'caps')}>
+						className={buttonClass('ghost', 'sm', 'caps !font-light')}>
 						Log in
 					</a>
 					{SIGNUPS_OPEN && (
 						<a
 							href={APP.register}
-							className={buttonClass('secondary', 'sm', 'caps')}>
+							className={buttonClass('secondary', 'sm', 'caps !font-light')}>
 							Create account
 						</a>
 					)}
 					<Link
 						href='/waitlist'
-						className={buttonClass('brand', 'sm', 'caps')}>
+						className={buttonClass('brand', 'sm', 'caps !font-normal')}>
 						Join the waitlist
 					</Link>
 				</div>
@@ -91,38 +180,66 @@ const Header = () => {
 			</div>
 
 			{open && (
-				<div className='fade-in h-[calc(100dvh-64px)] overflow-y-auto border-t border-line bg-bg px-5 pb-10 pt-4 lg:hidden'>
+				<div className='fade-in h-[calc(100dvh-64px)] overflow-y-auto border-t border-line bg-bg px-5 pb-10 pt-2 lg:hidden'>
 					<nav className='flex flex-col'>
-						{[{ href: '/', label: 'Home' }, ...NAV, { href: '/features', label: 'All features' }, { href: '/use-cases', label: 'Use cases' }, { href: '/security', label: 'Teams & security' }, { href: '/changelog', label: 'Changelog' }, { href: '/about', label: 'About' }].map(
-							n => (
+						{[{ href: '/', label: 'Home' } as NavItem, ...NAV].map(n =>
+							n.children ? (
+								<div
+									key={n.href}
+									className='border-b border-line py-4'>
+									<p className='caps !text-[10.5px] text-faint'>{n.label}</p>
+									<div className='mt-2 flex flex-col'>
+										{n.children.map(c => (
+											<Link
+												key={c.href}
+												href={c.href}
+												className={cx('caps flex items-center gap-3 py-2.5 !text-[13px] !font-light', pathname === c.href ? 'text-fg' : 'text-muted')}>
+												<span className={cx('size-1.5 rounded-full', tone(c.color).bg)} />
+												{c.label}
+											</Link>
+										))}
+									</div>
+								</div>
+							) : (
 								<Link
 									key={n.href}
 									href={n.href}
-									className={cx(
-										'caps border-b border-line py-4 !text-[14px]',
-										pathname === n.href ? 'text-fg' : 'text-muted'
-									)}>
+									className={cx('caps border-b border-line py-4 !text-[13px] !font-light', pathname === n.href ? 'text-fg' : 'text-muted')}>
 									{n.label}
 								</Link>
 							)
 						)}
+						{[
+							{ href: '/features', label: 'All features' },
+							{ href: '/use-cases', label: 'Use cases' },
+							{ href: '/security', label: 'Security' },
+							{ href: '/changelog', label: 'Changelog' },
+							{ href: '/about', label: 'About' },
+						].map(n => (
+							<Link
+								key={n.href}
+								href={n.href}
+								className={cx('caps border-b border-line py-4 !text-[13px] !font-light', pathname === n.href ? 'text-fg' : 'text-muted')}>
+								{n.label}
+							</Link>
+						))}
 					</nav>
 					<div className='mt-8 flex flex-col gap-3'>
 						<Link
 							href='/waitlist'
-							className={buttonClass('brand', 'lg', 'caps')}>
+							className={buttonClass('brand', 'lg', 'caps !font-normal')}>
 							Join the waitlist
 						</Link>
 						{SIGNUPS_OPEN && (
 							<a
 								href={APP.register}
-								className={buttonClass('secondary', 'lg', 'caps')}>
+								className={buttonClass('secondary', 'lg', 'caps !font-light')}>
 								Create account
 							</a>
 						)}
 						<a
 							href={APP.login}
-							className={buttonClass('secondary', 'lg', 'caps')}>
+							className={buttonClass('secondary', 'lg', 'caps !font-light')}>
 							Log in
 						</a>
 					</div>

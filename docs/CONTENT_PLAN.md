@@ -1,4 +1,4 @@
-# MINT website — content plan (v2)
+# MINT website — content plan (v3)
 
 ## 1. Positioning
 
@@ -82,3 +82,75 @@ Footer adds Features, Use cases, Teams & security, Changelog, About, Privacy, Gu
 ## 6. Keep it true
 
 Claims stay inside what the product does today (see the app’s user guides). New product changes update `src/content/*` and the drawings — see README.
+
+---
+
+## 7. v3 — step-by-step workflows, admin panel features, new look
+
+**The ask (2026-10-04):** Workflow becomes a dropdown — the basic workflow as it is, then *build a website*
+(connect Claude or ChatGPT; design and backend get built for you; analytics, SEO and security included, so a
+developer has no headache), the same for *APIs* and *admin panels*, and *how models are built and changed*.
+A page with every admin panel feature. Step by step, so people learn how it works. Dark mode black like
+thinkcrypt.dev; uppercase headings; slimmer body text and nav/footer items; a better logo.
+
+### Navigation
+
+Header: **Backend · Admin panel ▾ · AI · Workflows ▾ · Who it’s for · Developers**. Dropdowns open on hover and
+on click/keyboard; the mobile menu shows them as groups. Footer gets a **Workflows** column.
+
+| Menu | Item | Route |
+|---|---|---|
+| Admin panel ▾ | Overview — how the back office fits together | `/product` |
+| | Every feature — the full list, grouped | `/admin-panel` **new** |
+| Workflows ▾ | The basic workflow — six steps, idea to running business | `/workflow` |
+| | Build a website — AI builds the design and backend; SEO, analytics, security in | `/workflow/website` **new** |
+| | Build an API — models to a public REST API with customer sign-in | `/workflow/api` **new** |
+| | Build an admin panel — tables, forms, dashboard, roles | `/workflow/admin-panel` **new** |
+| | Build & change models — the wizard, AI features, and what each change does | `/workflow/models` **new** |
+
+### Every workflow page — one template (`components/flow/FlowPage`)
+
+1. Hero: what you end with + "time it takes" + who does each part (you · your AI · MINT).
+2. **Step rail** — numbered steps on a vertical line; each with title, what to do, what you get, a *where* tag
+   (e.g. *Build → Connect AI*), and a drawing.
+3. **Included — no headache**: what MINT handles for you (security, SEO, analytics…).
+4. Other workflows (cards) + CTA.
+
+Content in `src/content/flows.ts`; facts from the app's user guides (websites, analytics, connect-ai,
+public-api, customers, models, pages, sidebar, dashboard, organization, records).
+
+**Website** (`/workflow/website`): 1 Start a website project (kit: Pages, SEO, Contents + Site setup) →
+2 Connect Claude or ChatGPT (key with *Can build*; connector URL / Claude Code command) → 3 Describe the site
+(it shows the pages and lists it plans first) → 4 Design and backend get built (site code in your AI editor;
+site setup, pages + SEO + blocks, images to Media, lists become models with a public API, tracker on every page)
+→ 5 Deploy and add your domains (Check the site) → 6 Edit from the panel (live within a minute, no redeploy).
+Included: per-page SEO, sitemap + robots.txt, Search Console/Bing verification, redirects; cookie-free analytics,
+pixels and server-side tracking; security headers, domain-locked analytics, read-only site API, rate limits.
+
+**API** (`/workflow/api`): model → make it public (actions) → choose who may call it → customer sign-in →
+call it (paging, filters, search, fields) → API reference and tester. Included: validation messages, rate limits,
+private records never served, formulas computed on the server, docs that match the switches.
+
+**Admin panel** (`/workflow/admin-panel`): models give pages → shape pages (draft → publish) → sidebar →
+dashboard → team and roles → run it. Included: history and undo, two-step sign-in, project isolation, versions.
+
+**Models** (`/workflow/models`): describe (8-step wizard, or AI builds a whole feature) → field kinds → links,
+formulas, sections, record codes → who sees records → create (live at once). Then **"When it needs to change"** —
+a table of change → what happens (add/remove field, change kind, unique, formula, title, page layout, disable,
+delete), and the notice → draft → preview → publish loop.
+
+### `/admin-panel` — every feature
+
+Hero with the panel drawing; feature groups with tone each: Tables · Forms · Record pages · Many rows at once ·
+History & safety · Dashboards & sidebar · Team & access · Sign-in & devices · Media · Data kinds. Then the
+"you'd otherwise build" list and a link to the admin-panel workflow.
+
+### Design
+
+- **Dark mode = thinkcrypt.dev's neutral black**: background `#0D0D0D`, cards `#1B1B1B`, text `#FAF8F1`
+  (warm off-white), deepest bands `#060508`. No blue tint anywhere in dark surfaces. Light mode's ink bands use
+  the same black.
+- **Headings uppercase** (h1–h3), extra-light, slightly open tracking.
+- **Slimmer**: body text weight 250 (Outfit is variable); header/footer items weight 300.
+- **Logo**: a new mark — an "M" drawn as one continuous stroke over three stacked layers (the backend stack),
+  on the brand gradient; wordmark **MINT** in light, widely spaced capitals. Same mark as the favicon.
