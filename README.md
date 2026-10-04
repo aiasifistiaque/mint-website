@@ -35,6 +35,7 @@ npm run dev                  # http://localhost:3100
 | `/workflow/website`, `/workflow/api`, `/workflow/admin-panel`, `/workflow/models` | Step-by-step workflows (`content/flows.ts`, laid out by `components/flow/FlowPage`, drawings in `components/flow/arts.tsx`) — the header's Workflows menu |
 | `/product` | Admin panel & back office: how it fits together, records, dashboard, data flow, under the hood |
 | `/admin-panel` | Every admin panel feature, grouped (`content/adminPanel.ts`) |
+| `/workflow/analyze` | Analyze your data with any AI over MCP (read-only keys) |
 | `/compare` | MINT + your AI vs building it all with an AI coding tool, side by side (`content/compare.ts`) |
 | `/who-its-for` | Six audiences — today vs with MINT, what they build, what they ask their AI — and the day timeline |
 | `/features` | Every feature, grouped, each linking to its user guide in the app |
@@ -72,6 +73,12 @@ Content lives in `src/content/*`; pages only lay it out. Colours come from
 (light in `:root`, dark in `[data-theme='dark']`; use `bg-panel`, not `bg-white`, and give
 any hard-coded colour a `dark:` variant). Icons come from `src/components/ui/icons.tsx`; put them on a neutral `glyph` tile (`IconTile`, `NumberTile`) in one
 thin colour — no gradient tiles.
+
+## SEO and share images
+
+Every page's metadata comes from `pageMeta()` (`lib/seo.ts`: title, description, canonical, Open Graph,
+Twitter). Share images are drawn at build time by `lib/og.tsx` from each route's `opengraph-image.tsx`
+(the root one covers pages without their own). The layout adds JSON-LD (Organization + SoftwareApplication).
 
 ## Deploy
 

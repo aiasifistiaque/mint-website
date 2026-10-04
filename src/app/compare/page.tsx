@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Check, Minus, Sparkles } from '@/components/ui/icons';
 import { Accent, Button, IconTile, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
 import { FILE_TREE, PLAN, REASONS, ROWS } from '@/content/compare';
 import { NOT_TO_BUILD } from '@/content/platform';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'MINT + AI vs AI coding',
 	description:
 		'Building with Claude Code, Codex or Cursor alone means thousands of lines to write, host, secure and patch. Connect the same AI to MINT: fewer tokens, faster, live at once, nothing breaks — side by side.',
-	alternates: { canonical: '/compare' },
-};
+	path: '/compare',
+});
 
 /** The two sides' headers, shared by the comparison table. */
 const SIDES = [

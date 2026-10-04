@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import {
 	AppWindow,
 	Boxes,
@@ -23,12 +24,12 @@ import DataFlow from '@/components/viz/DataFlow';
 import CtaBand from '@/components/site/CtaBand';
 import { tone, type Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Admin panel & back office',
 	description:
 		'The admin panel and back-office tools that come with every MINT backend: tables, forms, dashboards, roles, history, media and more — for every model, automatically.',
-	alternates: { canonical: '/product' },
-};
+	path: '/product',
+});
 
 const PARTS: { icon: typeof Boxes; t: string; b: string; c: Tone }[] = [
 	{ icon: Boxes, t: 'Models', b: 'The things you keep track of', c: 'emerald' },

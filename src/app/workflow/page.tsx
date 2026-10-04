@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { Check, Clock } from '@/components/ui/icons';
 import { Accent, Button, Container, PageHero, Reveal, Section, SectionHead, cx } from '@/components/ui';
@@ -11,12 +12,12 @@ import Pipeline from '@/components/viz/Pipeline';
 import BuildPaths from '@/components/viz/BuildPaths';
 import FlowCards from '@/components/flow/FlowCards';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Workflow',
 	description:
 		'How a business goes from an idea to a running app on MINT: start a project, describe your data, shape the pages, bring in the team, run it, go live.',
-	alternates: { canonical: '/workflow' },
-};
+	path: '/workflow',
+});
 
 const LOOP = [
 	{ t: 'Notice', b: 'Someone on the team needs a new field, a filter, a report.', c: 'amber' as const },

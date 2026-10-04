@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { ChartLine, Filter, Globe, Lock, Server, UserRound } from '@/components/ui/icons';
 import { Accent, Button, IconTile, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import Code from '@/components/ui/Code';
@@ -7,12 +8,12 @@ import DataFlow from '@/components/viz/DataFlow';
 import CtaBand from '@/components/site/CtaBand';
 import { API_URL } from '@/lib/config';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Developers',
 	description:
 		'A back end you didn’t have to write: a REST API per model with paging, sorting, filters and search, customer sign-in with a drop-in widget, a website content API and cookie-free analytics.',
-	alternates: { canonical: '/developers' },
-};
+	path: '/developers',
+});
 
 const PUBLIC = `${API_URL}/public/api/acme-store`;
 

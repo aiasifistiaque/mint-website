@@ -1,6 +1,7 @@
 import {
 	Boxes,
 	ChartLine,
+	Plug,
 	Code,
 	Database,
 	Eye,
@@ -53,7 +54,10 @@ export type ArtKey =
 	| 'fields'
 	| 'links'
 	| 'privacy'
-	| 'create';
+	| 'create'
+	| 'read-key'
+	| 'ask'
+	| 'scope';
 
 export type FlowStep = {
 	title: string;
@@ -346,6 +350,75 @@ export const FLOWS: Flow[] = [
 			{ icon: History, title: 'Safety', items: ['History and undo on every record', 'Drafts and versions for every page', 'Archive, restore and safe merges', 'Imports all-or-nothing'] },
 			{ icon: Users, title: 'Access', items: ['Roles and permissions', 'Per-project access', 'Private records with owners', 'Sidebar and dashboard per viewer'] },
 			{ icon: Lock, title: 'Sign-in', items: ['Passkeys and email codes', 'Backup codes', 'Signed-in devices you can sign out', 'Several organizations, one account'] },
+		],
+	},
+
+	/* ---------------------------------------------------------- analyze */
+	{
+		id: 'analyze',
+		href: '/workflow/analyze',
+		menu: { label: 'Analyze your data with AI', blurb: 'Ask Claude, ChatGPT or any AI about your records — over MCP.' },
+		icon: ChartLine,
+		color: 'rose',
+		eyebrow: 'Workflow · Analyze',
+		title: 'Ask your data anything.',
+		accent: 'With the AI you already use.',
+		lead: 'Connect Claude, ChatGPT, Cursor or any assistant that speaks MCP to a project and ask in plain words — how many, which ones, by month, by room. It reads your records the way you can, works out the answer, and never changes a thing.',
+		result: 'Answers about your business in a chat — no exports, spreadsheets or SQL.',
+		time: 'Minutes',
+		steps: [
+			{
+				title: 'Make a read-only key',
+				where: 'Build → Connect AI → New key',
+				who: ['you'],
+				body: 'Make a key with “Can read records” on and “Can build” off. It can look at your models and read records to answer questions — and it can’t change anything.',
+				points: ['A key is for one project and acts as you — never more than your role can see', 'Choose when it expires: never, or in 7, 30, 90 days or a year', 'See when it was last used, and revoke it at once'],
+				art: 'read-key',
+				guide: 'connect-ai#mcp-keys',
+			},
+			{
+				title: 'Connect the AI of your choice',
+				where: 'Your assistant’s settings',
+				who: ['you'],
+				body: 'MINT speaks MCP, the open protocol AI assistants use to work with other tools — so you pick the assistant. Your own AI subscription does the thinking; MINT answers its questions with your data.',
+				points: ['Claude on the web or desktop: a custom connector', 'ChatGPT: a connector in developer mode', 'Claude Code and Cursor: one command or one settings entry', 'Anything else that speaks MCP over Streamable HTTP'],
+				art: 'connect',
+				guide: 'connect-ai#mcp-connect',
+			},
+			{
+				title: 'Ask in plain words',
+				where: 'In your AI chat',
+				who: ['you', 'ai'],
+				body: 'Talk about the business, not the database: “How many bookings did we have last month, by room?” “Which clients haven’t paid this month?” The AI looks at your models to see what exists, then reads the records it needs.',
+				points: ['It knows your models — their fields, links and options', 'Counts, totals, breakdowns, lists and comparisons, worked out from your records', 'Ask a follow-up; the chat keeps the thread'],
+				art: 'ask',
+				guide: 'connect-ai#conversation',
+			},
+			{
+				title: 'Stay in control',
+				where: 'Every question',
+				who: ['mint'],
+				body: 'Every read goes through MINT with the key’s permissions: only this project, only the pages your role can view, and nothing written. Revoke the key and the AI loses access on its next question.',
+				points: ['Read-only: a key without “Can build” changes nothing', 'Scoped to one project and limited by your role', 'Live data — always the current records, never a stale export'],
+				art: 'scope',
+				guide: 'connect-ai#safety',
+			},
+			{
+				title: 'Turn a question into a dashboard',
+				where: 'Build → Dashboard',
+				who: ['you', 'ai'],
+				body: 'When a question comes up every week, make it a widget on the project’s home page — arrange it yourself, or ask an AI whose key can build to add it for you.',
+				points: ['Numbers, charts and recent lists from any model', 'Conditions: this month, unpaid, assigned to me', 'Each person sees only the widgets for data they may view'],
+				art: 'dashboard',
+				guide: 'dashboard',
+			},
+		],
+		includedTitle: 'Any AI. Your data. Your rules.',
+		includedLead: 'No exports, no data warehouse, no SQL — the assistant asks MINT, and MINT answers within the key’s permissions.',
+		included: [
+			{ icon: Plug, title: 'Any assistant', items: ['Claude — web, desktop and Claude Code', 'ChatGPT', 'Cursor', 'Any client that speaks MCP', 'Your own subscription does the thinking'] },
+			{ icon: ShieldCheck, title: 'Control', items: ['Read-only keys', 'One project per key, never beyond your role', 'Expiry, last used, revoke at once', 'What it reads goes to the AI you chose — pick one your business trusts'] },
+			{ icon: Database, title: 'No plumbing', items: ['No exports or copies to keep in sync', 'No SQL, no BI tool to set up', 'Always the live records', 'Questions about every model in the project'] },
 		],
 	},
 

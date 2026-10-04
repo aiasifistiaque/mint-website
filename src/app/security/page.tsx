@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Archive, Building2, Eye, FolderKanban, Fingerprint, History, KeyRound, Lock, MonitorSmartphone, ShieldCheck, Users } from '@/components/ui/icons';
 import { Accent, IconTile, PageHero, Reveal, Section, SectionHead, cx } from '@/components/ui';
 import { TeamMock } from '@/components/mock/mocks';
 import CtaBand from '@/components/site/CtaBand';
 import type { Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Teams & security',
 	description:
 		'Organizations, roles and per-project access; passkeys and two-step sign-in; signed-in devices; full history; data scoped to its organization on every request.',
-	alternates: { canonical: '/security' },
-};
+	path: '/security',
+});
 
 const ROLES = [
 	{ r: 'Owner', p: ['view', 'create', 'edit', 'delete', 'build', 'manage'], c: 'bg-violet-100 dark:bg-violet-400/15 text-violet-700 dark:text-violet-300' },

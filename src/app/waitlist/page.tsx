@@ -1,15 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Check, MailOpen, Rocket, Wand2 } from '@/components/ui/icons';
 import { Accent, Container, Dot, Eyebrow, IconTile, Pill, Section, SectionHead, cx } from '@/components/ui';
 import { WaitlistFull } from '@/components/waitlist/WaitlistForm';
 import Faq, { FAQ } from '@/components/site/Faq';
 import { tone, type Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Join the waitlist',
-	description: 'Get early access to MINT. Tell us what you want to build and we’ll open a workspace set up for it.',
-	alternates: { canonical: '/waitlist' },
-};
+	description:
+		'Get early access to MINT. Tell us what you want to build and we’ll open a workspace set up for it.',
+	path: '/waitlist',
+});
 
 const PERKS = [
 	'A workspace set up for what you told us you’re building',

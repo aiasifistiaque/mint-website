@@ -8,7 +8,7 @@ import { tone } from '@/lib/tones';
 const FlowCards = ({ except }: { except?: string }) => {
 	const flows = ALL_FLOWS.filter(f => f.href !== except);
 	return (
-		<div className={cx('grid gap-4 sm:grid-cols-2', flows.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4')}>
+		<div className={cx('grid gap-4 sm:grid-cols-2', flows.length % 3 === 0 ? 'lg:grid-cols-3' : flows.length === 5 ? 'lg:grid-cols-5' : 'lg:grid-cols-4')}>
 			{flows.map((f, i) => {
 				const t = tone(f.color);
 				return (

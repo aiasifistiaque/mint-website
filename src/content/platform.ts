@@ -112,7 +112,7 @@ export const NOT_TO_BUILD = [
 export const WHAT_IS = {
 	title: 'MINT is where your business runs.',
 	accent: 'The backend, the admin panel and the API — built for you.',
-	lead: 'Think of it as the engine room of your business, in one place. Say what you keep track of — customers, bookings, orders, stock — and MINT turns it into a working app for your team, an API for your website or mobile app, and a site you can edit yourself. No servers, no code to maintain. Or ask your AI to build it for you.',
+	lead: 'Think of it as the engine room of your business, in one place. Say what you keep track of — customers, bookings, orders, stock — and MINT turns it into a working app for your team, an API for your website or mobile app, and a site you can edit yourself. No servers, no code to maintain. Ask your AI to build it — and later, to analyze it.',
 	points: [
 		{
 			icon: Database,
@@ -124,7 +124,7 @@ export const WHAT_IS = {
 			icon: Sparkles,
 			color: 'violet' as Tone,
 			title: 'What it does',
-			body: '“We track guests, rooms and bookings” becomes tables, forms, a dashboard, an API and a website — live in minutes, with nothing to deploy.',
+			body: '“We track guests, rooms and bookings” becomes tables, forms, a dashboard, an API and a website — live in minutes. Then ask any AI about your data, over MCP.',
 		},
 		{
 			icon: Rocket,

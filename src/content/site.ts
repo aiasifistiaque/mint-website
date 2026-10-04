@@ -1,4 +1,4 @@
-import { Globe, LayoutDashboard, ListChecks, Scales, Sparkles, Workflow, type IconType } from '@/components/ui/icons';
+import { ChartLine, Globe, LayoutDashboard, ListChecks, Scales, Sparkles, Workflow, type IconType } from '@/components/ui/icons';
 import { ALL_FLOWS } from '@/content/flows';
 import type { Tone } from '@/lib/tones';
 
@@ -25,6 +25,7 @@ export const NAV: NavItem[] = [
 			{ href: '/ai', label: 'Build with AI', blurb: 'Connect Claude, ChatGPT or Cursor; it plans and builds with you.', icon: Sparkles, color: 'violet' },
 			{ href: '/compare', label: 'MINT + AI vs AI coding', blurb: 'Fewer tokens, live at once, nothing to patch — side by side.', icon: Scales, color: 'emerald' },
 			{ href: '/workflow/website', label: 'Build a website with AI', blurb: 'The design and the backend, with SEO and analytics.', icon: Globe, color: 'amber' },
+			{ href: '/workflow/analyze', label: 'Analyze your data', blurb: 'Ask any AI about your records — read-only, over MCP.', icon: ChartLine, color: 'rose' },
 		],
 	},
 	{ href: '/workflow', label: 'Workflows', children: ALL_FLOWS },
@@ -53,6 +54,7 @@ export const FOOTER = [
 			{ href: '/workflow/api', label: 'APIs' },
 			{ href: '/workflow/admin-panel', label: 'Admin panels' },
 			{ href: '/workflow/models', label: 'Models' },
+			{ href: '/workflow/analyze', label: 'Data analysis' },
 		],
 	},
 	{

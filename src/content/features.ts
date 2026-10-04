@@ -172,6 +172,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{ icon: KeyRound, title: 'Project keys', body: 'A key per connection, for one project — see when it was last used, revoke it at once.', guide: 'connect-ai#mcp-keys' },
 			{ icon: Blocks, title: 'Plan, then build', body: 'The assistant drafts a plan you can check before anything is built.', guide: 'connect-ai#conversation' },
 			{ icon: Table2, title: 'Works with your data', body: 'Ask for a dashboard, a filter or a new field on the models you already have.' },
+			{ icon: ChartLine, title: 'Analyze with any AI', body: 'A read-only key lets your assistant answer questions from your live records — counts, totals, breakdowns.', guide: 'connect-ai#tools' },
 			{ icon: Eye, title: 'Everything recorded', body: 'Changes made by an assistant land in history like anyone else’s.' },
 		],
 	},

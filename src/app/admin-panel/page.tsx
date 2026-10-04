@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { Accent, Button, Container, IconTile, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import { PanelMock } from '@/components/mock/mocks';
@@ -7,12 +8,12 @@ import FlowCards from '@/components/flow/FlowCards';
 import { PANEL_GROUPS, PANEL_STATS } from '@/content/adminPanel';
 import { tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Admin panel features',
 	description:
 		'Every feature of the MINT admin panel and back office: tables, forms, record pages, bulk actions, history and undo, build tools, roles, passkeys and media — on every model, with nothing to code.',
-	alternates: { canonical: '/admin-panel' },
-};
+	path: '/admin-panel',
+});
 
 export default function AdminPanelPage() {
 	return (

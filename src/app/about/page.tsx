@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Compass, Hand, Layers, Sparkles } from '@/components/ui/icons';
 import { Accent, IconTile, PageHero, Reveal, Section, SectionHead } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
 import type { Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'About',
-	description: 'Why we’re building MINT: every business deserves software that fits it, built and changed by the people who run it.',
-	alternates: { canonical: '/about' },
-};
+	description:
+		'Why we’re building MINT: every business deserves software that fits it, built and changed by the people who run it.',
+	path: '/about',
+});
 
 const BELIEFS: { icon: typeof Compass; t: string; b: string; c: Tone }[] = [
 	{

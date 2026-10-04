@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Accent, Reveal, Section, SectionHead, cx } from '@/components/ui';
 import FlowPage from '@/components/flow/FlowPage';
 import { FLOWS, MODEL_CHANGES } from '@/content/flows';
@@ -6,12 +7,12 @@ import { tone, type Tone } from '@/lib/tones';
 
 const flow = FLOWS.find(f => f.id === 'models')!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Build & change models',
 	description:
 		'How models are built on MINT — the eight-step wizard or a whole feature from your AI — and exactly what happens when you change one later: add, remove, retype, make unique, disable, delete.',
-	alternates: { canonical: flow.href },
-};
+	path: flow.href,
+});
 
 const TONE = {
 	safe: { label: 'Safe', cls: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-300' },

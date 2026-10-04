@@ -12,18 +12,37 @@ import './globals.css';
 const sans = Outfit({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
+/** Structured data for search engines: the organization and the product. */
+const JSON_LD = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{ '@type': 'Organization', name: 'MINT', url: SITE_URL, logo: `${SITE_URL}/icon.svg` },
+		{
+			'@type': 'SoftwareApplication',
+			name: 'MINT',
+			applicationCategory: 'BusinessApplication',
+			operatingSystem: 'Web',
+			url: SITE_URL,
+			description: DESCRIPTION,
+		},
+	],
+};
+
 export const metadata: Metadata = {
 	metadataBase: new URL(SITE_URL),
 	title: { default: `MINT — ${TAGLINE}`, template: '%s · MINT' },
 	description: DESCRIPTION,
 	applicationName: 'MINT',
+	keywords: ['backend as a service', 'BaaS', 'admin panel', 'back office', 'no-code backend', 'REST API', 'headless CMS', 'MCP', 'AI app builder', 'Claude', 'ChatGPT'],
 	openGraph: {
 		type: 'website',
 		siteName: 'MINT',
+		locale: 'en_US',
 		title: `MINT — ${TAGLINE}`,
 		description: DESCRIPTION,
 		url: SITE_URL,
 	},
+	robots: { index: true, follow: true },
 	twitter: { card: 'summary_large_image', title: `MINT — ${TAGLINE}`, description: DESCRIPTION },
 	alternates: { canonical: '/' },
 };
@@ -43,6 +62,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			className={`${sans.variable} ${mono.variable}`}>
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+				/>
 			</head>
 			<body className='flex min-h-dvh flex-col'>
 				<a

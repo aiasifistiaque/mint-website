@@ -181,7 +181,7 @@ const DeployArt = () => (
 	<Frame
 		url='app.mintapp.shop/bakery/site-setup'
 		bodyClassName='p-5'>
-		<div className='mb-4 flex gap-1.5 overflow-hidden text-[10.5px]'>
+		<div className='mb-4 flex gap-1.5 overflow-x-auto text-[10.5px] [scrollbar-width:none]'>
 			{['General', 'SEO', 'Tracking', 'Indexing', 'Domains', 'Check the site'].map((t, i) => (
 				<span
 					key={t}
@@ -626,6 +626,111 @@ const CreateArt = () => (
 	</Frame>
 );
 
+/* ----------------------------------------------------------- analyze */
+
+const ReadKeyArt = () => (
+	<Frame
+		url='app.mintapp.shop/model-builder/connect'
+		bodyClassName='p-5'>
+		<p className='mb-4 text-[14px] font-medium'>New key</p>
+		<p className='mb-1 text-[10.5px] text-faint'>Name</p>
+		<div className='mb-4 rounded-lg border border-line px-2.5 py-1.5'>ChatGPT — weekly numbers</div>
+		<div className='divide-y divide-line rounded-xl border border-line'>
+			{[
+				['Can build', 'Create and change models and pages', false],
+				['Can read records', 'Read records to answer questions', true],
+			].map(([t, b, on]) => (
+				<div
+					key={t as string}
+					className='flex items-center gap-3 px-3 py-2.5'>
+					<span className='min-w-0 flex-1'>
+						<span className='block font-medium'>{t}</span>
+						<span className='block truncate text-[10.5px] text-faint'>{b}</span>
+					</span>
+					<Toggle on={on as boolean} />
+				</div>
+			))}
+			<div className='flex items-center justify-between px-3 py-2.5'>
+				<span className='font-medium'>Expires</span>
+				<span className='rounded-md bg-subtle px-2 py-0.5 text-[11px]'>In 90 days</span>
+			</div>
+		</div>
+		<div className='mt-4 flex items-center gap-2 rounded-lg bg-subtle px-3 py-2 text-[11px] text-muted'>
+			<Eye className='size-3.5 text-rose-500' /> Looks and reads — changes nothing
+		</div>
+	</Frame>
+);
+
+const AskArt = () => (
+	<Frame bodyClassName='p-5'>
+		<div className='mb-4 flex items-center gap-2'>
+			<span className='inline-flex size-6 items-center justify-center rounded-full bg-soft'>
+				<Sparkles className='size-3 text-violet-500' />
+			</span>
+			<p className='font-medium'>Your AI assistant</p>
+			<span className='ml-auto inline-flex items-center gap-1 rounded-full border border-line px-2 py-0.5 text-[10.5px] text-muted'>
+				<span className='size-1.5 rounded-full bg-emerald-500' /> MINT · read only
+			</span>
+		</div>
+		<div className='mb-3 ml-auto max-w-[86%] rounded-2xl rounded-br-md bg-brand px-3.5 py-2.5 text-[12.5px] leading-relaxed text-white'>
+			How many bookings did we have last month, by room — and what did each bring in?
+		</div>
+		<p className='mb-2 font-mono text-[10px] text-faint'>mint · query_records · Bookings, Rooms</p>
+		<div className='rounded-2xl rounded-bl-md border border-line p-3'>
+			<p className='mb-2.5 text-[12.5px]'>September: 64 bookings, $21,480. Sea view rooms led:</p>
+			{[
+				['Sea view 2', 18, 7020],
+				['Sea view 1', 15, 5850],
+				['Loft', 12, 4560],
+				['Garden 1', 11, 2290],
+				['Garden 2', 8, 1760],
+			].map(([r, n, v]) => (
+				<div
+					key={r as string}
+					className='mb-1.5 grid grid-cols-[72px_1fr_56px] items-center gap-2 text-[11px]'>
+					<span className='truncate'>{r}</span>
+					<span className='h-2 rounded-full bg-soft'>
+						<span
+							className='block h-2 rounded-full bg-gradient-to-r from-rose-400 to-violet-500'
+							style={{ width: `${((n as number) / 18) * 100}%` }}
+						/>
+					</span>
+					<span className='text-right font-mono text-[10.5px] text-muted'>${(v as number).toLocaleString('en-US')}</span>
+				</div>
+			))}
+			<p className='mt-2.5 text-[12px] text-muted'>Garden 2 is down 40% on August. Want it on the dashboard?</p>
+		</div>
+	</Frame>
+);
+
+const ScopeArt = () => (
+	<Frame bodyClassName='p-5'>
+		<Label>What this key can do</Label>
+		<div className='divide-y divide-line rounded-xl border border-line'>
+			{[
+				['Project', 'Seaside Inn only'],
+				['Acts as', 'Amira Khan · Manager'],
+				['Reads', 'Bookings, Guests, Rooms, Payments'],
+				['Writes', 'Nothing'],
+				['Last used', '2 minutes ago'],
+			].map(([k, v]) => (
+				<div
+					key={k}
+					className='flex items-center justify-between gap-3 px-3 py-2.5'>
+					<span className='text-faint'>{k}</span>
+					<span className={cx('truncate text-right', k === 'Writes' && 'text-emerald-600 dark:text-emerald-400')}>{v}</span>
+				</div>
+			))}
+		</div>
+		<div className='mt-3 flex items-center justify-between rounded-xl border border-rose-200 px-3 py-2.5 dark:border-rose-400/25'>
+			<span className='flex items-center gap-2'>
+				<Lock className='size-3.5 text-rose-500' /> Stop it at once
+			</span>
+			<span className='rounded-full border border-rose-300 px-2.5 py-0.5 text-[10.5px] text-rose-600 dark:border-rose-400/40 dark:text-rose-400'>Revoke</span>
+		</div>
+	</Frame>
+);
+
 /** The drawing for a workflow step. */
 const FlowArt = ({ art }: { art: ArtKey }) => {
 	switch (art) {
@@ -677,6 +782,12 @@ const FlowArt = ({ art }: { art: ArtKey }) => {
 			return <PrivacyArt />;
 		case 'create':
 			return <CreateArt />;
+		case 'read-key':
+			return <ReadKeyArt />;
+		case 'ask':
+			return <AskArt />;
+		case 'scope':
+			return <ScopeArt />;
 	}
 };
 

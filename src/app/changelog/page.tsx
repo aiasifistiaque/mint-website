@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Accent, Container, PageHero, Reveal, cx } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
 import { RELEASES } from '@/content/changelog';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Changelog',
-	description: 'What’s new in MINT — every improvement, newest first.',
-	alternates: { canonical: '/changelog' },
-};
+	description:
+		'What’s new in MINT — every improvement, newest first.',
+	path: '/changelog',
+});
 
 const TAG = {
 	New: 'bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300',

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import {
 	Archive,
 	Bell,
@@ -28,12 +29,12 @@ import { NOT_TO_BUILD } from '@/content/platform';
 import { API_URL } from '@/lib/config';
 import type { Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Backend as a service',
 	description:
 		'A database, REST API, auth and storage — with an advanced admin panel and back-office tools built in. Build it with blocks or let AI build it, then edit your data visually.',
-	alternates: { canonical: '/backend' },
-};
+	path: '/backend',
+});
 
 const DATABASE: { icon: typeof Link2; t: string; b: string; c: Tone }[] = [
 	{ icon: Link2, t: 'Relations', b: 'Link models to each other; linked records open from anywhere.', c: 'sky' },

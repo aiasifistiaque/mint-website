@@ -142,7 +142,7 @@ const FlowPage = ({ flow, children }: { flow: Flow; children?: ReactNode }) => {
 										</div>
 										<h3 className='text-[26px] font-extralight leading-[1.1] md:text-[34px]'>{s.title}</h3>
 										<p className='mt-4 text-[16.5px] leading-[1.75] text-muted'>{s.body}</p>
-										<ul className='mt-6 flex flex-col gap-2.5'>
+										<ul className='mt-6 flex flex-col gap-2.5 [overflow-wrap:anywhere]'>
 											{s.points.map(p => (
 												<li
 													key={p}

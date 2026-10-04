@@ -82,6 +82,8 @@ body {
 	font-family: var(--font-sans);
 	font-weight: 250;
 	letter-spacing: 0;
+	/* Long URLs and query strings wrap instead of widening the page. */
+	overflow-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -129,6 +131,15 @@ b {
 	outline: 2px solid #8b5cf6;
 	outline-offset: 2px;
 	border-radius: 8px;
+}
+
+/* Grid items may shrink below their content (code blocks, drawings), so a
+   wide child scrolls inside its own box instead of widening the page. In the
+   base layer, so a min-w-* utility still wins. */
+@layer base {
+	.grid > * {
+		min-width: 0;
+	}
 }
 
 /* Section anchors land below the sticky header. */

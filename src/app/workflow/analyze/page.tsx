@@ -3,12 +3,12 @@ import { pageMeta } from '@/lib/seo';
 import FlowPage from '@/components/flow/FlowPage';
 import { FLOWS } from '@/content/flows';
 
-const flow = FLOWS.find(f => f.id === 'api')!;
+const flow = FLOWS.find(f => f.id === 'analyze')!;
 
 export const metadata: Metadata = pageMeta({
-	title: 'Build an API',
+	title: 'Analyze your data with AI',
 	description:
-		'From a model to a public REST API, step by step: choose the actions and who may call them, add customer sign-in, filter and search, and check it in a live reference.',
+		'Connect Claude, ChatGPT, Cursor or any MCP assistant to a MINT project and ask your data anything in plain words — read-only keys, scoped to one project, never beyond your role.',
 	path: flow.href,
 });
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowRight, Sparkles, X, Check } from '@/components/ui/icons';
 import { Accent, Button, Container, IconTile, PageHero, Reveal, Section, SectionHead, cx } from '@/components/ui';
@@ -7,12 +8,12 @@ import CtaBand from '@/components/site/CtaBand';
 import { PERSONAS } from '@/content/personas';
 import { tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Who it’s for',
 	description:
 		'MINT is for small business owners, founders, operations teams, agencies, developers, clinics, schools and nonprofits — anyone who runs something real and needs software that fits.',
-	alternates: { canonical: '/who-its-for' },
-};
+	path: '/who-its-for',
+});
 
 export default function WhoPage() {
 	return (

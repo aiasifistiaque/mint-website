@@ -28,6 +28,8 @@ export const RELEASES: Release[] = [
 			'A new logo, and a deeper black in dark mode',
 			'MINT + AI vs AI coding: why your AI should write a plan, not a codebase — side by side',
 			'Chat with us on WhatsApp from any page',
+			'Analyze your data with any AI: a read-only key, plain-word questions, answers from your live records',
+			'A What is MINT section on the home page, and a proper preview image for every page when it’s shared'
 		],
 	},
 	{

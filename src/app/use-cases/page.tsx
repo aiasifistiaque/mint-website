@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { Boxes, Rocket } from '@/components/ui/icons';
 import { Accent, Container, IconTile, PageHero, Reveal, cx } from '@/components/ui';
@@ -6,11 +7,12 @@ import CtaBand from '@/components/site/CtaBand';
 import { USE_CASES } from '@/content/useCases';
 import { tone, type Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Use cases',
-	description: 'What teams build on MINT: CRMs, bookings, inventory, orders, invoices, support desks, company websites and mobile app back ends.',
-	alternates: { canonical: '/use-cases' },
-};
+	description:
+		'What teams build on MINT: CRMs, bookings, inventory, orders, invoices, support desks, company websites and mobile app back ends.',
+	path: '/use-cases',
+});
 
 const COLORS: Tone[] = ['emerald', 'sky', 'violet', 'amber', 'rose', 'cyan', 'violet', 'emerald'];
 

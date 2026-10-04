@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { Container, PageHero } from '@/components/ui';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Privacy',
-	description: 'What this website collects and why.',
-	alternates: { canonical: '/privacy' },
-};
+	description:
+		'What this website collects and why.',
+	path: '/privacy',
+});
 
 /**
  * What this website itself collects. The app's own terms and policy live in

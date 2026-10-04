@@ -367,7 +367,7 @@ export default function Home() {
 				/>
 				<AiFlow />
 				<div className='mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px] text-white/60'>
-					{['Your AI subscription does the thinking', 'Keys per project — read-only or builder', 'Every change lands in history'].map(t => (
+					{['Your AI subscription does the thinking', 'Keys per project — read-only or builder', 'Ask your data anything, read-only', 'Every change lands in history'].map(t => (
 						<span
 							key={t}
 							className='inline-flex items-center gap-2'>
@@ -378,6 +378,11 @@ export default function Home() {
 						href='/ai'
 						className='text-white'>
 						How AI building works
+					</TextLink>
+					<TextLink
+						href='/workflow/analyze'
+						className='text-white'>
+						Analyze your data with any AI
 					</TextLink>
 				</div>
 			</Section>

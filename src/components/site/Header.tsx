@@ -78,7 +78,7 @@ const Dropdown = ({ item, active }: { item: NavItem; active: boolean }) => {
 									className={cx(
 										'group flex gap-3.5 rounded-xl p-3 transition-colors hover:bg-subtle',
 										here && 'bg-subtle',
-										wide && c === children[0] && 'col-span-2 border-b border-line pb-4'
+										wide && children.length % 2 === 1 && c === children[0] && 'col-span-2 border-b border-line pb-4'
 									)}>
 									<span className={cx('glyph size-9 rounded-lg', t.text)}>
 										<c.icon

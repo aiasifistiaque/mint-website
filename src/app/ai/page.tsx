@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
-import { BookOpenCheck, Clock3, Eye, Hammer, KeyRound, ShieldCheck, Sparkles, UserCheck } from '@/components/ui/icons';
+import { pageMeta } from '@/lib/seo';
+import { BookOpenCheck, Check, Clock3, Eye, Hammer, KeyRound, ShieldCheck, Sparkles, UserCheck } from '@/components/ui/icons';
 import { Accent, Button, IconTile, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import { AiChatMock } from '@/components/mock/mocks';
 import AiFlow from '@/components/viz/AiFlow';
+import FlowArt from '@/components/flow/arts';
 import CtaBand from '@/components/site/CtaBand';
 import { tone, type Tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Build with AI',
 	description:
 		'Connect Claude, ChatGPT, Cursor or any MCP assistant to a MINT project. Describe what you need; it plans and builds models, pages and dashboards — within your role.',
-	alternates: { canonical: '/ai' },
-};
+	path: '/ai',
+});
 
 const ASSISTANTS: { name: string; how: string; c: Tone }[] = [
 	{ name: 'Claude', how: 'Add a custom connector with your project’s URL — on the web or desktop.', c: 'amber' },
@@ -99,6 +101,43 @@ export default function AiPage() {
 							<p className='text-[15.5px] font-medium leading-snug'>{p}</p>
 						</Reveal>
 					))}
+				</div>
+			</Section>
+
+			{/* analyze */}
+			<Section tone='subtle'>
+				<div className='grid items-center gap-12 lg:grid-cols-2 lg:gap-16'>
+					<div>
+						<SectionHead
+							className='!mb-8'
+							eyebrow='Analyze your data'
+							color='rose'
+							title={
+								<>
+									Ask your data anything — <Accent>with any AI.</Accent>
+								</>
+							}
+							lead='Give an assistant a read-only key and it becomes your analyst: counts, totals, breakdowns and lists from your live records, in plain words. It reads only what your role can view, in one project, and never changes a thing.'
+						/>
+						<ul className='flex flex-col gap-2.5'>
+							{['Claude, ChatGPT, Cursor or anything that speaks MCP', 'No exports, no SQL, no BI tool — always the live records', 'Read-only keys with expiry; revoke one at once'].map(t => (
+								<li
+									key={t}
+									className='flex gap-3 text-[15px]'>
+									<Check className='mt-1 size-3.5 shrink-0 text-emerald-500' />
+									{t}
+								</li>
+							))}
+						</ul>
+						<TextLink
+							href='/workflow/analyze'
+							className='mt-8'>
+							Analyze your data, step by step
+						</TextLink>
+					</div>
+					<Reveal>
+						<FlowArt art='ask' />
+					</Reveal>
 				</div>
 			</Section>
 

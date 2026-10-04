@@ -1,15 +1,17 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { Container, IconTile, PageHero, Reveal, cx } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
 import { FEATURE_GROUPS } from '@/content/features';
 import { tone } from '@/lib/tones';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
 	title: 'Features',
-	description: 'Every MINT feature: models, pages, dashboards, history, roles, passkeys, public API, customer accounts, websites, analytics and AI.',
-	alternates: { canonical: '/features' },
-};
+	description:
+		'Every MINT feature: models, pages, dashboards, history, roles, passkeys, public API, customer accounts, websites, analytics and AI.',
+	path: '/features',
+});
 
 export default function FeaturesPage() {
 	const count = FEATURE_GROUPS.reduce((n, g) => n + g.features.length, 0);
