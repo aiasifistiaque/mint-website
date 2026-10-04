@@ -6,7 +6,7 @@ const HeroVisual = () => (
 	<div className='relative mx-auto max-w-[1060px]'>
 		<div
 			aria-hidden
-			className='absolute -inset-x-6 -bottom-8 top-12 rounded-3xl bg-gradient-to-r from-emerald-300/40 via-cyan-300/40 to-violet-400/40 blur-2xl'
+			className='absolute -bottom-8 top-12 -inset-x-1 rounded-3xl md:-inset-x-6 bg-gradient-to-r from-emerald-300/40 via-cyan-300/40 to-violet-400/40 blur-2xl'
 		/>
 		<div className='relative rounded-[22px] bg-panel/60 p-2 shadow-float ring-1 ring-black/5'>
 			<PanelMock />
@@ -29,8 +29,11 @@ const HeroVisual = () => (
 		<div
 			aria-hidden
 			className='float-slow absolute -right-6 top-10 hidden w-[240px] items-start gap-3 rounded-2xl border border-line bg-panel p-3.5 text-[12px] shadow-float lg:flex xl:-right-14'>
-			<span className='inline-flex size-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 text-white'>
-				<Bell className='size-4' />
+			<span className='glyph size-8 rounded-xl text-rose-500'>
+				<Bell
+					weight='light'
+					className='size-[18px]'
+				/>
 			</span>
 			<span>
 				<span className='block font-semibold'>New booking from your site</span>

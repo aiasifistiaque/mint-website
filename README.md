@@ -2,7 +2,9 @@
 
 The marketing website for MINT — backend as a service with the admin panel and
 back office built in — a multi-page pitch for the product, with a
-**Join the waitlist** form and links into the app (Log in → dashboard).
+**Join the waitlist** form. There is no Log in while access is by waitlist, and no links into the
+app's user guides until they're public. A WhatsApp chat button (`lib/contact.ts`) and back-to-top
+button sit on every page.
 
 Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Outfit (uppercase
 headings, light body) and JetBrains Mono · Phosphor icons · light and dark mode
@@ -19,7 +21,7 @@ npm run dev                  # http://localhost:3100
 | Variable | What it's for | Default |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | Canonical URLs, sitemap, Open Graph | `https://mintapp.shop` |
-| `NEXT_PUBLIC_APP_URL` | The MINT app (tenant panel): Log in, Create account, Dashboard, Guides | `https://app.mintapp.shop` |
+| `NEXT_PUBLIC_APP_URL` | The MINT app (tenant panel) — used for Create account when signups open | `https://app.mintapp.shop` |
 | `NEXT_PUBLIC_API_URL` | The backend root; the waitlist posts to `<api>/public/waitlist` | `https://api.mintapp.shop` |
 | `NEXT_PUBLIC_SIGNUPS_OPEN` | `true` adds "Create account" next to "Join the waitlist" | `false` |
 
@@ -33,6 +35,7 @@ npm run dev                  # http://localhost:3100
 | `/workflow/website`, `/workflow/api`, `/workflow/admin-panel`, `/workflow/models` | Step-by-step workflows (`content/flows.ts`, laid out by `components/flow/FlowPage`, drawings in `components/flow/arts.tsx`) — the header's Workflows menu |
 | `/product` | Admin panel & back office: how it fits together, records, dashboard, data flow, under the hood |
 | `/admin-panel` | Every admin panel feature, grouped (`content/adminPanel.ts`) |
+| `/compare` | MINT + your AI vs building it all with an AI coding tool, side by side (`content/compare.ts`) |
 | `/who-its-for` | Six audiences — today vs with MINT, what they build, what they ask their AI — and the day timeline |
 | `/features` | Every feature, grouped, each linking to its user guide in the app |
 | `/ai` | Connecting an AI assistant (MCP), project keys, safety |
@@ -67,7 +70,8 @@ site in the same piece of work**:
 Content lives in `src/content/*`; pages only lay it out. Colours come from
 `src/lib/tones.ts` (one tone per step / group) and the tokens in `src/app/globals.css`
 (light in `:root`, dark in `[data-theme='dark']`; use `bg-panel`, not `bg-white`, and give
-any hard-coded colour a `dark:` variant). Icons come from `src/components/ui/icons.tsx`.
+any hard-coded colour a `dark:` variant). Icons come from `src/components/ui/icons.tsx`; put them on a neutral `glyph` tile (`IconTile`, `NumberTile`) in one
+thin colour — no gradient tiles.
 
 ## Deploy
 

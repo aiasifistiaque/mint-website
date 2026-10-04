@@ -97,8 +97,8 @@ const WorkflowTabs = ({ mocks }: { mocks: ReactNode[] }) => {
 							<span className='flex items-start gap-4'>
 								<span
 									className={cx(
-										'inline-flex size-8 shrink-0 items-center justify-center rounded-xl font-mono text-[11px] font-bold transition-colors',
-										on ? cx('bg-gradient-to-br text-white shadow-md', tone(s.color).grad) : 'bg-soft text-faint'
+										'inline-flex size-8 shrink-0 items-center justify-center rounded-xl font-mono text-[11px] transition-colors',
+										on ? cx('glyph', tone(s.color).text) : 'bg-soft text-faint'
 									)}>
 									{s.n}
 								</span>

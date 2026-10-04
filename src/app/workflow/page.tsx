@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Check, Clock } from '@/components/ui/icons';
-import { Accent, Button, Container, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
+import { Accent, Button, Container, PageHero, Reveal, Section, SectionHead, cx } from '@/components/ui';
 import StepMock from '@/components/mock/StepMock';
 import { SignInMock, SiteMock } from '@/components/mock/mocks';
 import CtaBand from '@/components/site/CtaBand';
 import { STEPS } from '@/content/workflow';
-import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 import Pipeline from '@/components/viz/Pipeline';
 import BuildPaths from '@/components/viz/BuildPaths';
@@ -45,9 +44,9 @@ export default function WorkflowPage() {
 					Join the waitlist
 				</Button>
 				<Button
-					href={APP.login}
+					href='/workflow/website'
 					variant='secondary'>
-					Log in
+					Build a website
 				</Button>
 			</PageHero>
 
@@ -110,7 +109,7 @@ export default function WorkflowPage() {
 						<div className='grid items-center gap-12 lg:grid-cols-2 lg:gap-20'>
 							<Reveal className={cx(i % 2 === 1 && 'lg:order-2')}>
 								<div className='mb-6 flex items-center gap-3'>
-									<span className={cx('inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br font-mono text-[14px] font-bold text-white shadow-lg', tone(s.color).grad)}>
+									<span className={cx('glyph size-12 rounded-2xl font-mono text-[14px]', tone(s.color).text)}>
 										{s.n}
 									</span>
 									<span className={cx('inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-[12px] font-medium', tone(s.color).soft, tone(s.color).text)}>
@@ -131,11 +130,6 @@ export default function WorkflowPage() {
 										</li>
 									))}
 								</ul>
-								<TextLink
-									href={APP.guide(s.guide)}
-									className='mt-9'>
-									Read the guide
-								</TextLink>
 							</Reveal>
 							<Reveal
 								delay={100}
@@ -175,7 +169,7 @@ export default function WorkflowPage() {
 							key={l.t}
 							delay={i * 80}
 							className='relative rounded-2xl border border-line bg-panel p-6 shadow-panel'>
-							<span className={cx('mb-6 inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br font-mono text-[13px] font-bold text-white', tone(l.c).grad)}>
+							<span className={cx('glyph mb-6 size-10 rounded-xl font-mono text-[13px]', tone(l.c).text)}>
 								0{i + 1}
 							</span>
 							<h3 className='text-[19px] font-medium tracking-[-0.02em]'>{l.t}</h3>

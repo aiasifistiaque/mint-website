@@ -8,10 +8,10 @@ import DatabaseMock from '@/components/mock/DatabaseMock';
  */
 
 const BLOCKS = [
-	{ icon: Boxes, t: 'Model builder', b: 'Fields, links, formulas', c: 'bg-emerald-500' },
-	{ icon: LayoutTemplate, t: 'Page builder', b: 'Tables, forms, detail pages', c: 'bg-violet-500' },
-	{ icon: PanelLeft, t: 'Sidebar builder', b: 'Sections, icons, access', c: 'bg-sky-500' },
-	{ icon: LayoutDashboard, t: 'Dashboard builder', b: 'Numbers, charts, lists', c: 'bg-rose-500' },
+	{ icon: Boxes, t: 'Model builder', b: 'Fields, links, formulas', c: 'text-emerald-600 dark:text-emerald-400' },
+	{ icon: LayoutTemplate, t: 'Page builder', b: 'Tables, forms, detail pages', c: 'text-violet-600 dark:text-violet-400' },
+	{ icon: PanelLeft, t: 'Sidebar builder', b: 'Sections, icons, access', c: 'text-sky-600 dark:text-sky-400' },
+	{ icon: LayoutDashboard, t: 'Dashboard builder', b: 'Numbers, charts, lists', c: 'text-rose-600 dark:text-rose-400' },
 ];
 
 const BuildPaths = () => (
@@ -26,8 +26,11 @@ const BuildPaths = () => (
 						<div
 							key={b.t}
 							className='flex items-center gap-2.5 rounded-xl border border-line bg-subtle p-3'>
-							<span className={cx('inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-white', b.c)}>
-								<b.icon className='size-4' />
+							<span className={cx('glyph size-8 rounded-lg', b.c)}>
+								<b.icon
+									weight='light'
+									className='size-[17px]'
+								/>
 							</span>
 							<span className='min-w-0'>
 								<span className='block truncate text-[13px] font-semibold'>{b.t}</span>

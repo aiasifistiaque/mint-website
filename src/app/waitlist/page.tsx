@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Check, MailOpen, Rocket, Wand2 } from '@/components/ui/icons';
-import { Accent, Container, Dot, Eyebrow, IconTile, Pill, Section, SectionHead, TextLink, cx } from '@/components/ui';
+import { Accent, Container, Dot, Eyebrow, IconTile, Pill, Section, SectionHead, cx } from '@/components/ui';
 import { WaitlistFull } from '@/components/waitlist/WaitlistForm';
 import Faq, { FAQ } from '@/components/site/Faq';
-import { APP } from '@/lib/config';
 import { tone, type Tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -54,19 +53,14 @@ export default function WaitlistPage() {
 									<li
 										key={p}
 										className='flex items-center gap-3 text-[16px] font-medium'>
-										<span className={cx('inline-flex size-7 items-center justify-center rounded-full bg-gradient-to-br text-white', t.grad)}>
-											<Check className='size-4' />
+										<span className={cx('glyph size-7 rounded-full', t.text)}>
+											<Check className='size-3.5' />
 										</span>
 										{p}
 									</li>
 								);
 							})}
 						</ul>
-						<TextLink
-							href={APP.login}
-							className='mt-10 text-muted'>
-							Already have access? Log in
-						</TextLink>
 					</div>
 					<WaitlistFull />
 				</Container>

@@ -1,9 +1,8 @@
 import { ReactNode } from 'react';
-import { Accent, Container, Reveal, TextLink } from '@/components/ui';
+import { Accent, Container, Reveal } from '@/components/ui';
 import { WaitlistInline } from '@/components/waitlist/WaitlistForm';
-import { APP } from '@/lib/config';
 
-/** The closing card on every page: join the waitlist, or log in. */
+/** The closing card on every page: join the waitlist. */
 const CtaBand = ({
 	title = (
 		<>
@@ -15,7 +14,7 @@ const CtaBand = ({
 	title?: ReactNode;
 	lead?: string;
 }) => (
-	<section className='py-20 md:py-28'>
+	<section className='pb-16 pt-20 md:pb-20 md:pt-28'>
 		<Container>
 			<Reveal className='mesh-ink relative overflow-hidden rounded-3xl px-6 py-20 text-white shadow-float md:px-12 md:py-28'>
 				<div
@@ -30,11 +29,6 @@ const CtaBand = ({
 						dark
 						className='mt-10'
 					/>
-					<TextLink
-						href={APP.login}
-						className='mt-6 text-white/80'>
-						Already have access? Open your dashboard
-					</TextLink>
 				</div>
 			</Reveal>
 		</Container>

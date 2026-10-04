@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ComponentProps, ReactNode } from 'react';
+import { cloneElement, isValidElement, type ComponentProps, type ReactElement, type ReactNode } from 'react';
 import { ArrowRight, ArrowUpRight } from '@/components/ui/icons';
 import { Tone, tone } from '@/lib/tones';
 import Reveal from './Reveal';
@@ -195,16 +195,31 @@ export const Card = ({ className, children, ...rest }: ComponentProps<'div'>) =>
 	</div>
 );
 
-/** The coloured icon tile on feature cards. */
-export const IconTile = ({ children, color = 'emerald', solid, className }: { children: ReactNode; color?: Tone; solid?: boolean; className?: string }) => (
-	<span
-		className={cx(
-			'inline-flex size-11 items-center justify-center rounded-xl [&>svg]:size-[22px]',
-			solid ? cx('bg-gradient-to-br text-white shadow-lg', tone(color).grad) : cx(tone(color).soft, tone(color).text),
-			className
-		)}>
-		{children}
+/**
+ * The icon tile on feature cards: a neutral tile with the icon drawn thin, in
+ * one colour (the tone). `ink` for the dark bands. `solid` is kept for older
+ * call sites and means the same thing.
+ */
+export const IconTile = ({
+	children,
+	color = 'emerald',
+	ink,
+	className,
+}: {
+	children: ReactNode;
+	color?: Tone;
+	solid?: boolean;
+	ink?: boolean;
+	className?: string;
+}) => (
+	<span className={cx('glyph size-11 rounded-xl [&>svg]:size-[21px]', ink && 'glyph-ink', tone(color).text, className)}>
+		{isValidElement(children) ? cloneElement(children as ReactElement<{ weight?: string }>, { weight: 'light' }) : children}
 	</span>
+);
+
+/** A numbered tile — steps and sequences. */
+export const NumberTile = ({ n, color = 'emerald', className }: { n: ReactNode; color?: Tone; className?: string }) => (
+	<span className={cx('glyph font-mono text-[13px]', tone(color).text, className ?? 'size-10 rounded-xl')}>{n}</span>
 );
 
 /** The page title block every inner page opens with. */

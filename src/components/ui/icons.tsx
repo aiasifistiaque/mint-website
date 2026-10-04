@@ -98,6 +98,11 @@ import {
 	Tag as PhTag,
 	Robot as PhRobot,
 	MapPin as PhMapPin,
+	Scales as PhScales,
+	Coins as PhCoins,
+	Wrench as PhWrench,
+	WhatsappLogo as PhWhatsappLogo,
+	ArrowUp as PhArrowUp,
 	ArrowCounterClockwise as PhArrowCounterClockwise,
 	Columns as PhColumns,
 	Stamp as PhStamp,
@@ -214,3 +219,9 @@ export const Stamp = make(PhStamp, 'duotone');
 export const Merge = make(PhArrowsMerge, 'duotone');
 export const Calculator = make(PhCalculator, 'duotone');
 export const Undo = make(PhArrowCounterClockwise, 'duotone');
+export const WhatsApp = make(PhWhatsappLogo, 'light');
+export const ArrowUp = make(PhArrowUp, 'light');
+export const Coins = make(PhCoins, 'duotone');
+export const Wrench = make(PhWrench, 'duotone');
+export const Timer = make(PhTimer, 'duotone');
+export const Scales = make(PhScales, 'duotone');

@@ -154,3 +154,27 @@ History & safety · Dashboards & sidebar · Team & access · Sign-in & devices �
 - **Slimmer**: body text weight 250 (Outfit is variable); header/footer items weight 300.
 - **Logo**: a new mark — an "M" drawn as one continuous stroke over three stacked layers (the backend stack),
   on the brand gradient; wordmark **MINT** in light, widely spaced capitals. Same mark as the favicon.
+
+## 8. `/compare` — MINT + your AI vs AI coding alone
+
+**The ask (2026-10-04):** a page on why MINT + AI beats building the whole project with Claude Code, Codex or
+Cursor: fewer tokens, faster, live deployment, nothing breaks, security patches handled, everything under the hood
+— a side-by-side comparison.
+
+Header: **AI** becomes a dropdown — Build with AI (`/ai`), MINT + AI vs AI coding (`/compare`), Build a website
+with AI (`/workflow/website`).
+
+1. Hero: "Your AI writes a plan, not a codebase." — what changes when the same assistant builds on MINT.
+2. **What the AI has to produce** — a file tree of a hand-built backend vs the one short plan MINT needs
+   (illustrative, labelled so).
+3. **Six reasons** — fewer tokens · faster · live at once · nothing breaks (plans checked, all or nothing) ·
+   security kept up (one platform, updated for every project) · everything under the hood.
+4. **Side by side** — a row per concern (what the AI writes, tokens, time to live, hosting, mistakes, security,
+   auth, admin panel, API docs, SEO/analytics, changing later, who can change it, context as it grows).
+5. **Under the hood** — the list from `NOT_TO_BUILD`.
+6. **Use both** — your AI still writes the front end; MINT is everything behind it.
+
+Keep it honest: no invented benchmarks; illustrations say they are illustrations.
+
+Also (same day): no Log in anywhere (access is by waitlist); no links into the user guides until they're public;
+neutral "glyph" icon tiles instead of gradient ones; WhatsApp + back-to-top buttons on every page.

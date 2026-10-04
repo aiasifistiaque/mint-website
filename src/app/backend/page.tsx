@@ -25,7 +25,7 @@ import BuildPaths from '@/components/viz/BuildPaths';
 import StackMini from '@/components/viz/StackMini';
 import CtaBand from '@/components/site/CtaBand';
 import { NOT_TO_BUILD } from '@/content/platform';
-import { API_URL, APP } from '@/lib/config';
+import { API_URL } from '@/lib/config';
 import type { Tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -80,9 +80,9 @@ export default function BackendPage() {
 					Join the waitlist
 				</Button>
 				<Button
-					href={APP.login}
+					href='/workflow'
 					variant='secondary'>
-					Log in
+					See the workflows
 				</Button>
 			</PageHero>
 

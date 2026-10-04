@@ -12,9 +12,9 @@ import Logo from './Logo';
 import ThemeToggle from './ThemeToggle';
 
 /**
- * Sticky header: the pages — Admin panel and Workflows open menus — then the
- * way into the app: Log in (the app sends anyone already signed in on to
- * their dashboard) and Join the waitlist.
+ * Sticky header: the pages — Admin panel and Workflows open menus — then
+ * Join the waitlist (no Log in while access is by waitlist; Create account
+ * appears only when NEXT_PUBLIC_SIGNUPS_OPEN is on).
  */
 
 const NAV_LINK = 'caps inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 !font-light transition-colors';
@@ -80,8 +80,11 @@ const Dropdown = ({ item, active }: { item: NavItem; active: boolean }) => {
 										here && 'bg-subtle',
 										wide && c === children[0] && 'col-span-2 border-b border-line pb-4'
 									)}>
-									<span className={cx('inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br text-white', t.grad)}>
-										<c.icon className='size-[18px]' />
+									<span className={cx('glyph size-9 rounded-lg', t.text)}>
+										<c.icon
+											weight='light'
+											className='size-[19px]'
+										/>
 									</span>
 									<span className='min-w-0'>
 										<span className='caps block !text-[11px] !font-normal text-fg'>{c.label}</span>
@@ -150,11 +153,6 @@ const Header = () => {
 				</nav>
 				<div className='ml-auto hidden items-center gap-1.5 lg:flex'>
 					<ThemeToggle className='mr-1' />
-					<a
-						href={APP.login}
-						className={buttonClass('ghost', 'sm', 'caps !font-light')}>
-						Log in
-					</a>
 					{SIGNUPS_OPEN && (
 						<a
 							href={APP.register}
@@ -237,11 +235,6 @@ const Header = () => {
 								Create account
 							</a>
 						)}
-						<a
-							href={APP.login}
-							className={buttonClass('secondary', 'lg', 'caps !font-light')}>
-							Log in
-						</a>
 					</div>
 				</div>
 			)}

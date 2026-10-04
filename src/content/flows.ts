@@ -63,7 +63,7 @@ export type FlowStep = {
 	body: string;
 	points: string[];
 	art: ArtKey;
-	/** User guide slug in the app (APP.guide). */
+	/** User guide slug in the app — not linked until the user docs are public. */
 	guide?: string;
 };
 

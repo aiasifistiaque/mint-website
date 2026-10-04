@@ -61,12 +61,15 @@ const Pipeline = ({ dark }: { dark?: boolean }) => (
 							'group relative flex flex-1 items-center gap-4 rounded-2xl border p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 lg:flex-col lg:items-start lg:gap-3 lg:p-5',
 							dark ? 'border-white/10 bg-white/[0.04] hover:bg-white/[0.07]' : 'border-line bg-panel shadow-panel hover:shadow-float'
 						)}>
-						<span className={cx('inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-lg', t.grad)}>
-							<Icon className='size-5' />
+						<span className={cx('glyph size-11 rounded-2xl', dark ? 'glyph-ink text-white/85' : t.text)}>
+							<Icon
+								weight='light'
+								className='size-[21px]'
+							/>
 						</span>
 						<span>
 							<span className={cx('block font-mono text-[11px] font-semibold', dark ? 'text-white/50' : t.text)}>{s.n}</span>
-							<span className='font-display block text-[15.5px] font-medium leading-tight tracking-[-0.01em]'>{s.title}</span>
+							<span className='font-display block text-[15.5px] font-normal leading-tight tracking-[-0.01em]'>{s.title}</span>
 							<span className={cx('mt-1 block text-[12.5px]', dark ? 'text-white/50' : 'text-faint')}>{s.time}</span>
 						</span>
 					</a>

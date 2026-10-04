@@ -144,6 +144,34 @@ b {
 	font-weight: 300;
 }
 
+/* Icon and number tiles: a quiet neutral tile with a hairline border and a
+   soft top highlight; the glyph inside is one thin colour (ui IconTile). */
+.glyph {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border: 1px solid var(--line);
+	background: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.9),
+		0 1px 2px rgb(16 24 40 / 0.05);
+}
+[data-theme='dark'] .glyph {
+	border-color: #2a2a2a;
+	background: linear-gradient(180deg, #202020 0%, #161616 100%);
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.06),
+		0 1px 2px rgb(0 0 0 / 0.4);
+}
+/* On the dark ink bands, in either theme. */
+.glyph-ink,
+[data-theme='dark'] .glyph-ink {
+	border-color: rgb(255 255 255 / 0.1);
+	background: linear-gradient(180deg, rgb(255 255 255 / 0.07) 0%, rgb(255 255 255 / 0.02) 100%);
+	box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08);
+}
+
 /* ------------------------------------------------------------ colour */
 
 /* The brand gradient — headings' accent words, buttons, borders. */

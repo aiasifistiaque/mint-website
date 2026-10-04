@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono, Outfit } from 'next/font/google';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
+import Fabs from '@/components/site/Fabs';
 import { DESCRIPTION, TAGLINE } from '@/content/site';
 import { SITE_URL } from '@/lib/config';
 import { THEME_SCRIPT } from '@/components/site/ThemeToggle';
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					{children}
 				</main>
 				<Footer />
+				<Fabs />
 			</body>
 		</html>
 	);

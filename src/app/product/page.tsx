@@ -21,7 +21,6 @@ import { DashboardMock, RecordMock } from '@/components/mock/mocks';
 import HeroVisual from '@/components/home/HeroVisual';
 import DataFlow from '@/components/viz/DataFlow';
 import CtaBand from '@/components/site/CtaBand';
-import { APP } from '@/lib/config';
 import { tone, type Tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -203,7 +202,7 @@ export default function ProductPage() {
 							}
 							lead='Every record has its own page: its fields, the records linked to it in tabs, and its whole history. Totals calculate themselves; fields only appear when they apply; private records stay private.'
 						/>
-						<TextLink href={APP.guide('records')}>How records work</TextLink>
+						<TextLink href='/admin-panel#records'>Everything on a record page</TextLink>
 					</div>
 					<Reveal>
 						<RecordMock />
@@ -229,7 +228,7 @@ export default function ProductPage() {
 							}
 							lead='Pick the numbers, charts and recent lists for each project’s home page from your own models. People only see the widgets for data they’re allowed to view.'
 						/>
-						<TextLink href={APP.guide('dashboard')}>Arrange a dashboard</TextLink>
+						<TextLink href='/workflow/admin-panel#step-4'>Build the dashboard, step by step</TextLink>
 					</div>
 				</div>
 			</Section>

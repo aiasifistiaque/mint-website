@@ -19,7 +19,6 @@ import { STEPS } from '@/content/workflow';
 import { FEATURE_GROUPS } from '@/content/features';
 import { USE_CASES } from '@/content/useCases';
 import { PERSONAS } from '@/content/personas';
-import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 
 const HIGHLIGHTS = ['Models', 'Pages', 'Dashboard', 'History & undo', 'Roles', 'Public API', 'Customer accounts', 'Connect your AI'].flatMap(t =>
@@ -85,11 +84,6 @@ export default function Home() {
 						</p>
 						<div className='fade-in mt-10 flex w-full flex-col items-center [animation-delay:180ms]'>
 							<WaitlistInline align='center' />
-							<TextLink
-								href={APP.login}
-								className='mt-5 text-muted'>
-								Already have access? Log in
-							</TextLink>
 						</div>
 					</div>
 					<div className='fade-in mt-16 [animation-delay:260ms] md:mt-20'>

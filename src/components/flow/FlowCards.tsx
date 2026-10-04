@@ -19,8 +19,11 @@ const FlowCards = ({ except }: { except?: string }) => {
 							href={f.href}
 							className='group flex h-full flex-col rounded-2xl border border-line bg-panel p-5 shadow-panel transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-float'>
 							<div className='mb-8 flex items-start justify-between'>
-								<span className={cx('inline-flex size-10 items-center justify-center rounded-xl bg-gradient-to-br text-white', t.grad)}>
-									<f.icon className='size-5' />
+								<span className={cx('glyph size-10 rounded-xl', t.text)}>
+									<f.icon
+										weight='light'
+										className='size-5'
+									/>
 								</span>
 								<ArrowUpRight className='size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
 							</div>

@@ -4,7 +4,6 @@ import { Accent, Button, IconTile, PageHero, Reveal, Section, SectionHead, TextL
 import { AiChatMock } from '@/components/mock/mocks';
 import AiFlow from '@/components/viz/AiFlow';
 import CtaBand from '@/components/site/CtaBand';
-import { APP } from '@/lib/config';
 import { tone, type Tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -64,9 +63,9 @@ export default function AiPage() {
 					Join the waitlist
 				</Button>
 				<Button
-					href={APP.guide('connect-ai')}
+					href='/workflow/website'
 					variant='secondary'>
-					Read the guide
+					Build a website with AI
 				</Button>
 			</PageHero>
 
@@ -177,7 +176,7 @@ export default function AiPage() {
 							))}
 						</div>
 						<TextLink
-							href={APP.guide('connect-ai')}
+							href='/workflow/website#step-2'
 							className='mt-8'>
 							Connecting your assistant, step by step
 						</TextLink>

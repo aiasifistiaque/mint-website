@@ -5,7 +5,7 @@ import Code from '@/components/ui/Code';
 import { SignInMock, SiteMock } from '@/components/mock/mocks';
 import DataFlow from '@/components/viz/DataFlow';
 import CtaBand from '@/components/site/CtaBand';
-import { API_URL, APP } from '@/lib/config';
+import { API_URL } from '@/lib/config';
 
 export const metadata: Metadata = {
 	title: 'Developers',
@@ -64,9 +64,9 @@ const { doc, total } = await res.json();`}
 					Join the waitlist
 				</Button>
 				<Button
-					href={APP.guide('public-api')}
+					href='/workflow/api'
 					variant='secondary'>
-					API guide
+					Build an API, step by step
 				</Button>
 			</PageHero>
 
@@ -159,9 +159,9 @@ await MintAuth.ready;
 const res = await MintAuth.fetch('orders?sort=-createdAt');`}
 						/>
 						<TextLink
-							href={APP.guide('customers')}
+							href='/workflow/api#step-4'
 							className='mt-8'>
-							The customers guide
+							Customer sign-in, step by step
 						</TextLink>
 					</div>
 					<Reveal>

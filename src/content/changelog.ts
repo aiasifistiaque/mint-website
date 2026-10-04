@@ -26,6 +26,8 @@ export const RELEASES: Release[] = [
 			'Build an API, build an admin panel, and how models are built and changed later',
 			'Every admin panel feature, grouped, each linked to its guide',
 			'A new logo, and a deeper black in dark mode',
+			'MINT + AI vs AI coding: why your AI should write a plan, not a codebase — side by side',
+			'Chat with us on WhatsApp from any page',
 		],
 	},
 	{

@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight } from '@/components/ui/icons';
-import { Accent, Button, Container, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
+import { Accent, Button, Container, IconTile, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import { PanelMock } from '@/components/mock/mocks';
 import CtaBand from '@/components/site/CtaBand';
 import FlowCards from '@/components/flow/FlowCards';
 import { PANEL_GROUPS, PANEL_STATS } from '@/content/adminPanel';
-import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -92,29 +90,22 @@ export default function AdminPanelPage() {
 									const inner = (
 										<>
 											<div className='mb-5 flex items-start justify-between'>
-												<span className={cx('inline-flex size-10 items-center justify-center rounded-xl', t.soft, t.text)}>
-													<f.icon className='size-5' />
-												</span>
-												{f.guide && <ArrowUpRight className='size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />}
+												<IconTile
+													color={g.color}
+													className='size-10'>
+													<f.icon />
+												</IconTile>
 											</div>
 											<h3 className='text-[15px] font-normal'>{f.title}</h3>
 											<p className='mt-1.5 text-[14px] leading-relaxed text-muted'>{f.body}</p>
 										</>
 									);
-									const cls = 'group block h-full rounded-2xl border border-line bg-panel p-5 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-panel';
+									const cls = 'block h-full rounded-2xl border border-line bg-panel p-5';
 									return (
 										<Reveal
 											key={f.title}
 											delay={i * 50}>
-											{f.guide ? (
-												<a
-													href={APP.guide(f.guide)}
-													className={cls}>
-													{inner}
-												</a>
-											) : (
-												<div className={cls}>{inner}</div>
-											)}
+											<div className={cls}>{inner}</div>
 										</Reveal>
 									);
 								})}

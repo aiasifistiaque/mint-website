@@ -1,6 +1,5 @@
-import { LayoutDashboard, ListChecks, Workflow, type IconType } from '@/components/ui/icons';
+import { Globe, LayoutDashboard, ListChecks, Scales, Sparkles, Workflow, type IconType } from '@/components/ui/icons';
 import { ALL_FLOWS } from '@/content/flows';
-import { APP } from '@/lib/config';
 import type { Tone } from '@/lib/tones';
 
 /** The site's navigation — header, mobile menu and footer read it from here. */
@@ -19,7 +18,15 @@ export const NAV: NavItem[] = [
 			{ href: '/workflow/admin-panel', label: 'Build one, step by step', blurb: 'Models, pages, sidebar, dashboard and team.', icon: Workflow, color: 'emerald' },
 		],
 	},
-	{ href: '/ai', label: 'AI' },
+	{
+		href: '/ai',
+		label: 'AI',
+		children: [
+			{ href: '/ai', label: 'Build with AI', blurb: 'Connect Claude, ChatGPT or Cursor; it plans and builds with you.', icon: Sparkles, color: 'violet' },
+			{ href: '/compare', label: 'MINT + AI vs AI coding', blurb: 'Fewer tokens, live at once, nothing to patch — side by side.', icon: Scales, color: 'emerald' },
+			{ href: '/workflow/website', label: 'Build a website with AI', blurb: 'The design and the backend, with SEO and analytics.', icon: Globe, color: 'amber' },
+		],
+	},
 	{ href: '/workflow', label: 'Workflows', children: ALL_FLOWS },
 	{ href: '/who-its-for', label: 'Who it’s for' },
 	{ href: '/developers', label: 'Developers' },
@@ -34,6 +41,7 @@ export const FOOTER = [
 			{ href: '/admin-panel', label: 'Panel features' },
 			{ href: '/features', label: 'All features' },
 			{ href: '/ai', label: 'Build with AI' },
+			{ href: '/compare', label: 'MINT vs AI coding' },
 			{ href: '/changelog', label: 'Changelog' },
 		],
 	},
@@ -54,7 +62,6 @@ export const FOOTER = [
 			{ href: '/use-cases', label: 'Use cases' },
 			{ href: '/developers', label: 'Developers' },
 			{ href: '/security', label: 'Security' },
-			{ href: APP.guides, label: 'Guides', external: true },
 		],
 	},
 	{
@@ -63,8 +70,6 @@ export const FOOTER = [
 			{ href: '/about', label: 'About' },
 			{ href: '/waitlist', label: 'Waitlist' },
 			{ href: '/privacy', label: 'Privacy' },
-			{ href: APP.login, label: 'Log in', external: true },
-			{ href: APP.dashboard, label: 'Dashboard', external: true },
 		],
 	},
 ];

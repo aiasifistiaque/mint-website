@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight } from '@/components/ui/icons';
 import { Container, IconTile, PageHero, Reveal, cx } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
 import { FEATURE_GROUPS } from '@/content/features';
-import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -58,22 +56,12 @@ export default function FeaturesPage() {
 												<IconTile color={g.color}>
 													<f.icon />
 												</IconTile>
-												{f.guide && (
-													<ArrowUpRight className='size-4 text-faint transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-fg' />
-												)}
 											</div>
-											<h3 className='mt-5 text-[17px] font-medium tracking-[-0.01em]'>{f.title}</h3>
+											<h3 className='mt-5 text-[15px] font-normal'>{f.title}</h3>
 											<p className='mt-1.5 text-[14px] leading-relaxed text-muted'>{f.body}</p>
 										</>
 									);
-									return f.guide ? (
-										<a
-											key={f.title}
-											href={APP.guide(f.guide)}
-											className='group bg-panel p-6 transition-colors hover:bg-subtle'>
-											{body}
-										</a>
-									) : (
+									return (
 										<div
 											key={f.title}
 											className='bg-panel p-6'>

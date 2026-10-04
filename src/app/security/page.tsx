@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Archive, Building2, Eye, FolderKanban, Fingerprint, History, KeyRound, Lock, MonitorSmartphone, ShieldCheck, Users } from '@/components/ui/icons';
-import { Accent, IconTile, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
+import { Accent, IconTile, PageHero, Reveal, Section, SectionHead, cx } from '@/components/ui';
 import { TeamMock } from '@/components/mock/mocks';
 import CtaBand from '@/components/site/CtaBand';
-import { APP } from '@/lib/config';
 import type { Tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
@@ -138,13 +137,6 @@ export default function SecurityPage() {
 							</IconTile>
 							<h3 className='mt-5 text-[17px] font-medium tracking-[-0.015em]'>{p.t}</h3>
 							<p className='mt-1.5 flex-1 text-[14px] leading-relaxed text-muted'>{p.b}</p>
-							{p.guide && (
-								<TextLink
-									href={APP.guide(p.guide)}
-									className='mt-4 text-[13px]'>
-									Guide
-								</TextLink>
-							)}
 						</Reveal>
 					))}
 				</div>

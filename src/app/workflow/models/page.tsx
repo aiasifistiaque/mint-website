@@ -69,7 +69,7 @@ export default function Page() {
 								key={l.t}
 								delay={i * 80}
 								className='relative rounded-2xl border border-line bg-panel p-6 shadow-panel'>
-								<span className={cx('mb-6 inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br font-mono text-[13px] text-white', tone(l.c).grad)}>
+								<span className={cx('glyph mb-6 size-10 rounded-xl font-mono text-[13px]', tone(l.c).text)}>
 									0{i + 1}
 								</span>
 								<h3 className='text-[16px] font-light'>{l.t}</h3>

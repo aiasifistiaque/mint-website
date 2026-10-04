@@ -87,8 +87,11 @@ const AiFlow = () => (
 					key={s.title}
 					className='relative flex flex-col rounded-2xl border border-line bg-panel p-5 text-fg shadow-panel'>
 					<div className='mb-4 flex items-center gap-3'>
-						<span className={cx('inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-lg', t.grad)}>
-							<s.icon className='size-[18px]' />
+						<span className={cx('glyph size-10 rounded-xl', t.text)}>
+							<s.icon
+								weight='light'
+								className='size-5'
+							/>
 						</span>
 						<span className={cx('font-mono text-[11px] font-semibold', t.text)}>0{i + 1}</span>
 					</div>

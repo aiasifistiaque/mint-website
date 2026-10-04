@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { Check, Clock, MapPin } from '@/components/ui/icons';
-import { Accent, Button, Container, PageHero, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
+import { Accent, Button, Container, PageHero, Reveal, Section, SectionHead, cx } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
 import type { Flow, Who } from '@/content/flows';
-import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 import FlowArt from './arts';
 import FlowCards from './FlowCards';
@@ -40,7 +39,7 @@ const StepIndex = ({ flow }: { flow: Flow }) => {
 						<Link
 							href={`#step-${i + 1}`}
 							className='group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-subtle'>
-							<span className={cx('inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br font-mono text-[11px] text-white', t.grad)}>
+							<span className={cx('glyph size-7 rounded-full font-mono text-[11px]', t.text)}>
 								{i + 1}
 							</span>
 							<span className='flex-1 text-[14px]'>{s.title}</span>
@@ -90,9 +89,9 @@ const FlowPage = ({ flow, children }: { flow: Flow; children?: ReactNode }) => {
 					Join the waitlist
 				</Button>
 				<Button
-					href={APP.login}
+					href='/features'
 					variant='secondary'>
-					Log in
+					All features
 				</Button>
 			</PageHero>
 
@@ -121,8 +120,8 @@ const FlowPage = ({ flow, children }: { flow: Flow; children?: ReactNode }) => {
 									className='relative grid grid-cols-[minmax(0,1fr)] gap-10 md:pl-16 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16'>
 									<span
 										className={cx(
-											'absolute left-0 top-0 inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br font-mono text-[14px] text-white shadow-lg ring-8 ring-bg',
-											t.grad
+											'glyph absolute left-0 top-0 size-12 rounded-2xl font-mono text-[14px] ring-8 ring-bg',
+											t.text
 										)}>
 										{String(i + 1).padStart(2, '0')}
 									</span>
@@ -155,13 +154,6 @@ const FlowPage = ({ flow, children }: { flow: Flow; children?: ReactNode }) => {
 												</li>
 											))}
 										</ul>
-										{s.guide && (
-											<TextLink
-												href={APP.guide(s.guide)}
-												className='mt-7'>
-												Read the guide
-											</TextLink>
-										)}
 									</Reveal>
 									<Reveal delay={100}>
 										<FlowArt art={s.art} />
@@ -190,8 +182,11 @@ const FlowPage = ({ flow, children }: { flow: Flow; children?: ReactNode }) => {
 							key={g.title}
 							delay={i * 80}
 							className='rounded-2xl border border-white/10 bg-white/[0.04] p-6'>
-							<span className={cx('mb-6 inline-flex size-11 items-center justify-center rounded-xl bg-gradient-to-br text-white', t.grad)}>
-								<g.icon className='size-[22px]' />
+							<span className='glyph glyph-ink mb-6 size-11 rounded-xl text-white/85'>
+								<g.icon
+									weight='light'
+									className='size-[22px]'
+								/>
 							</span>
 							<h3 className='text-[17px] font-light'>{g.title}</h3>
 							<ul className='mt-4 flex flex-col gap-2.5'>

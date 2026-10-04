@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FormEvent, useEffect, useState } from 'react';
 import { ArrowRight, Check, Loader2 } from '@/components/ui/icons';
-import { API_URL, APP } from '@/lib/config';
+import { API_URL } from '@/lib/config';
 import { cx } from '@/components/ui';
 
 /**
@@ -240,11 +240,6 @@ export const WaitlistFull = () => {
 						See the workflow
 						<ArrowRight className='size-4' />
 					</Link>
-					<a
-						href={APP.login}
-						className='inline-flex h-10 items-center rounded-full px-4 text-[14px] text-muted hover:text-fg'>
-						Already have access? Log in
-					</a>
 				</div>
 			</div>
 		);
