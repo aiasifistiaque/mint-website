@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter_Tight, JetBrains_Mono, Manrope } from 'next/font/google';
+import { JetBrains_Mono, Outfit } from 'next/font/google';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
 import { DESCRIPTION, TAGLINE } from '@/content/site';
@@ -7,9 +7,8 @@ import { SITE_URL } from '@/lib/config';
 import { THEME_SCRIPT } from '@/components/site/ThemeToggle';
 import './globals.css';
 
-// Headings: Inter Tight, light and tightly set. Text: Manrope. Labels and code: JetBrains Mono.
-const display = Inter_Tight({ subsets: ['latin'], variable: '--font-display-face', display: 'swap' });
-const sans = Manrope({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
+// Headings and text: Outfit — slim and geometric (light weights). Labels and code: JetBrains Mono.
+const sans = Outfit({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 export const metadata: Metadata = {
@@ -40,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html
 			lang='en'
 			suppressHydrationWarning
-			className={`${display.variable} ${sans.variable} ${mono.variable}`}>
+			className={`${sans.variable} ${mono.variable}`}>
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
 			</head>

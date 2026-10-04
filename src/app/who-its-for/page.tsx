@@ -78,7 +78,7 @@ export default function WhoPage() {
 											<p.icon />
 										</IconTile>
 										<div>
-											<h2 className='text-[32px] font-light leading-tight tracking-[-0.035em] md:text-[42px]'>{p.who}</h2>
+											<h2 className='text-[32px] font-extralight leading-tight tracking-[-0.035em] md:text-[42px]'>{p.who}</h2>
 											<p className={cx('text-[14px] font-medium', t.text)}>{p.examples}</p>
 										</div>
 									</div>

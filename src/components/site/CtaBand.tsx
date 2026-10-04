@@ -23,7 +23,7 @@ const CtaBand = ({
 					className='bg-grid-ink pointer-events-none absolute inset-0'
 				/>
 				<div className='relative mx-auto flex max-w-[760px] flex-col items-center text-center'>
-					<h2 className='text-balance text-[38px] font-light leading-[1.04] tracking-[-0.045em] md:text-[60px]'>{title}</h2>
+					<h2 className='text-balance text-[38px] font-extralight leading-[1.04] tracking-[-0.045em] md:text-[60px]'>{title}</h2>
 					<p className='mt-5 max-w-[540px] text-[17.5px] leading-relaxed text-white/65'>{lead}</p>
 					<WaitlistInline
 						align='center'

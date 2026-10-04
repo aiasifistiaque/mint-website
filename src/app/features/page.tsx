@@ -47,7 +47,7 @@ export default function FeaturesPage() {
 						<div className='grid gap-10 lg:grid-cols-[280px_1fr] lg:gap-16'>
 							<Reveal className='lg:sticky lg:top-36 lg:self-start'>
 								<span className={cx('mb-4 block h-1.5 w-12 rounded-full bg-gradient-to-r', tone(g.color).grad)} />
-								<h2 className='text-[36px] font-light tracking-[-0.035em]'>{g.title}</h2>
+								<h2 className='text-[36px] font-extralight tracking-[-0.035em]'>{g.title}</h2>
 								<p className='mt-3 text-[15px] leading-relaxed text-muted'>{g.lead}</p>
 							</Reveal>
 							<div className='grid gap-px overflow-hidden rounded-2xl border border-line bg-line shadow-panel sm:grid-cols-2'>

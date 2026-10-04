@@ -76,7 +76,7 @@ Footer adds Features, Use cases, Teams & security, Changelog, About, Privacy, Gu
 ## 5. Design changes
 
 - **Dark mode**: follows the system by default; a toggle in the header (and mobile menu) switches light/dark and remembers the choice. No flash on load. Every surface, tone and drawing gets a dark variant.
-- **Body font**: Manrope — slimmer and sleeker than Inter. Headlines stay Inter Tight light; labels JetBrains Mono.
+- **Type**: Outfit for headlines (extra-light) and body (light) — slim and geometric; labels JetBrains Mono. Header and footer items in small spaced caps.
 - Keep the tone colours, Phosphor duotone icons, and the modernist, slim style.
 
 ## 6. Keep it true

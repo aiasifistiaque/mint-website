@@ -102,7 +102,7 @@ export default function WorkflowPage() {
 										<Clock className='size-3.5' /> {s.time}
 									</span>
 								</div>
-								<h2 className='text-[36px] font-light leading-[1.04] tracking-[-0.04em] md:text-[52px]'>{s.title}</h2>
+								<h2 className='text-[36px] font-extralight leading-[1.04] tracking-[-0.04em] md:text-[52px]'>{s.title}</h2>
 								<p className='mt-5 text-[17px] leading-[1.7] text-muted'>{s.body}</p>
 								<ul className='mt-8 flex flex-col gap-3'>
 									{s.points.map(p => (

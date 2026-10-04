@@ -52,7 +52,7 @@ const Header = () => {
 							key={n.href}
 							href={n.href}
 							className={cx(
-								'rounded-full px-3.5 py-1.5 text-[14px] transition-colors',
+								'caps rounded-full px-3.5 py-2 transition-colors',
 								active(n.href) ? 'bg-soft font-medium text-fg' : 'text-muted hover:text-fg'
 							)}>
 							{n.label}
@@ -63,19 +63,19 @@ const Header = () => {
 					<ThemeToggle className='mr-1' />
 					<a
 						href={APP.login}
-						className={buttonClass('ghost', 'sm')}>
+						className={buttonClass('ghost', 'sm', 'caps')}>
 						Log in
 					</a>
 					{SIGNUPS_OPEN && (
 						<a
 							href={APP.register}
-							className={buttonClass('secondary', 'sm')}>
+							className={buttonClass('secondary', 'sm', 'caps')}>
 							Create account
 						</a>
 					)}
 					<Link
 						href='/waitlist'
-						className={buttonClass('brand', 'sm')}>
+						className={buttonClass('brand', 'sm', 'caps')}>
 						Join the waitlist
 					</Link>
 				</div>
@@ -99,7 +99,7 @@ const Header = () => {
 									key={n.href}
 									href={n.href}
 									className={cx(
-										'font-display border-b border-line py-4 text-[22px] font-medium tracking-[-0.02em]',
+										'caps border-b border-line py-4 !text-[14px]',
 										pathname === n.href ? 'text-fg' : 'text-muted'
 									)}>
 									{n.label}
@@ -110,19 +110,19 @@ const Header = () => {
 					<div className='mt-8 flex flex-col gap-3'>
 						<Link
 							href='/waitlist'
-							className={buttonClass('brand', 'lg')}>
+							className={buttonClass('brand', 'lg', 'caps')}>
 							Join the waitlist
 						</Link>
 						{SIGNUPS_OPEN && (
 							<a
 								href={APP.register}
-								className={buttonClass('secondary', 'lg')}>
+								className={buttonClass('secondary', 'lg', 'caps')}>
 								Create account
 							</a>
 						)}
 						<a
 							href={APP.login}
-							className={buttonClass('secondary', 'lg')}>
+							className={buttonClass('secondary', 'lg', 'caps')}>
 							Log in
 						</a>
 					</div>

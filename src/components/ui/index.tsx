@@ -81,7 +81,7 @@ export const SectionHead = ({
 				{eyebrow}
 			</Eyebrow>
 		)}
-		<h2 className='text-balance text-[34px] font-light leading-[1.06] tracking-[-0.035em] md:text-[50px]'>{title}</h2>
+		<h2 className='text-balance text-[34px] font-extralight leading-[1.06] tracking-[-0.035em] md:text-[50px]'>{title}</h2>
 		{lead && <p className={cx('mt-5 text-pretty text-[17.5px] leading-[1.7]', dark ? 'text-white/65' : 'text-muted')}>{lead}</p>}
 	</Reveal>
 );
@@ -235,7 +235,7 @@ export const PageHero = ({
 		<Container className={cx('relative pb-20 pt-20 md:pb-28 md:pt-28', !!aside && 'grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]')}>
 			<Reveal className='max-w-[780px]'>
 				<Eyebrow color={color}>{eyebrow}</Eyebrow>
-				<h1 className='text-balance text-[42px] font-light leading-[1.02] tracking-[-0.045em] md:text-[66px]'>{title}</h1>
+				<h1 className='text-balance text-[42px] font-extralight leading-[1.02] tracking-[-0.045em] md:text-[66px]'>{title}</h1>
 				<p className='mt-6 max-w-[620px] text-pretty text-[18.5px] leading-[1.7] text-muted'>{lead}</p>
 				{children && <div className='mt-10 flex flex-wrap items-center gap-3'>{children}</div>}
 			</Reveal>

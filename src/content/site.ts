@@ -16,7 +16,7 @@ export const FOOTER = [
 		title: 'Platform',
 		links: [
 			{ href: '/backend', label: 'Backend as a service' },
-			{ href: '/product', label: 'Admin panel & back office' },
+			{ href: '/product', label: 'Admin panel' },
 			{ href: '/workflow', label: 'Workflow' },
 			{ href: '/features', label: 'All features' },
 			{ href: '/ai', label: 'Build with AI' },

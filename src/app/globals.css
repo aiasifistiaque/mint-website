@@ -66,7 +66,7 @@
 	--shadow-panel: var(--shadow);
 	--shadow-float: var(--shadow-lg);
 	--font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
-	--font-display: var(--font-display-face), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+	--font-display: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 	--font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
 }
 
@@ -79,8 +79,8 @@ body {
 	background: var(--bg);
 	color: var(--fg);
 	font-family: var(--font-sans);
-	font-weight: 400;
-	letter-spacing: -0.005em;
+	font-weight: 300;
+	letter-spacing: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -91,13 +91,12 @@ h2,
 h3,
 .font-display {
 	font-family: var(--font-display);
-	font-feature-settings: 'ss01', 'cv05';
 }
 
 /* Modernist headlines: light, large, tightly set. */
 h1,
 h2 {
-	font-weight: 300;
+	font-weight: 200;
 }
 h1 strong,
 h2 strong {
@@ -118,6 +117,14 @@ h2 strong {
 /* Section anchors land below the sticky header. */
 [id] {
 	scroll-margin-top: 96px;
+}
+
+/* Header and footer items: small spaced capitals. */
+.caps {
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	font-size: 11.5px;
+	font-weight: 500;
 }
 
 /* ------------------------------------------------------------ colour */

@@ -76,7 +76,7 @@ export default function Home() {
 						<Pill className='fade-in mb-8'>
 							<Dot /> Backend as a service · early access
 						</Pill>
-						<h1 className='fade-in text-balance text-[46px] font-light leading-[0.98] tracking-[-0.05em] [animation-delay:60ms] sm:text-[64px] md:text-[84px]'>
+						<h1 className='fade-in text-balance text-[46px] font-extralight leading-[0.98] tracking-[-0.05em] [animation-delay:60ms] sm:text-[64px] md:text-[84px]'>
 							{POSITIONING.title} <Accent>{POSITIONING.accent}</Accent>
 						</h1>
 						<p className='fade-in mt-7 max-w-[640px] text-pretty text-[18px] leading-[1.7] text-muted [animation-delay:120ms] md:text-[20px]'>
@@ -441,7 +441,7 @@ export default function Home() {
 				<div className='grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20'>
 					<div>
 						<Eyebrow color='violet'>Questions</Eyebrow>
-						<h2 className='text-[34px] font-light leading-[1.06] tracking-[-0.035em] md:text-[50px]'>
+						<h2 className='text-[34px] font-extralight leading-[1.06] tracking-[-0.035em] md:text-[50px]'>
 							Good to <Accent>know.</Accent>
 						</h2>
 					</div>

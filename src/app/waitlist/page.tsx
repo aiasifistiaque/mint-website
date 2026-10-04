@@ -41,7 +41,7 @@ export default function WaitlistPage() {
 						<Pill className='mb-8'>
 							<Dot /> Opening to a few teams at a time
 						</Pill>
-						<h1 className='text-balance text-[44px] font-light leading-[1.02] tracking-[-0.045em] md:text-[64px]'>
+						<h1 className='text-balance text-[44px] font-extralight leading-[1.02] tracking-[-0.045em] md:text-[64px]'>
 							Get early access to <Accent>MINT.</Accent>
 						</h1>
 						<p className='mt-6 max-w-[520px] text-[18px] leading-[1.7] text-muted'>
@@ -106,7 +106,7 @@ export default function WaitlistPage() {
 				<div className='grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20'>
 					<div>
 						<Eyebrow color='violet'>Questions</Eyebrow>
-						<h2 className='text-[34px] font-light leading-[1.06] tracking-[-0.035em] md:text-[46px]'>Before you join.</h2>
+						<h2 className='text-[34px] font-extralight leading-[1.06] tracking-[-0.035em] md:text-[46px]'>Before you join.</h2>
 					</div>
 					<Faq items={['Why a waitlist?', 'Is MINT a backend as a service?', 'Do I need to know how to code?', 'Which AI assistants work with MINT?'].map(q => FAQ.find(f => f.q === q)!)} />
 				</div>

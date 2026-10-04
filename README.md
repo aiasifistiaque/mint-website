@@ -4,8 +4,8 @@ The marketing website for MINT — backend as a service with the admin panel and
 back office built in — a multi-page pitch for the product, with a
 **Join the waitlist** form and links into the app (Log in → dashboard).
 
-Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Inter Tight, Manrope
-and JetBrains Mono · Phosphor icons · light and dark mode. Content plan: `docs/CONTENT_PLAN.md`.
+Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Outfit and
+JetBrains Mono · Phosphor icons · light and dark mode. Content plan: `docs/CONTENT_PLAN.md`.
 
 ## Run it
 

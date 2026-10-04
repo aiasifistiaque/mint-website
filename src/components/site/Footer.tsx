@@ -15,20 +15,20 @@ const Footer = () => (
 				</div>
 				{FOOTER.map(col => (
 					<div key={col.title}>
-						<p className='font-display mb-4 text-[13px] font-medium'>{col.title}</p>
-						<ul className='flex flex-col gap-2.5'>
+						<p className='caps mb-5 text-faint'>{col.title}</p>
+						<ul className='flex flex-col gap-3'>
 							{col.links.map(l => (
 								<li key={l.href}>
 									{'external' in l && l.external ? (
 										<a
 											href={l.href}
-											className='text-[14px] text-muted transition-colors hover:text-fg'>
+											className='caps !font-normal text-muted transition-colors hover:text-fg'>
 											{l.label}
 										</a>
 									) : (
 										<Link
 											href={l.href}
-											className='text-[14px] text-muted transition-colors hover:text-fg'>
+											className='caps !font-normal text-muted transition-colors hover:text-fg'>
 											{l.label}
 										</Link>
 									)}
@@ -38,9 +38,9 @@ const Footer = () => (
 					</div>
 				))}
 			</div>
-			<div className='mt-16 flex flex-col justify-between gap-3 border-t border-line pt-8 text-[13px] text-faint sm:flex-row'>
+			<div className='caps mt-16 flex flex-col justify-between gap-3 border-t border-line pt-8 !font-normal text-faint sm:flex-row'>
 				<p>© {new Date().getFullYear()} MINT. All rights reserved.</p>
-				<p className='font-mono text-[12px]'>
+				<p>
 					Built on <span className='text-gradient font-bold'>MINT</span>, naturally.
 				</p>
 			</div>
