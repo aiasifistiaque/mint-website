@@ -51,7 +51,8 @@ Footer adds Features, Use cases, Teams & security, Changelog, About, Privacy, Gu
 
 ## 3. Home — section by section
 
-1. **Hero** — H1 + supporting line, waitlist form, “Already have access? Log in”, product shot.
+1. **Hero** — H1 + supporting line, waitlist form, product shot.
+1b. **What is MINT** — in plain words: what it is, what it does, why it matters; then who it's for (six audiences) and a waitlist button. (Replaces the later Who it's for section.)
 2. **What you build** — four product cards (Backends, APIs, Admin panels, Websites), each with a small visual.
 3. **Two ways to build** — Building blocks ↔ AI builds it, converging on **one visual editor** (data-editor drawing).
 4. **Backend as a service** — the stack diagram (Database → API & auth → Admin panel & back office → your apps, sites and team) + what’s included.

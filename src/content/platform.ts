@@ -3,6 +3,8 @@ import {
 	Code,
 	Database,
 	LayoutDashboard,
+	Rocket,
+	Sparkles,
 	type IconType,
 } from '@/components/ui/icons';
 import type { Tone } from '@/lib/tones';
@@ -105,3 +107,30 @@ export const NOT_TO_BUILD = [
 	'Dashboards and charts',
 	'A CMS for your website',
 ];
+
+/** Home, right after the hero: what MINT is, in plain words, and who it's for. */
+export const WHAT_IS = {
+	title: 'MINT is where your business runs.',
+	accent: 'The backend, the admin panel and the API — built for you.',
+	lead: 'Think of it as the engine room of your business, in one place. Say what you keep track of — customers, bookings, orders, stock — and MINT turns it into a working app for your team, an API for your website or mobile app, and a site you can edit yourself. No servers, no code to maintain. Or ask your AI to build it for you.',
+	points: [
+		{
+			icon: Database,
+			color: 'emerald' as Tone,
+			title: 'What it is',
+			body: 'Backend as a service with an advanced admin panel built in: your data, your API and your team’s back-office tools, in one place.',
+		},
+		{
+			icon: Sparkles,
+			color: 'violet' as Tone,
+			title: 'What it does',
+			body: '“We track guests, rooms and bookings” becomes tables, forms, a dashboard, an API and a website — live in minutes, with nothing to deploy.',
+		},
+		{
+			icon: Rocket,
+			color: 'amber' as Tone,
+			title: 'Why it matters',
+			body: 'No developer queue, no servers, no patching. The person who knows the business builds the tool that runs it — and changes it the same day.',
+		},
+	],
+};

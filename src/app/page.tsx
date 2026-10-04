@@ -1,5 +1,6 @@
-import { ArrowUpRight, Check, Minus, X } from '@/components/ui/icons';
-import { Accent, Container, Dot, Eyebrow, IconTile, Pill, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
+import { Check, Minus, X } from '@/components/ui/icons';
+import Link from 'next/link';
+import { Accent, Button, Container, Dot, Eyebrow, IconTile, Pill, Reveal, Section, SectionHead, TextLink, cx } from '@/components/ui';
 import { WaitlistInline } from '@/components/waitlist/WaitlistForm';
 import WorkflowTabs from '@/components/home/WorkflowTabs';
 import FlowCards from '@/components/flow/FlowCards';
@@ -12,7 +13,7 @@ import DayTimeline from '@/components/viz/DayTimeline';
 import ProductCards from '@/components/viz/ProductCards';
 import BuildPaths from '@/components/viz/BuildPaths';
 import StackDiagram from '@/components/viz/StackDiagram';
-import { NOT_TO_BUILD, POSITIONING } from '@/content/platform';
+import { NOT_TO_BUILD, POSITIONING, WHAT_IS } from '@/content/platform';
 import CtaBand from '@/components/site/CtaBand';
 import Faq from '@/components/site/Faq';
 import { STEPS } from '@/content/workflow';
@@ -91,6 +92,80 @@ export default function Home() {
 					</div>
 				</Container>
 			</section>
+
+			{/* ------------------------------------------------ what is MINT */}
+			<Section id='what-is-mint'>
+				<Reveal className='mx-auto max-w-[920px] text-center'>
+					<Eyebrow color='emerald'>What is MINT</Eyebrow>
+					<h2 className='text-balance text-[34px] font-extralight leading-[1.06] md:text-[52px]'>
+						{WHAT_IS.title} <Accent>{WHAT_IS.accent}</Accent>
+					</h2>
+					<p className='mx-auto mt-6 max-w-[720px] text-pretty text-[17.5px] leading-[1.75] text-muted md:text-[19px]'>{WHAT_IS.lead}</p>
+				</Reveal>
+
+				<div className='mt-14 grid gap-4 md:mt-16 md:grid-cols-3'>
+					{WHAT_IS.points.map((p, i) => (
+						<Reveal
+							key={p.title}
+							delay={i * 80}
+							className='rounded-2xl border border-line bg-panel p-6 shadow-panel md:p-7'>
+							<IconTile color={p.color}>
+								<p.icon />
+							</IconTile>
+							<h3 className='mt-6 text-[16px] font-normal'>{p.title}</h3>
+							<p className='mt-2 text-[15px] leading-relaxed text-muted'>{p.body}</p>
+						</Reveal>
+					))}
+				</div>
+
+				{/* who it's for */}
+				<div className='mt-20 md:mt-24'>
+					<Reveal className='flex flex-col items-start justify-between gap-4 md:flex-row md:items-end'>
+						<div className='max-w-[620px]'>
+							<p className='caps text-faint'>Who it’s for</p>
+							<h3 className='mt-3 text-[26px] font-extralight leading-[1.1] md:text-[34px]'>
+								If you keep track of anything, <Accent>MINT is for you.</Accent>
+							</h3>
+						</div>
+						<TextLink href='/who-its-for'>See how each one uses it</TextLink>
+					</Reveal>
+					<div className='mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3'>
+						{PERSONAS.map((p, i) => (
+							<Reveal
+								key={p.id}
+								delay={(i % 3) * 60}>
+								<Link
+									href={`/who-its-for#${p.id}`}
+									className='group flex h-full gap-4 rounded-2xl border border-line bg-panel p-5 transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-panel'>
+									<IconTile
+										color={p.color}
+										className='size-10'>
+										<p.icon />
+									</IconTile>
+									<span className='min-w-0'>
+										<span className='caps block !text-[11px] text-fg'>{p.who}</span>
+										<span className='mt-0.5 block text-[12.5px] text-faint'>{p.examples}</span>
+										<span className='mt-2.5 block text-[14px] leading-relaxed text-muted'>{p.gain}</span>
+									</span>
+								</Link>
+							</Reveal>
+						))}
+					</div>
+					<Reveal className='mt-10 flex flex-wrap items-center gap-3'>
+						<Button
+							href='/waitlist'
+							variant='brand'
+							arrow>
+							Join the waitlist
+						</Button>
+						<Button
+							href='/workflow'
+							variant='secondary'>
+							See how it works
+						</Button>
+					</Reveal>
+				</div>
+			</Section>
 
 			{/* --------------------------------------------- what people build */}
 			<section className='border-y border-line bg-panel py-7'>
@@ -256,54 +331,6 @@ export default function Home() {
 				<FlowCards />
 			</Section>
 
-			{/* ------------------------------------------------ who it's for */}
-			<Section id='who'>
-				<SectionHead
-					eyebrow='Who it’s for'
-					color='amber'
-					title={
-						<>
-							Built for anyone who runs <Accent warm>something real.</Accent>
-						</>
-					}
-					lead='A café owner and a developer want different things from software. MINT gives both of them what they came for.'
-				/>
-				<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-					{PERSONAS.map((p, i) => {
-						const t = tone(p.color);
-						return (
-							<Reveal
-								key={p.id}
-								delay={(i % 3) * 70}>
-								<a
-									href={`/who-its-for#${p.id}`}
-									className='group flex h-full flex-col rounded-2xl border border-line bg-panel p-6 shadow-panel transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-float'>
-									<div className='flex items-start justify-between'>
-										<IconTile
-											color={p.color}
-											solid>
-											<p.icon />
-										</IconTile>
-										<ArrowUpRight className='size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
-									</div>
-									<h3 className='mt-5 text-[19px] font-medium tracking-[-0.02em]'>{p.who}</h3>
-									<p className='text-[13px] text-faint'>{p.examples}</p>
-									<p className='mt-3 text-[14.5px] leading-relaxed text-muted'>{p.gain}</p>
-									<div className='mt-5 flex flex-wrap gap-1.5'>
-										{p.builds.map(b => (
-											<span
-												key={b}
-												className={cx('rounded-full px-2.5 py-1 text-[12px] font-medium', t.soft, t.text)}>
-												{b}
-											</span>
-										))}
-									</div>
-								</a>
-							</Reveal>
-						);
-					})}
-				</div>
-			</Section>
 
 			{/* -------------------------------------------------- a day with */}
 			<Section
