@@ -63,6 +63,7 @@ import {
 	MagicWand as PhMagicWand,
 	MagnifyingGlass as PhMagnifyingGlass,
 	Minus as PhMinus,
+	Moon as PhMoon,
 	Package as PhPackage,
 	Plug as PhPlug,
 	Plus as PhPlus,
@@ -77,6 +78,7 @@ import {
 	SquaresFour as PhSquaresFour,
 	Stack as PhStack,
 	Storefront as PhStorefront,
+	Sun as PhSun,
 	Table as PhTable,
 	TextT as PhTextT,
 	Timer as PhTimer,
@@ -87,6 +89,14 @@ import {
 	UsersThree as PhUsersThree,
 	WebhooksLogo as PhWebhooksLogo,
 	X as PhX,
+	Database as PhDatabase,
+	PencilSimple as PhPencilSimple,
+	CursorClick as PhCursorClick,
+	Browser as PhBrowser,
+	ToggleRight as PhToggleRight,
+	TextAa as PhTextAa,
+	Tag as PhTag,
+	Robot as PhRobot,
 } from '@phosphor-icons/react/dist/ssr';
 
 export type IconType = ComponentType<IconProps>;
@@ -154,6 +164,7 @@ export const MailOpen = make(PhEnvelopeOpen, 'duotone');
 export const Menu = make(PhList, 'bold');
 export const MessageSquareText = make(PhChatText, 'duotone');
 export const Minus = make(PhMinus, 'bold');
+export const Moon = make(PhMoon, 'duotone');
 export const MonitorSmartphone = make(PhDevices, 'duotone');
 export const Package = make(PhPackage, 'duotone');
 export const PanelLeft = make(PhSidebar, 'duotone');
@@ -171,6 +182,7 @@ export const Smartphone = make(PhDeviceMobile, 'duotone');
 export const Sparkles = make(PhSparkle, 'duotone');
 export const SquareStack = make(PhCheckSquareOffset, 'duotone');
 export const Store = make(PhStorefront, 'duotone');
+export const Sun = make(PhSun, 'duotone');
 export const Table2 = make(PhTable, 'duotone');
 export const TrendingUp = make(PhTrendUp, 'duotone');
 export const Type = make(PhTextT, 'duotone');
@@ -182,3 +194,11 @@ export const Webhook = make(PhWebhooksLogo, 'duotone');
 export const Workflow = make(PhFlowArrow, 'duotone');
 export const X = make(PhX, 'bold');
 export const Zap = make(PhLightning, 'duotone');
+export const Database = make(PhDatabase, 'duotone');
+export const Pencil = make(PhPencilSimple, 'duotone');
+export const Cursor = make(PhCursorClick, 'duotone');
+export const Browser = make(PhBrowser, 'duotone');
+export const Toggle = make(PhToggleRight, 'duotone');
+export const TextAa = make(PhTextAa, 'duotone');
+export const Tag = make(PhTag, 'duotone');
+export const Robot = make(PhRobot, 'duotone');

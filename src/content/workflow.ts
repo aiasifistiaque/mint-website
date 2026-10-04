@@ -68,7 +68,7 @@ export const STEPS: Step[] = [
 		points: [
 			'Form sections, and fields that only appear when they apply',
 			'Detail pages with tabs for everything linked to a record',
-			'Saved filters, bulk edits, import and export, per table',
+			'Filters, bulk edits, import and export on every table',
 			'Drafts and publishing, with every version kept',
 		],
 		time: '10 minutes',

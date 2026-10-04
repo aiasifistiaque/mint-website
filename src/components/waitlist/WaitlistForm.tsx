@@ -101,7 +101,7 @@ export const WaitlistInline = ({ className, align = 'left', dark }: { className?
 		<form
 			onSubmit={submit}
 			className={cx('w-full max-w-[440px]', align === 'center' && 'mx-auto', className)}>
-			<div className='flex items-center gap-1.5 rounded-full border border-line-strong bg-white p-1.5 shadow-float transition-colors focus-within:border-violet-400'>
+			<div className='flex items-center gap-1.5 rounded-full border border-line-strong bg-panel p-1.5 shadow-float transition-colors focus-within:border-violet-400'>
 				<label
 					htmlFor='waitlist-email'
 					className='sr-only'>
@@ -131,7 +131,7 @@ export const WaitlistInline = ({ className, align = 'left', dark }: { className?
 			</div>
 			<p
 				role={error ? 'alert' : undefined}
-				className={cx('mt-3 text-[13px]', error ? (dark ? 'text-rose-300' : 'text-rose-600') : dark ? 'text-white/50' : 'text-faint', align === 'center' && 'text-center')}>
+				className={cx('mt-3 text-[13px]', error ? (dark ? 'text-rose-300' : 'text-rose-600 dark:text-rose-400') : dark ? 'text-white/50' : 'text-faint', align === 'center' && 'text-center')}>
 				{error || 'A few teams at a time. One email when your spot opens — no spam.'}
 			</p>
 		</form>
@@ -180,7 +180,7 @@ const Trap = ({ value, onChange }: { value: string; onChange: (v: string) => voi
 /* -------------------------------------------------------------- full */
 
 const FIELD =
-	'h-11 w-full rounded-xl border border-line-strong bg-white px-3.5 text-[15px] outline-none transition-colors placeholder:text-faint focus:border-violet-400';
+	'h-11 w-full rounded-xl border border-line-strong bg-panel px-3.5 text-[15px] outline-none transition-colors placeholder:text-faint focus:border-violet-400';
 
 export const WaitlistFull = () => {
 	const pathname = usePathname();
@@ -217,7 +217,7 @@ export const WaitlistFull = () => {
 		return (
 			<div
 				role='status'
-				className='fade-in rounded-2xl border border-line bg-white p-8 shadow-float md:p-10'>
+				className='fade-in rounded-2xl border border-line bg-panel p-8 shadow-float md:p-10'>
 				<span className='inline-flex size-12 items-center justify-center rounded-2xl bg-brand text-white shadow-lg'>
 					<Check className='size-5' />
 				</span>
@@ -253,7 +253,7 @@ export const WaitlistFull = () => {
 		<form
 			id='details'
 			onSubmit={submit}
-			className='rounded-2xl border border-line bg-white p-6 shadow-float md:p-8'>
+			className='rounded-2xl border border-line bg-panel p-6 shadow-float md:p-8'>
 			<div className='grid gap-5 sm:grid-cols-2'>
 				<Field
 					label='Work email'
@@ -311,7 +311,7 @@ export const WaitlistFull = () => {
 								onClick={() => setForm(f => ({ ...f, teamSize: f.teamSize === t.value ? '' : t.value }))}
 								className={cx(
 									'h-11 rounded-xl border px-3.5 text-[14px] transition-colors',
-									form.teamSize === t.value ? 'border-violet-500 bg-violet-500 text-white' : 'border-line-strong bg-white hover:border-violet-300'
+									form.teamSize === t.value ? 'border-violet-500 bg-violet-500 text-white' : 'border-line-strong bg-panel hover:border-violet-300'
 								)}>
 								{t.label}
 							</button>
@@ -338,7 +338,7 @@ export const WaitlistFull = () => {
 			{error && (
 				<p
 					role='alert'
-					className='mt-5 text-[14px] text-rose-600'>
+					className='mt-5 text-[14px] text-rose-600 dark:text-rose-400'>
 					{error}
 				</p>
 			)}

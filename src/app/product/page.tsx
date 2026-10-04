@@ -25,9 +25,9 @@ import { APP } from '@/lib/config';
 import { tone, type Tone } from '@/lib/tones';
 
 export const metadata: Metadata = {
-	title: 'Product tour',
+	title: 'Admin panel & back office',
 	description:
-		'What’s inside MINT: organizations, projects, models, pages, dashboards, media, history and an API — one workspace for the software your business runs on.',
+		'The admin panel and back-office tools that come with every MINT backend: tables, forms, dashboards, roles, history, media and more — for every model, automatically.',
 	alternates: { canonical: '/product' },
 };
 
@@ -84,14 +84,14 @@ export default function ProductPage() {
 	return (
 		<>
 			<PageHero
-				eyebrow='Product tour'
+				eyebrow='Admin panel & back office'
 				color='sky'
 				title={
 					<>
-						Everything your business runs on, <Accent>in one workspace.</Accent>
+						An admin panel for every model. <Accent>A back office for every business.</Accent>
 					</>
 				}
-				lead='MINT gives every business the parts real software is made of — data that stays right, screens people enjoy, access that’s safe and an API for everything else — without building any of it.'>
+				lead='Every backend on MINT comes with the panel your team works in: tables and forms for every model, dashboards, roles, history and notifications — shaped around your data, and nothing to code.'>
 				<Button
 					href='/waitlist'
 					variant='brand'
@@ -124,7 +124,7 @@ export default function ProductPage() {
 					lead='Your company is an organization. Inside it, each project — an app or a website — is a workspace of its own, with the same seven parts.'
 				/>
 				<Reveal>
-					<div className='rounded-3xl border border-line bg-white p-5 shadow-float md:p-8'>
+					<div className='rounded-3xl border border-line bg-panel p-5 shadow-float md:p-8'>
 						<div className='mb-6 flex items-center gap-3'>
 							<IconTile
 								color='amber'
@@ -140,11 +140,11 @@ export default function ProductPage() {
 							</span>
 						</div>
 						<div className='grid gap-4 lg:grid-cols-[1.6fr_1fr_1fr]'>
-							<div className='ring-brand rounded-2xl bg-gradient-to-br from-emerald-50/70 via-white to-violet-50/70 p-5'>
+							<div className='ring-brand rounded-2xl bg-gradient-to-br from-emerald-50/70 dark:from-emerald-400/10 via-panel to-violet-50/70 dark:to-violet-400/10 p-5'>
 								<div className='mb-5 flex items-center gap-2'>
 									<AppWindow className='size-4' />
 									<p className='font-medium'>Seaside Inn</p>
-									<span className='ml-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700'>App</span>
+									<span className='ml-1 rounded-full bg-emerald-100 dark:bg-emerald-400/15 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 dark:text-emerald-300'>App</span>
 								</div>
 								<div className='grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-4'>
 									{PARTS.map(p => (
@@ -263,7 +263,7 @@ export default function ProductPage() {
 						<Reveal
 							key={u.t}
 							delay={(i % 3) * 60}
-							className='bg-white p-7'>
+							className='bg-panel p-7'>
 							<IconTile
 								color={u.c}
 								solid>

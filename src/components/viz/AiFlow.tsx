@@ -26,7 +26,7 @@ const STAGES: { icon: typeof Check; color: Tone; title: string; body: string; ar
 				{['Owner · name, phone', 'Dog · name, breed → Owner', 'Walk · dog → Dog, date, paid'].map(l => (
 					<p
 						key={l}
-						className='truncate rounded-md bg-sky-50 px-2 py-1 text-sky-800'>
+						className='truncate rounded-md bg-sky-50 dark:bg-sky-400/10 px-2 py-1 text-sky-800 dark:text-sky-300'>
 						{l}
 					</p>
 				))}
@@ -70,7 +70,7 @@ const STAGES: { icon: typeof Check; color: Tone; title: string; body: string; ar
 						className={cx('grid grid-cols-3 gap-1 px-2 py-1', i > 0 && 'border-t border-line')}>
 						<span className='font-semibold'>{d}</span>
 						<span className='text-faint'>{t}</span>
-						<span className={p === 'Paid' ? 'text-emerald-600' : 'text-amber-600'}>{p}</span>
+						<span className={p === 'Paid' ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'}>{p}</span>
 					</div>
 				))}
 			</div>
@@ -85,7 +85,7 @@ const AiFlow = () => (
 			return (
 				<div
 					key={s.title}
-					className='relative flex flex-col rounded-2xl border border-line bg-white p-5 text-fg shadow-panel'>
+					className='relative flex flex-col rounded-2xl border border-line bg-panel p-5 text-fg shadow-panel'>
 					<div className='mb-4 flex items-center gap-3'>
 						<span className={cx('inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-lg', t.grad)}>
 							<s.icon className='size-[18px]' />
@@ -98,7 +98,7 @@ const AiFlow = () => (
 					{i < STAGES.length - 1 && (
 						<span
 							aria-hidden
-							className='absolute -right-[15px] top-[38px] z-10 hidden size-7 items-center justify-center rounded-full border border-line bg-white text-[13px] text-muted shadow-panel lg:flex'>
+							className='absolute -right-[15px] top-[38px] z-10 hidden size-7 items-center justify-center rounded-full border border-line bg-panel text-[13px] text-muted shadow-panel lg:flex'>
 							→
 						</span>
 					)}

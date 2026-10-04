@@ -52,10 +52,10 @@ export default function AiPage() {
 				color='violet'
 				title={
 					<>
-						Your AI, <Accent>building your business software.</Accent>
+						Your AI, <Accent>building your backend.</Accent>
 					</>
 				}
-				lead='Connect the assistant you already pay for to a MINT project. Describe what you need in plain words — it looks at what you have, plans with you, and builds it. Then ask it questions about your data.'
+				lead='Connect the assistant you already pay for to a MINT project. Describe the backend you need in plain words — it plans the models with you and builds them, with their API and admin screens. Then ask it questions about your data.'
 				aside={<AiChatMock />}>
 				<Button
 					href='/waitlist'
@@ -95,7 +95,7 @@ export default function AiPage() {
 						<Reveal
 							key={p}
 							delay={(i % 3) * 60}
-							className='flex items-start gap-3 rounded-2xl border border-line bg-white p-5 shadow-panel'>
+							className='flex items-start gap-3 rounded-2xl border border-line bg-panel p-5 shadow-panel'>
 							<Sparkles className={cx('mt-0.5 size-5 shrink-0', tone((['violet', 'sky', 'emerald', 'amber', 'rose', 'cyan'] as const)[i]).text)} />
 							<p className='text-[15.5px] font-medium leading-snug'>{p}</p>
 						</Reveal>
@@ -142,7 +142,7 @@ export default function AiPage() {
 							{KEYS.map(k => (
 								<div
 									key={k.t}
-									className='flex gap-4 rounded-2xl border border-line bg-white p-5 shadow-panel'>
+									className='flex gap-4 rounded-2xl border border-line bg-panel p-5 shadow-panel'>
 									<IconTile color={k.c}>
 										<k.icon />
 									</IconTile>
@@ -165,7 +165,7 @@ export default function AiPage() {
 							{SAFE.map(s => (
 								<div
 									key={s.t}
-									className='rounded-2xl border border-line bg-white p-5 shadow-panel'>
+									className='rounded-2xl border border-line bg-panel p-5 shadow-panel'>
 									<IconTile
 										color={s.c}
 										solid>

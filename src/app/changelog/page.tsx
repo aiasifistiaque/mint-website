@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const TAG = {
-	New: 'bg-emerald-100 text-emerald-700',
-	Improved: 'bg-violet-100 text-violet-700',
-	Fixed: 'bg-amber-100 text-amber-700',
+	New: 'bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300',
+	Improved: 'bg-violet-100 dark:bg-violet-400/15 text-violet-700 dark:text-violet-300',
+	Fixed: 'bg-amber-100 dark:bg-amber-400/15 text-amber-700 dark:text-amber-300',
 };
 const DOT = { New: 'bg-emerald-500', Improved: 'bg-violet-500', Fixed: 'bg-amber-500' };
 
@@ -45,7 +45,7 @@ export default function ChangelogPage() {
 							<span
 								aria-hidden
 								className={cx(
-									'absolute left-0 top-1.5 size-[15px] rounded-full border-[3px] border-white shadow md:left-[180px]',
+									'absolute left-0 top-1.5 size-[15px] rounded-full border-[3px] border-bg shadow md:left-[180px]',
 									DOT[r.tag || 'New']
 								)}
 							/>

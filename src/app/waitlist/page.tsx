@@ -86,7 +86,7 @@ export default function WaitlistPage() {
 					{NEXT.map((n, i) => (
 						<div
 							key={n.t}
-							className='rounded-2xl border border-line bg-white p-7 shadow-panel'>
+							className='rounded-2xl border border-line bg-panel p-7 shadow-panel'>
 							<div className='flex items-center justify-between'>
 								<IconTile
 									color={n.c}
@@ -108,7 +108,7 @@ export default function WaitlistPage() {
 						<Eyebrow color='violet'>Questions</Eyebrow>
 						<h2 className='text-[34px] font-light leading-[1.06] tracking-[-0.035em] md:text-[46px]'>Before you join.</h2>
 					</div>
-					<Faq items={[FAQ[5], FAQ[0], FAQ[3], FAQ[4]]} />
+					<Faq items={['Why a waitlist?', 'Is MINT a backend as a service?', 'Do I need to know how to code?', 'Which AI assistants work with MINT?'].map(q => FAQ.find(f => f.q === q)!)} />
 				</div>
 			</Section>
 		</>

@@ -9,6 +9,7 @@ import { STEPS } from '@/content/workflow';
 import { APP } from '@/lib/config';
 import { tone } from '@/lib/tones';
 import Pipeline from '@/components/viz/Pipeline';
+import BuildPaths from '@/components/viz/BuildPaths';
 
 export const metadata: Metadata = {
 	title: 'Workflow',
@@ -55,8 +56,23 @@ export default function WorkflowPage() {
 				</Reveal>
 			</Container>
 
+			<Section tone='subtle'>
+				<SectionHead
+					align='center'
+					eyebrow='Before you start'
+					color='emerald'
+					title={
+						<>
+							Every step works two ways: <Accent>blocks or AI.</Accent>
+						</>
+					}
+					lead='Each step below can be done with the visual builders, or by asking your AI assistant — and you can mix the two. Everything ends up in the same visual editor.'
+				/>
+				<BuildPaths />
+			</Section>
+
 			{/* step index */}
-			<div className='sticky top-16 z-30 hidden border-y border-line bg-white/95 md:block'>
+			<div className='sticky top-16 z-30 hidden border-y border-line bg-bg/90 md:block'>
 				<Container className='flex h-12 items-center gap-1 overflow-x-auto'>
 					{STEPS.map(s => (
 						<Link
@@ -143,7 +159,7 @@ export default function WorkflowPage() {
 						<Reveal
 							key={l.t}
 							delay={i * 80}
-							className='relative rounded-2xl border border-line bg-white p-6 shadow-panel'>
+							className='relative rounded-2xl border border-line bg-panel p-6 shadow-panel'>
 							<span className={cx('mb-6 inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br font-mono text-[13px] font-bold text-white', tone(l.c).grad)}>
 								0{i + 1}
 							</span>
@@ -152,7 +168,7 @@ export default function WorkflowPage() {
 							{i < LOOP.length - 1 && (
 								<span
 									aria-hidden
-									className='absolute -right-[15px] top-1/2 z-10 hidden size-7 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-white text-[13px] text-muted shadow-panel lg:flex'>
+									className='absolute -right-[15px] top-1/2 z-10 hidden size-7 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-panel text-[13px] text-muted shadow-panel lg:flex'>
 									→
 								</span>
 							)}

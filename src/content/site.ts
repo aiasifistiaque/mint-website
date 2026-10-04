@@ -3,20 +3,21 @@ import { APP } from '@/lib/config';
 /** The site's navigation — header, mobile menu and footer read it from here. */
 
 export const NAV = [
-	{ href: '/workflow', label: 'Workflow' },
-	{ href: '/product', label: 'Product' },
-	{ href: '/who-its-for', label: 'Who it’s for' },
+	{ href: '/backend', label: 'Backend' },
+	{ href: '/product', label: 'Admin panel' },
 	{ href: '/ai', label: 'AI' },
+	{ href: '/workflow', label: 'Workflow' },
+	{ href: '/who-its-for', label: 'Who it’s for' },
 	{ href: '/developers', label: 'Developers' },
-	{ href: '/use-cases', label: 'Use cases' },
 ];
 
 export const FOOTER = [
 	{
-		title: 'Product',
+		title: 'Platform',
 		links: [
+			{ href: '/backend', label: 'Backend as a service' },
+			{ href: '/product', label: 'Admin panel & back office' },
 			{ href: '/workflow', label: 'Workflow' },
-			{ href: '/product', label: 'Product tour' },
 			{ href: '/features', label: 'All features' },
 			{ href: '/ai', label: 'Build with AI' },
 			{ href: '/changelog', label: 'Changelog' },
@@ -49,6 +50,6 @@ export const FOOTER = [
 	},
 ];
 
-export const TAGLINE = 'Describe your business. Get the app that runs it.';
+export const TAGLINE = 'The backend for every business. Admin panel included.';
 export const DESCRIPTION =
-	'MINT turns the things your business keeps track of into a ready app — tables, forms, dashboards and an API — for your whole team. No code, nothing to deploy.';
+	'MINT is backend as a service with an advanced admin panel and back-office tools built in. Build backends, admin panels, websites and APIs from building blocks — or let AI build them — and edit your data visually.';

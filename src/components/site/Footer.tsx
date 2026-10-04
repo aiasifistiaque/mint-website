@@ -4,13 +4,13 @@ import { Container } from '@/components/ui';
 import Logo from './Logo';
 
 const Footer = () => (
-	<footer className='border-t border-line bg-white'>
+	<footer className='border-t border-line bg-panel'>
 		<Container className='py-16'>
 			<div className='grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]'>
 				<div className='max-w-[280px]'>
 					<Logo />
 					<p className='mt-4 text-[14px] leading-relaxed text-muted'>
-						The workspace that turns what your business keeps track of into the app that runs it.
+						Backend as a service, with the admin panel and back office built in. For every business and every developer.
 					</p>
 				</div>
 				{FOOTER.map(col => (

@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 };
 
 const ROLES = [
-	{ r: 'Owner', p: ['view', 'create', 'edit', 'delete', 'build', 'manage'], c: 'bg-violet-100 text-violet-700' },
-	{ r: 'Builder', p: ['view', 'create', 'edit', 'delete', 'build'], c: 'bg-sky-100 text-sky-700' },
-	{ r: 'Front desk', p: ['view', 'create', 'edit'], c: 'bg-emerald-100 text-emerald-700' },
-	{ r: 'Viewer', p: ['view'], c: 'bg-amber-100 text-amber-700' },
+	{ r: 'Owner', p: ['view', 'create', 'edit', 'delete', 'build', 'manage'], c: 'bg-violet-100 dark:bg-violet-400/15 text-violet-700 dark:text-violet-300' },
+	{ r: 'Builder', p: ['view', 'create', 'edit', 'delete', 'build'], c: 'bg-sky-100 dark:bg-sky-400/15 text-sky-700 dark:text-sky-300' },
+	{ r: 'Front desk', p: ['view', 'create', 'edit'], c: 'bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300' },
+	{ r: 'Viewer', p: ['view'], c: 'bg-amber-100 dark:bg-amber-400/15 text-amber-700 dark:text-amber-300' },
 ];
 const PERMS = ['view', 'create', 'edit', 'delete', 'build', 'manage'];
 
@@ -55,7 +55,7 @@ export default function SecurityPage() {
 					lead='Roles use a short, standard set of permissions. Narrowing someone’s access is as simple as giving them fewer projects.'
 				/>
 				<div className='grid gap-6 lg:grid-cols-[1.3fr_1fr]'>
-					<Reveal className='overflow-x-auto rounded-2xl border border-line bg-white shadow-panel'>
+					<Reveal className='overflow-x-auto rounded-2xl border border-line bg-panel shadow-panel'>
 						<table className='w-full min-w-[560px] text-[14px]'>
 							<thead>
 								<tr className='border-b border-line text-left text-[12px] uppercase tracking-[0.08em] text-faint'>
@@ -101,7 +101,7 @@ export default function SecurityPage() {
 						].map(x => (
 							<div
 								key={x.t}
-								className='flex gap-4 rounded-2xl border border-line bg-white p-5 shadow-panel'>
+								className='flex gap-4 rounded-2xl border border-line bg-panel p-5 shadow-panel'>
 								<IconTile color={x.c}>
 									<x.icon />
 								</IconTile>
@@ -130,7 +130,7 @@ export default function SecurityPage() {
 						<Reveal
 							key={p.t}
 							delay={(i % 4) * 60}
-							className='flex flex-col rounded-2xl border border-line bg-white p-6 shadow-panel'>
+							className='flex flex-col rounded-2xl border border-line bg-panel p-6 shadow-panel'>
 							<IconTile
 								color={p.c}
 								solid>

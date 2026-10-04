@@ -4,8 +4,16 @@ import { Plus } from '@/components/ui/icons';
 
 export const FAQ = [
 	{
+		q: 'Is MINT a backend as a service?',
+		a: 'Yes — with the admin panel built in. Every model you create is a real database collection with validation and relations, a REST API with filters and customer sign-in, and a set of admin screens your team can use straight away. File storage, roles, history and dashboards come with it. Nothing to host or deploy.',
+	},
+	{
 		q: 'Do I need to know how to code?',
-		a: 'No. You describe your data in a form — or in a sentence to your AI — and MINT builds the tables, forms and pages. Developers get an API when they want one, but nobody has to write code to run a business on MINT.',
+		a: 'No. Build with the visual builders, or describe what you need to your AI and it builds it. Developers get a full API when they want one — but nobody has to write code to run a business on MINT.',
+	},
+	{
+		q: 'I’m a developer — why not build my own backend?',
+		a: 'You can — but you’d be writing the schema, CRUD endpoints, auth, validation, filters, admin screens, roles and audit history before the interesting part. MINT gives you all of that, so you ship the front end and your client gets a back office they can actually use.',
 	},
 	{
 		q: 'How is this different from a spreadsheet?',
@@ -34,7 +42,7 @@ const Faq = ({ items = FAQ }: { items?: { q: string; a: string }[] }) => (
 		{items.map(({ q, a }) => (
 			<details
 				key={q}
-				className='group rounded-2xl border border-line bg-white px-5 py-4 shadow-panel transition-colors open:border-violet-200 [&_summary::-webkit-details-marker]:hidden'>
+				className='group rounded-2xl border border-line bg-panel px-5 py-4 shadow-panel transition-colors open:border-violet-200 dark:border-violet-400/25 [&_summary::-webkit-details-marker]:hidden'>
 				<summary className='font-display flex cursor-pointer list-none items-center justify-between gap-6 text-[16.5px] font-medium tracking-[-0.01em]'>
 					{q}
 					<span className='inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-soft text-muted transition-[transform,background,color] duration-300 group-open:rotate-45 group-open:bg-violet-500 group-open:text-white'>

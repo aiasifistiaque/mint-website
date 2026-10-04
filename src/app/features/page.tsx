@@ -24,7 +24,7 @@ export default function FeaturesPage() {
 				lead='Every project gets all of it — no add-ons, no plugins to wire together. Each feature links to the guide that covers it in the app.'
 			/>
 
-			<div className='sticky top-16 z-30 border-y border-line bg-white/95'>
+			<div className='sticky top-16 z-30 border-y border-line bg-bg/90'>
 				<Container className='flex h-12 items-center gap-1 overflow-x-auto'>
 					{FEATURE_GROUPS.map(g => (
 						<Link
@@ -70,18 +70,18 @@ export default function FeaturesPage() {
 										<a
 											key={f.title}
 											href={APP.guide(f.guide)}
-											className='group bg-white p-6 transition-colors hover:bg-subtle'>
+											className='group bg-panel p-6 transition-colors hover:bg-subtle'>
 											{body}
 										</a>
 									) : (
 										<div
 											key={f.title}
-											className='bg-white p-6'>
+											className='bg-panel p-6'>
 											{body}
 										</div>
 									);
 								})}
-								{g.features.length % 2 === 1 && <div className='hidden bg-white sm:block' />}
+								{g.features.length % 2 === 1 && <div className='hidden bg-panel sm:block' />}
 							</div>
 						</div>
 					</Container>

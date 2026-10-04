@@ -49,7 +49,7 @@ export default function UseCasesPage() {
 								delay={(i % 2) * 80}>
 								<article
 									id={u.id}
-									className='group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white p-7 shadow-panel transition-shadow hover:shadow-float'>
+									className='group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-panel p-7 shadow-panel transition-shadow hover:shadow-float'>
 									<div
 										aria-hidden
 										className={cx('absolute -right-16 -top-16 size-48 rounded-full bg-gradient-to-br opacity-15 transition-opacity group-hover:opacity-25', t.grad)}
@@ -71,7 +71,7 @@ export default function UseCasesPage() {
 												<span
 													key={m}
 													className='inline-flex items-center gap-1.5'>
-													<span className={cx('rounded-lg border bg-white px-2.5 py-1 text-[13px] font-semibold', t.border)}>{m}</span>
+													<span className={cx('rounded-lg border bg-panel px-2.5 py-1 text-[13px] font-semibold', t.border)}>{m}</span>
 													{j < u.models.length - 1 && <span className='text-faint'>→</span>}
 												</span>
 											))}

@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-04',
+		title: 'Backend as a service, and dark mode',
+		tag: 'Improved',
+		summary: 'The website now tells the whole story: MINT is backend as a service with the admin panel and back office built in.',
+		items: [
+			'A new Backend page: the stack, the database, visual data editing, API and auth, back-office tools',
+			'Two ways to build, side by side: building blocks or your AI',
+			'Dark mode across the site, following your system or your choice',
+		],
+	},
+	{
+		date: '2026-10-04',
 		title: 'Waitlist and a new home on the web',
 		tag: 'New',
 		summary: 'MINT has a full website — and early access opens through a waitlist, a few teams at a time.',

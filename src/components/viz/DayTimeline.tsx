@@ -25,7 +25,7 @@ const DayTimeline = () => (
 						<span
 							aria-hidden
 							className={cx(
-								'absolute left-[12px] top-4 z-10 size-[15px] rounded-full border-[3px] border-white shadow md:left-1/2 md:-translate-x-1/2',
+								'absolute left-[12px] top-4 z-10 size-[15px] rounded-full border-[3px] border-bg shadow md:left-1/2 md:-translate-x-1/2',
 								t.bg
 							)}
 						/>
@@ -40,7 +40,7 @@ const DayTimeline = () => (
 									<p className='max-w-[400px] rounded-2xl rounded-br-md bg-brand px-4 py-2.5 text-left text-[14px] leading-snug text-white shadow-panel'>
 										{m.prompt}
 									</p>
-									<p className='flex max-w-[400px] gap-2 rounded-2xl rounded-bl-md border border-line bg-white px-4 py-2.5 text-left text-[14px] leading-snug shadow-panel'>
+									<p className='flex max-w-[400px] gap-2 rounded-2xl rounded-bl-md border border-line bg-panel px-4 py-2.5 text-left text-[14px] leading-snug shadow-panel'>
 										<Sparkles className='mt-0.5 size-4 shrink-0 text-violet-500' />
 										{m.reply}
 									</p>

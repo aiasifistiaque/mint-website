@@ -104,9 +104,9 @@ type ButtonProps = {
 
 const BUTTON = {
 	base: 'group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-[background,color,border-color,box-shadow,transform] duration-200 active:scale-[0.98]',
-	primary: 'bg-ink text-white shadow-[0_8px_24px_-8px_rgb(10_11_18/0.5)] hover:shadow-[0_10px_30px_-6px_rgb(99_102_241/0.55)]',
+	primary: 'bg-ink text-white shadow-[0_8px_24px_-8px_rgb(10_11_18/0.5)] hover:shadow-[0_10px_30px_-6px_rgb(99_102_241/0.55)] dark:bg-white dark:text-ink',
 	brand: 'bg-brand text-white shadow-[0_10px_30px_-8px_rgb(99_102_241/0.6)] hover:brightness-110',
-	secondary: 'border border-line-strong bg-white text-fg hover:border-fg/30',
+	secondary: 'border border-line-strong bg-panel text-fg hover:border-fg/30',
 	ghost: 'text-muted hover:text-fg',
 	light: 'bg-white text-ink hover:bg-white/90',
 	sm: 'h-9 px-4 text-[13px]',
@@ -172,7 +172,7 @@ export const TextLink = ({ href, children, className }: { href: string; children
 export const Pill = ({ children, className }: { children: ReactNode; className?: string }) => (
 	<span
 		className={cx(
-			'inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-3.5 py-1.5 text-[13px] font-medium text-muted shadow-panel',
+			'inline-flex items-center gap-2 rounded-full border border-line bg-panel/80 px-3.5 py-1.5 text-[13px] font-medium text-muted shadow-panel',
 			className
 		)}>
 		{children}
@@ -189,7 +189,7 @@ export const Dot = ({ className }: { className?: string }) => (
 /** A bordered card. */
 export const Card = ({ className, children, ...rest }: ComponentProps<'div'>) => (
 	<div
-		className={cx('rounded-2xl border border-line bg-white', className)}
+		className={cx('rounded-2xl border border-line bg-panel', className)}
 		{...rest}>
 		{children}
 	</div>

@@ -62,7 +62,7 @@ export default function AboutPage() {
 						<Reveal
 							key={b.t}
 							delay={(i % 2) * 80}
-							className='rounded-2xl border border-line bg-white p-7 shadow-panel'>
+							className='rounded-2xl border border-line bg-panel p-7 shadow-panel'>
 							<IconTile
 								color={b.c}
 								solid>

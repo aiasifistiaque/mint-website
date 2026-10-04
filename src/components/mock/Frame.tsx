@@ -41,10 +41,10 @@ export const Chip = ({ tone = 'neutral', children }: { tone?: 'green' | 'amber' 
 	<span
 		className={cx(
 			'inline-flex items-center gap-1 rounded-full px-2 py-[2px] text-[10.5px] font-medium',
-			tone === 'green' && 'bg-emerald-50 text-emerald-700',
-			tone === 'amber' && 'bg-amber-50 text-amber-700',
-			tone === 'red' && 'bg-rose-50 text-rose-700',
-			tone === 'blue' && 'bg-sky-50 text-sky-700',
+			tone === 'green' && 'bg-emerald-50 dark:bg-emerald-400/10 text-emerald-700 dark:text-emerald-300',
+			tone === 'amber' && 'bg-amber-50 dark:bg-amber-400/10 text-amber-700 dark:text-amber-300',
+			tone === 'red' && 'bg-rose-50 dark:bg-rose-400/10 text-rose-700 dark:text-rose-300',
+			tone === 'blue' && 'bg-sky-50 dark:bg-sky-400/10 text-sky-700 dark:text-sky-300',
 			tone === 'neutral' && 'bg-soft text-muted'
 		)}>
 		<span className='size-1 rounded-full bg-current' />

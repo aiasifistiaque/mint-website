@@ -1,10 +1,11 @@
 # mint-webpage
 
-The marketing website for MINT — a multi-page pitch for the product, with a
+The marketing website for MINT — backend as a service with the admin panel and
+back office built in — a multi-page pitch for the product, with a
 **Join the waitlist** form and links into the app (Log in → dashboard).
 
-Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Plus Jakarta Sans,
-Inter and JetBrains Mono · lucide-react.
+Next.js 16 (App Router, all pages static) · Tailwind CSS v4 · Inter Tight, Manrope
+and JetBrains Mono · Phosphor icons · light and dark mode. Content plan: `docs/CONTENT_PLAN.md`.
 
 ## Run it
 
@@ -25,9 +26,10 @@ npm run dev                  # http://localhost:3100
 
 | Route | What it is |
 |---|---|
-| `/` | The pitch: hero, workflow pipeline + step-by-step tabs, who it's for, a day with MINT + AI, AI build flow, data flow, comparison, features, FAQ |
+| `/` | The pitch: hero, what you build (backends, APIs, admin panels, websites), blocks or AI, the BaaS stack, workflow pipeline + step-by-step tabs, who it's for, a day with MINT + AI, AI build flow, data flow, comparison, features, FAQ |
+| `/backend` | Backend as a service: the stack, database, visual data editing, API & auth, back-office tools, vs building your own |
 | `/workflow` | The six steps in depth, each with its screen, and the after-launch loop |
-| `/product` | Product tour: how it fits together, records, dashboard, data flow, under the hood |
+| `/product` | Admin panel & back office: how it fits together, records, dashboard, data flow, under the hood |
 | `/who-its-for` | Six audiences — today vs with MINT, what they build, what they ask their AI — and the day timeline |
 | `/features` | Every feature, grouped, each linking to its user guide in the app |
 | `/ai` | Connecting an AI assistant (MCP), project keys, safety |
@@ -59,7 +61,9 @@ site in the same piece of work**:
 - AI / API behaviour → `/ai`, `/developers` (snippets come from the app's user guides)
 
 Content lives in `src/content/*`; pages only lay it out. Colours come from
-`src/lib/tones.ts` (one tone per step / group) and the tokens in `src/app/globals.css`.
+`src/lib/tones.ts` (one tone per step / group) and the tokens in `src/app/globals.css`
+(light in `:root`, dark in `[data-theme='dark']`; use `bg-panel`, not `bg-white`, and give
+any hard-coded colour a `dark:` variant). Icons come from `src/components/ui/icons.tsx`.
 
 ## Deploy
 

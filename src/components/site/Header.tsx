@@ -8,6 +8,7 @@ import { NAV } from '@/content/site';
 import { APP, SIGNUPS_OPEN } from '@/lib/config';
 import { buttonClass, cx } from '@/components/ui';
 import Logo from './Logo';
+import ThemeToggle from './ThemeToggle';
 
 /**
  * Sticky header: the pages, then the way into the app — Log in (the app sends
@@ -41,7 +42,7 @@ const Header = () => {
 		<header
 			className={cx(
 				'sticky top-0 z-40 transition-[background,border-color] duration-300',
-				scrolled || open ? 'border-b border-line bg-white/95 shadow-[0_1px_0_rgb(0_0_0/0.02)]' : 'border-b border-transparent bg-transparent'
+				scrolled || open ? 'border-b border-line bg-bg/[0.97] shadow-[0_1px_0_rgb(0_0_0/0.02)]' : 'border-b border-transparent bg-transparent'
 			)}>
 			<div className='mx-auto flex h-16 w-full max-w-[1160px] items-center gap-8 px-5 md:px-8'>
 				<Logo />
@@ -59,6 +60,7 @@ const Header = () => {
 					))}
 				</nav>
 				<div className='ml-auto hidden items-center gap-1.5 lg:flex'>
+					<ThemeToggle className='mr-1' />
 					<a
 						href={APP.login}
 						className={buttonClass('ghost', 'sm')}>
@@ -77,12 +79,13 @@ const Header = () => {
 						Join the waitlist
 					</Link>
 				</div>
+				<ThemeToggle className='ml-auto lg:hidden' />
 				<button
 					type='button'
 					aria-label={open ? 'Close menu' : 'Open menu'}
 					aria-expanded={open}
 					onClick={() => setOpen(o => !o)}
-					className='ml-auto inline-flex size-9 items-center justify-center rounded-full border border-line lg:hidden'>
+					className='inline-flex size-9 items-center justify-center rounded-full border border-line lg:hidden'>
 					{open ? <X className='size-4' /> : <Menu className='size-4' />}
 				</button>
 			</div>
@@ -90,7 +93,7 @@ const Header = () => {
 			{open && (
 				<div className='fade-in h-[calc(100dvh-64px)] overflow-y-auto border-t border-line bg-bg px-5 pb-10 pt-4 lg:hidden'>
 					<nav className='flex flex-col'>
-						{[{ href: '/', label: 'Home' }, ...NAV, { href: '/features', label: 'All features' }, { href: '/security', label: 'Teams & security' }, { href: '/changelog', label: 'Changelog' }, { href: '/about', label: 'About' }].map(
+						{[{ href: '/', label: 'Home' }, ...NAV, { href: '/features', label: 'All features' }, { href: '/use-cases', label: 'Use cases' }, { href: '/security', label: 'Teams & security' }, { href: '/changelog', label: 'Changelog' }, { href: '/about', label: 'About' }].map(
 							n => (
 								<Link
 									key={n.href}

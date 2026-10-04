@@ -47,7 +47,7 @@ const SIDEBAR = [
 	{ icon: ImageIcon, label: 'Media', c: 'text-rose-500' },
 ];
 
-const AVATAR = ['bg-emerald-100 text-emerald-700', 'bg-sky-100 text-sky-700', 'bg-violet-100 text-violet-700', 'bg-amber-100 text-amber-700', 'bg-rose-100 text-rose-700', 'bg-cyan-100 text-cyan-700'];
+const AVATAR = ['bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300', 'bg-sky-100 dark:bg-sky-400/15 text-sky-700 dark:text-sky-300', 'bg-violet-100 dark:bg-violet-400/15 text-violet-700 dark:text-violet-300', 'bg-amber-100 dark:bg-amber-400/15 text-amber-700 dark:text-amber-300', 'bg-rose-100 dark:bg-rose-400/15 text-rose-700 dark:text-rose-300', 'bg-cyan-100 dark:bg-cyan-400/15 text-cyan-700 dark:text-cyan-300'];
 const initials = (name: string) =>
 	name
 		.split(' ')
@@ -260,7 +260,7 @@ export const PagesMock = () => (
 					className='mb-2 rounded-lg border border-line p-2.5'>
 					<p className='font-medium'>{s.t}</p>
 					<p className='text-faint'>{s.f}</p>
-					{s.rule && <p className='mt-1.5 inline-flex rounded bg-violet-50 px-1.5 py-0.5 text-[10.5px] font-medium text-violet-600'>{s.rule}</p>}
+					{s.rule && <p className='mt-1.5 inline-flex rounded bg-violet-50 dark:bg-violet-400/10 px-1.5 py-0.5 text-[10.5px] font-medium text-violet-600 dark:text-violet-400'>{s.rule}</p>}
 				</div>
 			))}
 			<div className='mt-3 flex items-center justify-between rounded-lg bg-subtle px-2.5 py-2'>
@@ -318,7 +318,7 @@ export const TeamMock = () => (
 				<Mail className='size-3' /> Invite
 			</span>
 		</div>
-		<div className='mb-4 rounded-xl border border-amber-200 bg-amber-50/60 p-3'>
+		<div className='mb-4 rounded-xl border border-amber-200 dark:border-amber-400/25 bg-amber-50/60 dark:bg-amber-400/10 p-3'>
 			<p className='mb-2 font-medium'>Invite by email</p>
 			<div className='flex flex-wrap gap-1.5'>
 				<span className='flex-1 rounded-md border border-line bg-bg px-2 py-1.5 text-muted'>nina@seaside.inn</span>
@@ -330,7 +330,7 @@ export const TeamMock = () => (
 				{['view', 'create', 'edit'].map(p => (
 					<span
 						key={p}
-						className='inline-flex items-center gap-1 rounded bg-emerald-50 px-1.5 py-0.5 text-[10.5px] font-medium text-emerald-700'>
+						className='inline-flex items-center gap-1 rounded bg-emerald-50 dark:bg-emerald-400/10 px-1.5 py-0.5 text-[10.5px] font-medium text-emerald-700 dark:text-emerald-300'>
 						<Check className='size-2.5' /> records:{p}
 					</span>
 				))}
@@ -416,9 +416,9 @@ export const DashboardMock = () => (
 		</div>
 		<div className='mb-3 grid grid-cols-3 gap-2.5'>
 			{[
-				{ k: 'Bookings', v: '128', d: '+12%', c: 'from-emerald-50 to-white text-emerald-600' },
-				{ k: 'Revenue', v: '$48.2k', d: '+8%', c: 'from-sky-50 to-white text-sky-600' },
-				{ k: 'Occupancy', v: '86%', d: '+4 pts', c: 'from-violet-50 to-white text-violet-600' },
+				{ k: 'Bookings', v: '128', d: '+12%', c: 'from-emerald-50 dark:from-emerald-400/10 to-panel text-emerald-600 dark:text-emerald-400' },
+				{ k: 'Revenue', v: '$48.2k', d: '+8%', c: 'from-sky-50 dark:from-sky-400/10 to-panel text-sky-600 dark:text-sky-400' },
+				{ k: 'Occupancy', v: '86%', d: '+4 pts', c: 'from-violet-50 dark:from-violet-400/10 to-panel text-violet-600 dark:text-violet-400' },
 			].map(s => (
 				<div
 					key={s.k}
@@ -525,8 +525,8 @@ export const AiChatMock = () => (
 		<div className='ml-auto mb-3 max-w-[85%] rounded-2xl rounded-br-md bg-brand px-3.5 py-2.5 text-[12.5px] leading-relaxed text-white'>
 			We rent rooms. Track guests, rooms and bookings — a booking’s total is nights times the room’s rate.
 		</div>
-		<div className='mb-3 rounded-xl border border-violet-200 bg-violet-50/70 p-3 font-mono text-[11px]'>
-			<p className='mb-1.5 font-semibold text-violet-600'>mint · plan_feature</p>
+		<div className='mb-3 rounded-xl border border-violet-200 dark:border-violet-400/25 bg-violet-50/70 dark:bg-violet-400/10 p-3 font-mono text-[11px]'>
+			<p className='mb-1.5 font-semibold text-violet-600 dark:text-violet-400'>mint · plan_feature</p>
 			{['Guest — name, email, phone', 'Room — name, rate, photos', 'Booking — guest → Guest, room → Room, nights, total = nights × room.rate'].map(
 				l => (
 					<p

@@ -6,6 +6,7 @@ import {
 	Building2,
 	ChartLine,
 	Code,
+	Database,
 	Eye,
 	FileUp,
 	Filter,
@@ -21,6 +22,7 @@ import {
 	Lock,
 	MonitorSmartphone,
 	PanelLeft,
+	Pencil,
 	Plug,
 	Search,
 	ShieldCheck,
@@ -47,10 +49,24 @@ export type FeatureGroup = { id: string; title: string; lead: string; color: Ton
 
 export const FEATURE_GROUPS: FeatureGroup[] = [
 	{
+		id: 'backend',
+		color: 'cyan',
+		title: 'Backend',
+		lead: 'Backend as a service — live the moment you save a model.',
+		features: [
+			{ icon: Database, title: 'Database', body: 'Every model is a real, validated collection — relations, formulas, defaults and allowed values.', guide: 'models' },
+			{ icon: Code, title: 'REST API per model', body: 'List, read, create, update and delete — you choose, per model, and who may call it.', guide: 'public-api' },
+			{ icon: UserRound, title: 'Auth', body: 'Accounts for your team, and sign-up and sign-in for your customers.', guide: 'customers' },
+			{ icon: Images, title: 'Storage', body: 'Images, videos and files in a media library, per project or shared.', guide: 'media' },
+			{ icon: Pencil, title: 'Visual data editor', body: 'Tables and forms for every model; bulk edits, import, export and undo.', guide: 'records' },
+			{ icon: Plug, title: 'MCP for AI', body: 'Your AI assistant builds and queries the backend through a scoped key.', guide: 'connect-ai' },
+		],
+	},
+	{
 		id: 'build',
 		color: 'emerald',
 		title: 'Build',
-		lead: 'Turn what you keep track of into working software.',
+		lead: 'Building blocks for backends, admin panels and back offices.',
 		features: [
 			{
 				icon: Boxes,
@@ -108,7 +124,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		title: 'Work',
 		lead: 'The everyday tools your team uses in every table.',
 		features: [
-			{ icon: Search, title: 'Search & filters', body: 'Find anything fast, filter by any field, and keep the filters you use.', guide: 'records#find' },
+			{ icon: Search, title: 'Search & filters', body: 'Find anything fast and filter by any field — dates, options, links and more.', guide: 'records#find' },
 			{ icon: SquareStack, title: 'Bulk actions', body: 'Edit, archive or merge many rows at once — merges repoint every link.', guide: 'records#bulk' },
 			{ icon: FileUp, title: 'Import & export', body: 'Bring a spreadsheet in, all-or-nothing, and export any view.', guide: 'records' },
 			{ icon: History, title: 'History & undo', body: 'Every change to every record, with who made it and when — and an undo.', guide: 'records#history' },

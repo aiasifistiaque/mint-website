@@ -37,7 +37,7 @@ const Box = ({ n, dark }: { n: Node; dark?: boolean }) => (
 			width={W}
 			height={H}
 			rx='18'
-			fill={dark ? 'rgb(255 255 255 / 0.05)' : '#fff'}
+			fill={dark ? 'rgb(255 255 255 / 0.05)' : 'var(--panel)'}
 			stroke={dark ? 'rgb(255 255 255 / 0.12)' : 'var(--line)'}
 		/>
 		<rect
@@ -162,7 +162,7 @@ const DataFlow = ({ dark }: { dark?: boolean }) => {
 					width={CORE.w}
 					height={CORE.h}
 					rx='24'
-					fill={dark ? '#12141f' : '#fff'}
+					fill={dark ? '#12141f' : 'var(--panel)'}
 				/>
 				<text
 					x={CORE.x + 22}
@@ -228,7 +228,7 @@ const DataFlow = ({ dark }: { dark?: boolean }) => {
 								key={n.title}
 								className={cx(
 									'flex w-full items-center gap-3 rounded-2xl border p-3.5',
-									dark ? 'border-white/10 bg-white/5' : 'border-line bg-white',
+									dark ? 'border-white/10 bg-white/5' : 'border-line bg-panel',
 									i === 1 && 'ring-brand'
 								)}>
 								<span

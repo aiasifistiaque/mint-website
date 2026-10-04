@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 const PUBLIC = `${API_URL}/public/api/acme-store`;
 
 const ENDPOINTS = [
-	{ m: 'GET', p: '/:model', d: 'List — paging, sorting, filters, search, fields', c: 'bg-emerald-100 text-emerald-700' },
-	{ m: 'GET', p: '/:model/:id', d: 'Read one record', c: 'bg-emerald-100 text-emerald-700' },
-	{ m: 'POST', p: '/:model', d: 'Create — a contact form, an order, a booking', c: 'bg-sky-100 text-sky-700' },
-	{ m: 'PUT', p: '/:model/:id', d: 'Update', c: 'bg-amber-100 text-amber-700' },
-	{ m: 'DELETE', p: '/:model/:id', d: 'Delete', c: 'bg-rose-100 text-rose-700' },
-	{ m: 'POST', p: '/auth/register · /auth/login', d: 'Customer accounts', c: 'bg-violet-100 text-violet-700' },
+	{ m: 'GET', p: '/:model', d: 'List — paging, sorting, filters, search, fields', c: 'bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300' },
+	{ m: 'GET', p: '/:model/:id', d: 'Read one record', c: 'bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300' },
+	{ m: 'POST', p: '/:model', d: 'Create — a contact form, an order, a booking', c: 'bg-sky-100 dark:bg-sky-400/15 text-sky-700 dark:text-sky-300' },
+	{ m: 'PUT', p: '/:model/:id', d: 'Update', c: 'bg-amber-100 dark:bg-amber-400/15 text-amber-700 dark:text-amber-300' },
+	{ m: 'DELETE', p: '/:model/:id', d: 'Delete', c: 'bg-rose-100 dark:bg-rose-400/15 text-rose-700 dark:text-rose-300' },
+	{ m: 'POST', p: '/auth/register · /auth/login', d: 'Customer accounts', c: 'bg-violet-100 dark:bg-violet-400/15 text-violet-700 dark:text-violet-300' },
 ];
 
 const FILTERS = [
@@ -42,10 +42,10 @@ export default function DevelopersPage() {
 				color='cyan'
 				title={
 					<>
-						A back end <Accent>you didn’t have to write.</Accent>
+						Backend as a service, <Accent>admin panel included.</Accent>
 					</>
 				}
-				lead='Your client or your ops team models the data in MINT. You get a REST API, customer sign-in and content for your front end — no servers, no admin screens, no migrations.'
+				lead='Model the data yourself, or let your client or AI do it. You get a database, a REST API, customer sign-in and a content API for your front end — and they get an admin panel they can actually use. No servers, no migrations.'
 				aside={
 					<Code
 						label='app/products/page.tsx'
@@ -95,7 +95,7 @@ const { doc, total } = await res.json();`}
 							title='An API for every model.'
 							lead='Switch it on per model and pick the actions it allows. Open to everyone, to signed-in customers, or to each customer’s own records only.'
 						/>
-						<div className='overflow-hidden rounded-2xl border border-line bg-white shadow-panel'>
+						<div className='overflow-hidden rounded-2xl border border-line bg-panel shadow-panel'>
 							{ENDPOINTS.map((e, i) => (
 								<div
 									key={e.m + e.p}
@@ -122,14 +122,14 @@ const { doc, total } = await res.json();`}
 								<Reveal
 									key={q}
 									delay={i * 40}
-									className='rounded-2xl border border-line bg-white p-4 shadow-panel'>
-									<p className='font-mono text-[13px] font-semibold text-violet-600'>{q}</p>
+									className='rounded-2xl border border-line bg-panel p-4 shadow-panel'>
+									<p className='font-mono text-[13px] font-semibold text-violet-600 dark:text-violet-400'>{q}</p>
 									<p className='mt-1 text-[13px] text-muted'>{d}</p>
 								</Reveal>
 							))}
 						</div>
-						<div className='mt-6 flex items-center gap-3 rounded-2xl border border-amber-200 bg-amber-50/70 p-4 text-[14px]'>
-							<Filter className='size-4 shrink-0 text-amber-600' />
+						<div className='mt-6 flex items-center gap-3 rounded-2xl border border-amber-200 dark:border-amber-400/25 bg-amber-50/70 dark:bg-amber-400/10 p-4 text-[14px]'>
+							<Filter className='size-4 shrink-0 text-amber-600 dark:text-amber-400' />
 							Up to 100 records a page, sensible rate limits, and clear errors for anything unsupported.
 						</div>
 					</div>
@@ -170,7 +170,7 @@ const res = await MintAuth.fetch('orders?sort=-createdAt');`}
 				</div>
 			</Section>
 
-			<Section>
+			<Section id='websites'>
 				<div className='grid items-center gap-14 lg:grid-cols-2 lg:gap-20'>
 					<Reveal className='order-2 lg:order-1'>
 						<SiteMock />
@@ -208,7 +208,7 @@ const about = await fetch('${PUBLIC}/pages/by-path?path=/about').then(r => r.jso
 					].map(x => (
 						<div
 							key={x.t}
-							className='flex items-center gap-3 rounded-2xl border border-line bg-white p-4 shadow-panel'>
+							className='flex items-center gap-3 rounded-2xl border border-line bg-panel p-4 shadow-panel'>
 							<IconTile
 								color={x.c}
 								solid>

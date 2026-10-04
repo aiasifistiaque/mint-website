@@ -59,7 +59,7 @@ const Pipeline = ({ dark }: { dark?: boolean }) => (
 						href={`/workflow#${s.id}`}
 						className={cx(
 							'group relative flex flex-1 items-center gap-4 rounded-2xl border p-4 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 lg:flex-col lg:items-start lg:gap-3 lg:p-5',
-							dark ? 'border-white/10 bg-white/[0.04] hover:bg-white/[0.07]' : 'border-line bg-white shadow-panel hover:shadow-float'
+							dark ? 'border-white/10 bg-white/[0.04] hover:bg-white/[0.07]' : 'border-line bg-panel shadow-panel hover:shadow-float'
 						)}>
 						<span className={cx('inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-lg', t.grad)}>
 							<Icon className='size-5' />

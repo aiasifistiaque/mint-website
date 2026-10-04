@@ -33,7 +33,7 @@ export default function WhoPage() {
 								key={p.id}
 								href={`#${p.id}`}
 								className={cx(
-									'group flex items-center gap-3 rounded-2xl border border-line bg-white p-3.5 shadow-panel transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-float',
+									'group flex items-center gap-3 rounded-2xl border border-line bg-panel p-3.5 shadow-panel transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-float',
 									i % 2 === 1 && 'translate-y-6'
 								)}>
 								<IconTile
@@ -83,14 +83,14 @@ export default function WhoPage() {
 										</div>
 									</div>
 									<div className='grid gap-3 sm:grid-cols-2'>
-										<div className='rounded-2xl border border-rose-100 bg-rose-50/60 p-5'>
+										<div className='rounded-2xl border border-rose-100 dark:border-rose-400/25 bg-rose-50/60 dark:bg-rose-400/10 p-5'>
 											<p className='mb-2 inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.12em] text-rose-500'>
 												<X className='size-3.5' /> Today
 											</p>
 											<p className='text-[15px] leading-relaxed text-fg/80'>{p.pain}</p>
 										</div>
-										<div className='rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5'>
-											<p className='mb-2 inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.12em] text-emerald-600'>
+										<div className='rounded-2xl border border-emerald-100 dark:border-emerald-400/25 bg-emerald-50/60 dark:bg-emerald-400/10 p-5'>
+											<p className='mb-2 inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.12em] text-emerald-600 dark:text-emerald-400'>
 												<Check className='size-3.5' /> With MINT
 											</p>
 											<p className='text-[15px] leading-relaxed text-fg/80'>{p.gain}</p>
@@ -109,8 +109,8 @@ export default function WhoPage() {
 								</Reveal>
 								<Reveal
 									delay={120}
-									className='rounded-2xl border border-line bg-white p-6 shadow-float'>
-									<p className='mb-5 inline-flex items-center gap-2 text-[13px] font-semibold text-violet-600'>
+									className='rounded-2xl border border-line bg-panel p-6 shadow-float'>
+									<p className='mb-5 inline-flex items-center gap-2 text-[13px] font-semibold text-violet-600 dark:text-violet-400'>
 										<Sparkles className='size-4' /> An ordinary day, with their AI
 									</p>
 									<div className='flex flex-col gap-3'>
