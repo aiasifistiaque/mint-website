@@ -34,6 +34,8 @@ import {
 	UserRound,
 	Users,
 	Webhook,
+	Server,
+	Zap,
 	type IconType,
 } from '@/components/ui/icons';
 import type { Tone } from '@/lib/tones';
@@ -156,7 +158,9 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		features: [
 			{ icon: Webhook, title: 'Public API', body: 'Turn on list, read, create, update or delete per model — no server to run.', guide: 'public-api' },
 			{ icon: Filter, title: 'Filters & search', body: 'Paging, sorting, field filters, date ranges and search on every list.', guide: 'public-api#filters' },
-			{ icon: Code, title: 'API reference & tester', body: 'Each project documents its own API, with a tester to try calls live.', guide: 'public-api' },
+			{ icon: Code, title: 'API reference & tester', body: 'Each project documents its own API, with curl and fetch examples and a tester to try calls live.', guide: 'public-api' },
+			{ icon: Server, title: 'API projects', body: 'A project laid out as a back end: its API first, a dashboard of endpoints and recent calls.', guide: 'projects#api' },
+			{ icon: Zap, title: 'Webhooks', body: 'Your server hears about every new, changed or deleted record — signed, retried and logged.', guide: 'public-api#webhooks' },
 			{ icon: UserRound, title: 'Customer accounts', body: 'A drop-in sign-in widget; customers see only their own records.', guide: 'customers' },
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
 			{ icon: ChartLine, title: 'Analytics', body: 'Visitors, pages, sources and events — without cookies.', guide: 'analytics' },

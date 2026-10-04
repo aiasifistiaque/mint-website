@@ -731,6 +731,41 @@ const ScopeArt = () => (
 	</Frame>
 );
 
+const WebhooksArt = () => (
+	<Frame bodyClassName='p-5'>
+		<Label>Webhook · Bookings</Label>
+		<div className='rounded-xl border border-line px-3 py-2.5'>
+			<div className='truncate font-mono text-[12px]'>https://desk.seaside-inn.com/hooks/mint</div>
+			<div className='mt-2 flex flex-wrap gap-1.5'>
+				{['Created', 'Changed'].map(e => (
+					<span
+						key={e}
+						className='rounded-full border border-line px-2.5 py-0.5 text-[10.5px] text-muted'>
+						{e}
+					</span>
+				))}
+				<span className='ml-auto font-mono text-[10.5px] text-faint'>signed · sha256</span>
+			</div>
+		</div>
+		<div className='mt-3 divide-y divide-line rounded-xl border border-line'>
+			{[
+				['create', 'Amira Khan · 3 nights', '200', true],
+				['update', 'Room 12 → Room 14', '200', true],
+				['create', 'Jon Park · 1 night', '503 · retried, 200', true],
+			].map(([event, what, status, ok], i) => (
+				<div
+					key={i}
+					className='flex items-center gap-2.5 px-3 py-2'>
+					<span className={cx('size-2 shrink-0 rounded-full', ok ? 'bg-emerald-500' : 'bg-rose-500')} />
+					<span className='w-12 font-mono text-[11px] text-faint'>{event as string}</span>
+					<span className='flex-1 truncate text-[12px]'>{what as string}</span>
+					<span className='font-mono text-[11px] text-muted'>{status as string}</span>
+				</div>
+			))}
+		</div>
+	</Frame>
+);
+
 /** The drawing for a workflow step. */
 const FlowArt = ({ art }: { art: ArtKey }) => {
 	switch (art) {
@@ -788,6 +823,8 @@ const FlowArt = ({ art }: { art: ArtKey }) => {
 			return <AskArt />;
 		case 'scope':
 			return <ScopeArt />;
+		case 'webhooks':
+			return <WebhooksArt />;
 	}
 };
 

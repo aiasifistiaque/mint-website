@@ -57,7 +57,8 @@ export type ArtKey =
 	| 'create'
 	| 'read-key'
 	| 'ask'
-	| 'scope';
+	| 'scope'
+	| 'webhooks';
 
 export type FlowStep = {
 	title: string;
@@ -207,7 +208,7 @@ export const FLOWS: Flow[] = [
 		eyebrow: 'Workflow · API',
 		title: 'A REST API,',
 		accent: 'the moment you save a model.',
-		lead: 'Describe your data, switch on the actions you want, choose who may call them. Paging, filters, search, customer accounts and a live reference come with it — there is no server to write or run.',
+		lead: 'Start an API project, describe your data, switch on the actions you want, choose who may call them. Paging, filters, search, customer accounts, webhooks and a live reference come with it — there is no server to write or run.',
 		result: 'A documented REST API for your site, app or script — with customer sign-in.',
 		time: 'Under an hour',
 		steps: [
@@ -222,7 +223,7 @@ export const FLOWS: Flow[] = [
 			},
 			{
 				title: 'Make it public',
-				where: 'Audience → Public API',
+				where: 'API → Public API',
 				who: ['you'],
 				body: 'Switch a model to Public and tick the actions it answers. It starts with List and Read one; add Create, Update and Delete when you need them. Changes apply at once.',
 				points: ['List · Read one · Create · Update · Delete — per model', 'Each project has its own address, from its public name', 'GET on the address describes every public model and its fields'],
@@ -231,7 +232,7 @@ export const FLOWS: Flow[] = [
 			},
 			{
 				title: 'Choose who may call it',
-				where: 'Audience → Public API',
+				where: 'API → Public API',
 				who: ['you'],
 				body: 'Open to anyone, only to your signed-in customers, or to customers for their own records only — each customer lists, reads and changes just what they created.',
 				points: ['Anyone — a product list, blog posts, opening hours', 'Signed-in customers — a members-only price list', 'Customers, own records only — orders, bookings, support requests'],
@@ -240,7 +241,7 @@ export const FLOWS: Flow[] = [
 			},
 			{
 				title: 'Add customer sign-in',
-				where: 'Audience → Customers',
+				where: 'API → Customers',
 				who: ['you'],
 				body: 'Drop in the sign-in widget, use MintAuth in your code, or post from your own form. Customers get accounts in your project, and you manage them from the panel.',
 				points: ['A ready widget — sign up, sign in, sign out', 'Tokens per project, sent with each call', 'Customers listed and managed in the panel'],
@@ -258,18 +259,27 @@ export const FLOWS: Flow[] = [
 			},
 			{
 				title: 'Check it in the reference',
-				where: 'Audience → Public API → reference',
+				where: 'API → Public API → reference',
 				who: ['mint'],
-				body: 'Each project documents its own API from what the live API offers, so it always matches the switches. Click an endpoint and try it with the tester.',
-				points: ['Every endpoint your site or app can call', 'Sortable and filterable fields for each list', 'A tester to send real requests'],
+				body: 'Each project documents its own API from what the live API offers, so it always matches the switches. Every endpoint comes as a curl and a fetch example to paste, and the tester sends real requests.',
+				points: ['Every endpoint your site or app can call', 'Copy-paste examples: curl and fetch', 'A tester to send real requests'],
 				art: 'reference',
 				guide: 'public-api',
+			},
+			{
+				title: 'Tell your other systems',
+				where: 'API → Webhooks',
+				who: ['you'],
+				body: 'When a record is created, changed or deleted — from your app, the panel or your AI — MINT posts it to your server, signed so you know it’s real. A failed delivery is retried, and every one is logged.',
+				points: ['Per model: created, changed, deleted', 'Signed with a secret (HMAC-SHA256); a test button', 'Retried 3 times; the last 50 deliveries kept'],
+				art: 'webhooks',
+				guide: 'public-api#webhooks',
 			},
 		],
 		includedTitle: 'What you didn’t have to write.',
 		includedLead: 'The plumbing behind every API, done once and done properly.',
 		included: [
-			{ icon: Code, title: 'Endpoints', items: ['CRUD for every model', 'Paging, sorting, filters, search', 'Choose the fields that come back', 'Formulas computed on every save'] },
+			{ icon: Code, title: 'Endpoints', items: ['CRUD for every model', 'Paging, sorting, filters, search', 'Choose the fields that come back', 'Formulas computed on every save', 'Webhooks: signed, retried, logged'] },
 			{ icon: KeyRound, title: 'Auth', items: ['Customer sign-up and sign-in', 'Own-records-only access', 'Tokens scoped to the project', 'Sign-in attempts rate-limited'] },
 			{ icon: ShieldCheck, title: 'Safety', items: ['Validation with plain error messages', '300 requests a minute per visitor', 'Private records never served', 'Archived projects stop answering'] },
 		],

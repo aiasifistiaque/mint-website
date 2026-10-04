@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-04',
+		title: 'API projects and webhooks',
+		tag: 'New',
+		summary: 'A project can now be an API — the back end of your own app or site — and any project can tell your other systems when records change.',
+		items: [
+			'A new kind of project, API: its sidebar starts with Public API, Webhooks and Customers',
+			'The API dashboard: your base address, the endpoints that are on, calls in the last day and the latest calls',
+			'Webhooks: your server gets every new, changed or deleted record — from the panel, the API or your AI',
+			'Signed with a secret so you know it’s real, retried 3 times, every delivery logged, and a Send test button',
+			'Every endpoint in the API reference now comes as a curl and a fetch example to copy',
+		],
+	},
+	{
+		date: '2026-10-04',
 		title: 'Step-by-step workflows',
 		tag: 'New',
 		summary: 'Learn MINT one step at a time: a workflow for each thing you build, and every admin panel feature on one page.',
