@@ -29,7 +29,7 @@ npm run dev                  # http://localhost:3100
 
 | Route | What it is |
 |---|---|
-| `/` | The pitch: hero, what you build (backends, APIs, admin panels, websites), start from a template or from scratch (`content/templates.ts`), blocks or AI, the BaaS stack, workflow pipeline + step-by-step tabs, who it's for, a day with MINT + AI, AI build flow, data flow, comparison, features, FAQ |
+| `/` | The pitch: hero, what you build (backends, APIs, admin panels, websites), start from a template or from scratch (`content/templates.ts`), blocks or AI, the BaaS stack, widgets for your own site (`content/widgets.ts`), workflow pipeline + step-by-step tabs, who it's for, a day with MINT + AI, AI build flow, data flow, comparison, features, FAQ |
 | `/backend` | Backend as a service: the stack, database, visual data editing, API & auth, back-office tools, vs building your own |
 | `/workflow` | The basic workflow: six steps in depth, each with its screen, and the after-launch loop |
 | `/workflow/website`, `/workflow/api`, `/workflow/admin-panel`, `/workflow/models` | Step-by-step workflows (`content/flows.ts`, laid out by `components/flow/FlowPage`, drawings in `components/flow/arts.tsx`) — the header's Workflows menu |
@@ -67,6 +67,7 @@ site in the same piece of work**:
 - an admin panel feature → `src/content/adminPanel.ts`
 - new kinds of users or uses → `src/content/personas.ts`, `src/content/useCases.ts`
 - project templates added or renamed → `src/content/templates.ts`
+- a site widget goes live or is added → `src/content/widgets.ts` (`live: true`), the changelog and FAQ
 - AI / API behaviour → `/ai`, `/developers` (snippets come from the app's user guides)
 
 Content lives in `src/content/*`; pages only lay it out. Colours come from

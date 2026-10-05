@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-05',
+		title: 'Widgets for your own site',
+		tag: 'New',
+		summary: 'Add MINT to a website you host yourself with one script tag, then place ready-made widgets on it — starting with customer sign-in.',
+		items: [
+			'Login & account: sign up, sign in and sign out, as a card or a button in your header',
+			'A Widgets page in each project: switch widgets on, set their options, reword every text and see a live preview before you save',
+			'Your colour, font and corners on every widget, light or dark to match the page — and sealed off from your site’s CSS',
+			'Your organization now has a country: pick it from a searchable list with flags and dialling codes. It decides which payment providers your sites can use',
+			'Website and API projects now offer their templates when you create them, with a few questions and optional sample records',
+			'Coming next: cart, checkout and payments to your own merchant account — Stripe, plus SSLCommerz and bKash in Bangladesh',
+		],
+	},
+	{
+		date: '2026-10-05',
 		title: 'Start from a template',
 		tag: 'New',
 		summary: 'A new project can start from a ready-made template — or from scratch, as before. Either way, everything in it is yours to change.',

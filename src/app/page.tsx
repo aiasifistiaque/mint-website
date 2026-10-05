@@ -13,6 +13,7 @@ import DayTimeline from '@/components/viz/DayTimeline';
 import ProductCards from '@/components/viz/ProductCards';
 import BuildPaths from '@/components/viz/BuildPaths';
 import StartPaths from '@/components/viz/StartPaths';
+import WidgetKit from '@/components/viz/WidgetKit';
 import StackDiagram from '@/components/viz/StackDiagram';
 import { NOT_TO_BUILD, POSITIONING, WHAT_IS } from '@/content/platform';
 import CtaBand from '@/components/site/CtaBand';
@@ -276,6 +277,26 @@ export default function Home() {
 							Explore backend as a service
 						</TextLink>
 					</div>
+				</div>
+			</Section>
+
+			{/* ---------------------------------------------- site widgets */}
+			<Section
+				tone='subtle'
+				id='widgets'>
+				<SectionHead
+					eyebrow='Widgets for your own site'
+					color='amber'
+					title={
+						<>
+							Sign-in, cart, checkout — <Accent warm>one script tag.</Accent>
+						</>
+					}
+					lead='Already have a website, or building one with your AI? Add MINT’s ready-made widgets to it: customer accounts today, with cart, checkout and payments next. Switch them on in the panel, give them your colours, and they run on your data.'
+				/>
+				<WidgetKit />
+				<div className='mt-10'>
+					<TextLink href='/developers#widgets'>How widgets work</TextLink>
 				</div>
 			</Section>
 

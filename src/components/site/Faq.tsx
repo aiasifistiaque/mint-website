@@ -33,7 +33,11 @@ export const FAQ = [
 	},
 	{
 		q: 'Can I use my data on my own website or app?',
-		a: 'Yes. Switch on the public API for any model and choose what it allows. Customers can create accounts and sign in with a drop-in widget, and see only their own records.',
+		a: 'Yes. Switch on the public API for any model and choose what it allows. Add one script tag to your site and its widgets let customers create accounts and sign in, and see only their own records.',
+	},
+	{
+		q: 'Can my website take payments?',
+		a: 'That’s next. A cart and checkout widget are being built now. Payments will go to your own merchant account, and your organization’s country decides which providers you can use: Stripe everywhere, plus SSLCommerz and bKash in Bangladesh. Sign-in already works today.',
 	},
 	{
 		q: 'Why a waitlist?',

@@ -11,7 +11,7 @@ import { API_URL } from '@/lib/config';
 export const metadata: Metadata = pageMeta({
 	title: 'Developers',
 	description:
-		'A back end you didn’t have to write: a REST API per model with paging, sorting, filters and search, customer sign-in with a drop-in widget, a website content API and cookie-free analytics.',
+		'A back end you didn’t have to write: a REST API per model with paging, sorting, filters and search, customer sign-in with drop-in site widgets, a website content API and cookie-free analytics.',
 	path: '/developers',
 });
 
@@ -137,27 +137,30 @@ const { doc, total } = await res.json();`}
 				</div>
 			</Section>
 
-			<Section tone='subtle'>
+			<Section
+				tone='subtle'
+				id='widgets'>
 				<div className='grid items-center gap-14 lg:grid-cols-2 lg:gap-20'>
 					<div>
 						<SectionHead
 							className='mb-8 md:mb-8'
-							eyebrow='Customer accounts'
+							eyebrow='Customer accounts & widgets'
 							color='rose'
 							title={
 								<>
 									Sign-in for your customers, <Accent warm>in one script tag.</Accent>
 								</>
 							}
-							lead='Drop the widget on your site and your customers can create an account and sign in. MintAuth gives your scripts the signed-in customer and an authenticated fetch — and each customer only ever sees their own records.'
+							lead='Add mint.js once and place the Login widget anywhere — a card on an account page or a button in your header. Switch it on, reword it and give it your colours in the panel. Mint gives your scripts the signed-in customer and an authenticated fetch, and each customer only ever sees their own records. Cart, checkout and payments are next.'
 						/>
 						<Code
 							label='index.html'
-							code={`<script src="${API_URL}/public/widget.js" data-project="acme-store" async></script>
+							code={`<script src="${API_URL}/public/mint.js" data-project="acme-store" async></script>
+<div data-mint="login"></div>
 
 // later, in your code
-await MintAuth.ready;
-const res = await MintAuth.fetch('orders?sort=-createdAt');`}
+await Mint.auth.ready;
+const res = await Mint.api('orders?sort=-createdAt');`}
 						/>
 						<TextLink
 							href='/workflow/api#step-4'

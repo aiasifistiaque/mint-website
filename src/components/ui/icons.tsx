@@ -108,6 +108,9 @@ import {
 	Stamp as PhStamp,
 	ArrowsMerge as PhArrowsMerge,
 	Calculator as PhCalculator,
+	ShoppingCart as PhShoppingCart,
+	CreditCard as PhCreditCard,
+	Cookie as PhCookie,
 } from '@phosphor-icons/react/dist/ssr';
 
 export type IconType = ComponentType<IconProps>;
@@ -225,3 +228,6 @@ export const Coins = make(PhCoins, 'duotone');
 export const Wrench = make(PhWrench, 'duotone');
 export const Timer = make(PhTimer, 'duotone');
 export const Scales = make(PhScales, 'duotone');
+export const ShoppingCart = make(PhShoppingCart, 'duotone');
+export const CreditCard = make(PhCreditCard, 'duotone');
+export const Cookie = make(PhCookie, 'duotone');
