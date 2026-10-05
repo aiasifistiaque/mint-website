@@ -17,6 +17,19 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-06',
+		title: 'Email from your own address',
+		tag: 'New',
+		summary: 'Add your business email’s server once, and MINT sends your emails to customers from your own address.',
+		items: [
+			'An Email page in your organization: pick Gmail, Outlook, Zoho or another provider, add your login, send a test',
+			'Customers who sign up on your sites get a welcome from you, not from us',
+			'Every email you send is listed with whether it went — and if it didn’t, why, in plain words',
+			'Your email password is stored encrypted and never shown again',
+			'New to MINT? You now get a welcome email, and joining the waitlist confirms your place in the queue',
+		],
+	},
+	{
 		date: '2026-10-05',
 		title: 'A cart for your own site',
 		tag: 'New',
