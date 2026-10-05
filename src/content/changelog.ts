@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-06',
+		title: 'Checkout and payments on your own site',
+		tag: 'New',
+		summary: 'Your site can now take orders and card payments — straight into your own Stripe account, priced by our server.',
+		items: [
+			'A Checkout widget: the buyer’s details and address, the order at your prices, and Pay on Stripe’s secure page',
+			'Orders arrive in your own orders table as Awaiting payment, and turn Paid only when Stripe confirms — nobody can mark their own order paid',
+			'Paid orders lower your stock, empty the buyer’s cart, notify your team and email the buyer a receipt from your address',
+			'A Thank-you page widget and a My orders widget for your customers’ account page',
+			'A Payments page in each project: connect Stripe in test or live mode and see every payment and how it went',
+			'Coming next: SSLCommerz and bKash in Bangladesh, cash on delivery, bank transfer and refunds',
+		],
+	},
+	{
+		date: '2026-10-06',
 		title: 'Email from your own address',
 		tag: 'New',
 		summary: 'Add your business email’s server once, and MINT sends your emails to customers from your own address.',

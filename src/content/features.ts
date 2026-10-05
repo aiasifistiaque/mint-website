@@ -169,7 +169,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{ icon: Server, title: 'API projects', body: 'A project laid out as a back end: its API first, a dashboard of endpoints and recent calls.', guide: 'projects#api' },
 			{ icon: Zap, title: 'Webhooks', body: 'Your server hears about every new, changed or deleted record — signed, retried and logged.', guide: 'public-api#webhooks' },
 			{ icon: UserRound, title: 'Customer accounts', body: 'Sign-up and sign-in for your customers; they see only their own records.', guide: 'customers' },
-			{ icon: Blocks, title: 'Site widgets', body: 'One script tag puts sign-in and a cart on your own site — styled to match, priced by our server; checkout next.', guide: 'widgets' },
+			{ icon: Blocks, title: 'Site widgets', body: 'One script tag puts sign-in, a cart and checkout on your own site — styled to match, priced by our server, paid into your own Stripe.', guide: 'widgets' },
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
 			{ icon: ChartLine, title: 'Analytics', body: 'Visitors, pages, sources and events — without cookies.', guide: 'analytics' },
 		],
