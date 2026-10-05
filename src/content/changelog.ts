@@ -38,6 +38,7 @@ export const RELEASES: Release[] = [
 		items: [
 			'Templates for apps (CRM, finance, HR & leave, inventory, projects & tasks, bookkeeping), APIs (bookings, products & orders) and websites (e-commerce, blog, business site, portfolio)',
 			'A few questions fill the template in; models, pages, sidebar, dashboard, roles, API and sample records arrive built',
+			'Pick the template right in New project — the project opens on its questions — or choose later on its Get started page',
 			'A set-up checklist on the new project’s home page',
 			'Read-only fields on the public API: an order’s status or payment reference is set by your team, never by a request',
 		],
