@@ -26,7 +26,7 @@ export const RELEASES: Release[] = [
 			'A Widgets page in each project: switch widgets on, set their options, reword every text and see a live preview before you save',
 			'Your colour, font and corners on every widget, light or dark to match the page — and sealed off from your site’s CSS',
 			'Your organization now has a country: pick it from a searchable list with flags and dialling codes. It decides which payment providers your sites can use',
-			'Website and API projects now offer their templates when you create them, with a few questions and optional sample records',
+			'Every new app, API and website now opens on its templates, and a template builds the whole thing: models, pages, sidebar, dashboard, roles and sample records',
 			'Coming next: cart, checkout and payments to your own merchant account — Stripe, plus SSLCommerz and bKash in Bangladesh',
 		],
 	},
