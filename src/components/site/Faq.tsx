@@ -16,6 +16,10 @@ export const FAQ = [
 		a: 'You can — but you’d be writing the schema, CRUD endpoints, auth, validation, filters, admin screens, roles and audit history before the interesting part. MINT gives you all of that, so you ship the front end and your client gets a back office they can actually use.',
 	},
 	{
+		q: 'Do I have to build everything from nothing?',
+		a: 'No. When you create a project you can start from a template — a CRM, finance, inventory, HR & leave, a booking or orders API, an online shop, a blog, a business site and more. Answer a few questions and it’s built, with sample records and a set-up checklist. It’s your own copy: rename, add or remove anything. Or start from scratch and build exactly what you need.',
+	},
+	{
 		q: 'How is this different from a spreadsheet?',
 		a: 'A spreadsheet is a grid anyone can break. MINT gives every kind of record its own form with required fields, links between records, roles that decide who can change what, a dashboard, and a history of every change with undo.',
 	},

@@ -121,8 +121,8 @@ export const FLOWS: Flow[] = [
 				title: 'Start a website project',
 				where: 'Projects → New → Website',
 				who: ['you'],
-				body: 'Choose Website when you create the project. It comes with the website kit — three models for Pages, SEO and Contents — and a Site setup screen for everything site-wide.',
-				points: ['Pages, SEO and content-block models, ready and public (read-only)', 'Site setup: name, logo, favicon, colours, font, contact and social links', 'A home page that lists what’s still missing — each with a link to where it’s set'],
+				body: 'Choose Website when you create the project — from scratch, or from a template (a blog, a business site, a portfolio, an online shop) that arrives with its pages, lists and sample content. Either way it comes with the website kit — Pages, SEO and Contents — and a Site setup screen for everything site-wide.',
+				points: ['From a template or from scratch — a template’s pages and lists are yours to change', 'Pages, SEO and content-block models, ready and public (read-only)', 'Site setup: name, logo, favicon, colours, font, contact and social links', 'A home page that lists what’s still missing — each with a link to where it’s set'],
 				art: 'project',
 				guide: 'websites',
 			},
@@ -213,6 +213,15 @@ export const FLOWS: Flow[] = [
 		time: 'Under an hour',
 		steps: [
 			{
+				title: 'Start an API project',
+				where: 'Projects → New → API',
+				who: ['you'],
+				body: 'Choose API when you create the project. Start from a template — a booking API, a products & orders API — and its models, endpoints, customer sign-in and webhooks arrive set up; or start from scratch and add your own.',
+				points: ['A template is a head start: change every model and endpoint in it', 'Or a blank API project, built your way', 'Its sidebar leads with Public API, Webhooks and Customers'],
+				art: 'project',
+				guide: 'projects',
+			},
+			{
 				title: 'Model your data',
 				where: 'Build → Models',
 				who: ['you', 'ai'],
@@ -235,7 +244,7 @@ export const FLOWS: Flow[] = [
 				where: 'API → Public API',
 				who: ['you'],
 				body: 'Open to anyone, only to your signed-in customers, or to customers for their own records only — each customer lists, reads and changes just what they created.',
-				points: ['Anyone — a product list, blog posts, opening hours', 'Signed-in customers — a members-only price list', 'Customers, own records only — orders, bookings, support requests'],
+				points: ['Anyone — a product list, blog posts, opening hours', 'Signed-in customers — a members-only price list', 'Customers, own records only — orders, bookings, support requests', 'Read-only fields: an order’s status or payment reference is set by you, never by a request'],
 				art: 'access',
 				guide: 'public-api',
 			},
@@ -299,6 +308,15 @@ export const FLOWS: Flow[] = [
 		result: 'An admin panel and back office your whole team works in every day.',
 		time: 'A morning',
 		steps: [
+			{
+				title: 'Start from a template, or blank',
+				where: 'Projects → New → App',
+				who: ['you'],
+				body: 'Pick a ready-made app — a CRM, finance, HR & leave, inventory, projects & tasks — answer a few questions, and its models, pages, sidebar, dashboard and roles are built with sample records. Or start with an empty app and build every part yourself.',
+				points: ['A set-up checklist walks you through the template', 'Everything it built is your own copy — change any of it', 'Blank instead? The next steps build it from nothing'],
+				art: 'project',
+				guide: 'projects',
+			},
 			{
 				title: 'Create your models',
 				where: 'Build → Models',

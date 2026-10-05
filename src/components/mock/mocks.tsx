@@ -1,13 +1,12 @@
 import {
-	AppWindow,
 	Building2,
 	CalendarDays,
 	Check,
 	ChevronDown,
-	Globe,
 	GripVertical,
 	Hash,
 	Image as ImageIcon,
+	Layers,
 	LayoutDashboard,
 	ListChecks,
 	Lock,
@@ -133,17 +132,24 @@ export const PanelMock = ({ className }: { className?: string }) => (
 
 /* ----------------------------------------------------------- project */
 
+const START = [
+	{ icon: Layers, title: 'From a template', body: 'Models, pages and sample data, ready — edit anything', on: true },
+	{ icon: Plus, title: 'From scratch', body: 'A blank project you build your way' },
+];
+const PICKS = [
+	{ name: 'Booking API', kind: 'API', on: true },
+	{ name: 'CRM', kind: 'App' },
+	{ name: 'E-commerce', kind: 'Website' },
+];
+
 export const ProjectMock = () => (
 	<Frame
 		url='app.mintapp.shop/projects/new'
 		bodyClassName='p-5'>
 		<p className='text-[14px] font-semibold'>New project</p>
-		<p className='mb-4 text-faint'>Step 1 of 3 · What are you making?</p>
+		<p className='mb-4 text-faint'>Step 1 of 3 · How do you want to start?</p>
 		<div className='grid grid-cols-2 gap-2.5'>
-			{[
-				{ icon: AppWindow, title: 'App', body: 'Tables, forms and a dashboard for your team', on: true },
-				{ icon: Globe, title: 'Website', body: 'Pages, SEO and content, with analytics' },
-			].map(({ icon: Icon, title, body, on }) => (
+			{START.map(({ icon: Icon, title, body, on }) => (
 				<div
 					key={title}
 					className={cx('rounded-xl border p-3', on ? 'border-fg bg-subtle' : 'border-line')}>
@@ -161,6 +167,18 @@ export const ProjectMock = () => (
 					<p className='mt-0.5 leading-snug text-faint'>{body}</p>
 				</div>
 			))}
+		</div>
+		<div className='mt-3 flex flex-wrap gap-1.5'>
+			{PICKS.map(p => (
+				<span
+					key={p.name}
+					className={cx('inline-flex items-center gap-1.5 rounded-md border px-2 py-1', p.on ? 'border-fg' : 'border-line text-muted')}>
+					{p.on && <Check className='size-3' />}
+					{p.name}
+					<span className='font-mono text-[9px] uppercase text-faint'>{p.kind}</span>
+				</span>
+			))}
+			<span className='inline-flex items-center rounded-md px-2 py-1 text-faint'>+9 more</span>
 		</div>
 		<div className='mt-4 space-y-2.5'>
 			<div>

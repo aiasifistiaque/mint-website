@@ -17,6 +17,18 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-05',
+		title: 'Start from a template',
+		tag: 'New',
+		summary: 'A new project can start from a ready-made template — or from scratch, as before. Either way, everything in it is yours to change.',
+		items: [
+			'Templates for apps (CRM, finance, HR & leave, inventory, projects & tasks, bookkeeping), APIs (bookings, products & orders) and websites (e-commerce, blog, business site, portfolio)',
+			'A few questions fill the template in; models, pages, sidebar, dashboard, roles, API and sample records arrive built',
+			'A set-up checklist on the new project’s home page',
+			'Read-only fields on the public API: an order’s status or payment reference is set by your team, never by a request',
+		],
+	},
+	{
 		date: '2026-10-04',
 		title: 'API projects and webhooks',
 		tag: 'New',

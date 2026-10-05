@@ -12,6 +12,7 @@ import AiFlow from '@/components/viz/AiFlow';
 import DayTimeline from '@/components/viz/DayTimeline';
 import ProductCards from '@/components/viz/ProductCards';
 import BuildPaths from '@/components/viz/BuildPaths';
+import StartPaths from '@/components/viz/StartPaths';
 import StackDiagram from '@/components/viz/StackDiagram';
 import { NOT_TO_BUILD, POSITIONING, WHAT_IS } from '@/content/platform';
 import CtaBand from '@/components/site/CtaBand';
@@ -206,10 +207,25 @@ export default function Home() {
 				<ProductCards />
 			</Section>
 
-			{/* --------------------------------------------- two ways to build */}
+			{/* ------------------------------------ start: template or scratch */}
 			<Section
 				tone='subtle'
-				id='two-ways'>
+				id='start'>
+				<SectionHead
+					eyebrow='Every project starts here'
+					color='emerald'
+					title={
+						<>
+							Start from a template. <Accent>Or from scratch.</Accent>
+						</>
+					}
+					lead='When you create an app, an API or a website, choose a ready-made template — a CRM, a booking API, an online shop, a blog — and edit everything in it. Or start with a blank project and build your own.'
+				/>
+				<StartPaths />
+			</Section>
+
+			{/* --------------------------------------------- two ways to build */}
+			<Section id='two-ways'>
 				<SectionHead
 					align='center'
 					eyebrow='Two ways to build'
@@ -219,7 +235,7 @@ export default function Home() {
 							Use the blocks. <Accent>Or let AI build it.</Accent>
 						</>
 					}
-					lead='Click your backend together with visual builders, or describe it to your AI assistant. Either way you land in the same place: your data, edited visually — no SQL, no admin screens to code.'
+					lead='Building from scratch or changing a template, click it together with visual builders, or describe it to your AI assistant. Either way you land in the same place: your data, edited visually — no SQL, no admin screens to code.'
 				/>
 				<BuildPaths />
 			</Section>

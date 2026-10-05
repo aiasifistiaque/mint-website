@@ -16,6 +16,7 @@ import {
 	History,
 	Images,
 	KeyRound,
+	Layers,
 	LayoutDashboard,
 	LayoutTemplate,
 	Link2,
@@ -70,6 +71,12 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		title: 'Build',
 		lead: 'Building blocks for backends, admin panels and back offices.',
 		features: [
+			{
+				icon: Layers,
+				title: 'Templates',
+				body: 'Start a project from a ready-made app, API or website — a CRM, a booking API, a shop — and edit everything. Or start from scratch.',
+				guide: 'projects',
+			},
 			{
 				icon: Boxes,
 				title: 'Models',
