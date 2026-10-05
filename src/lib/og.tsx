@@ -9,16 +9,38 @@ import { ImageResponse } from 'next/og';
 export const OG_SIZE = { width: 1200, height: 630 };
 export const OG_TYPE = 'image/png';
 
-/** Outfit from Google Fonts (TTF — what the renderer reads). Falls back to the default font offline. */
-const font = async (weight: number) => {
+type OgFont = { name: string; data: ArrayBuffer; weight: 200 | 400; style: 'normal' };
+
+/** A TrueType or OpenType file — anything else (an error page, a rate-limit answer) crashes the renderer. */
+const isFont = (data: ArrayBuffer) => {
+	if (data.byteLength < 1024) return false;
+	const tag = new DataView(data).getUint32(0);
+	return tag === 0x00010000 || tag === 0x4f54544f /* OTTO */ || tag === 0x74727565 /* true */;
+};
+
+/**
+ * Outfit from Google Fonts (TTF — what the renderer reads), fetched once per
+ * weight per build — every page's image shares it. Anything that isn't a font
+ * falls back to the default font rather than failing the build.
+ */
+const loadFont = async (weight: 200 | 400): Promise<OgFont | null> => {
 	try {
-		const css = await (await fetch(`https://fonts.googleapis.com/css2?family=Outfit:wght@${weight}&display=swap`)).text();
-		const url = css.match(/src: url\((.+?)\) format\('(opentype|truetype)'\)/)?.[1];
+		const res = await fetch(`https://fonts.googleapis.com/css2?family=Outfit:wght@${weight}&display=swap`);
+		if (!res.ok) return null;
+		const url = (await res.text()).match(/src: url\((.+?)\) format\('(opentype|truetype)'\)/)?.[1];
 		if (!url) return null;
-		return { name: 'Outfit', data: await (await fetch(url)).arrayBuffer(), weight: weight as 200 | 400, style: 'normal' as const };
+		const file = await fetch(url);
+		if (!file.ok) return null;
+		const data = await file.arrayBuffer();
+		return isFont(data) ? { name: 'Outfit', data, weight, style: 'normal' } : null;
 	} catch {
 		return null;
 	}
+};
+const fontCache = new Map<number, Promise<OgFont | null>>();
+const font = (weight: 200 | 400) => {
+	if (!fontCache.has(weight)) fontCache.set(weight, loadFont(weight));
+	return fontCache.get(weight)!;
 };
 
 const Mark = () => (
@@ -67,7 +89,7 @@ const Mark = () => (
 );
 
 export const og = async ({ eyebrow, title, accent }: { eyebrow: string; title: string; accent: string }) => {
-	const fonts = (await Promise.all([font(200), font(400)])).filter(Boolean) as NonNullable<Awaited<ReturnType<typeof font>>>[];
+	const fonts = (await Promise.all([font(200), font(400)])).filter((f): f is OgFont => !!f);
 	const long = (title + accent).length;
 	const size = long > 70 ? 58 : long > 52 ? 68 : 78;
 
