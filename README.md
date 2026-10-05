@@ -80,7 +80,8 @@ thin colour — no gradient tiles.
 
 Every page's metadata comes from `pageMeta()` (`lib/seo.ts`: title, description, canonical, Open Graph,
 Twitter). Share images are drawn at build time by `lib/og.tsx` from each route's `opengraph-image.tsx`
-(the root one covers pages without their own). The layout adds JSON-LD (Organization + SoftwareApplication).
+(the root one covers pages without their own). They use the Outfit files in `src/assets/fonts/` (SIL OFL, `OFL.txt`) — no font is fetched
+at build time; if those files go missing, the images fall back to the Geist font Next ships. The layout adds JSON-LD (Organization + SoftwareApplication).
 
 ## Deploy
 

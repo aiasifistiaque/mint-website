@@ -11,51 +11,32 @@ import { ImageResponse } from 'next/og';
 export const OG_SIZE = { width: 1200, height: 630 };
 export const OG_TYPE = 'image/png';
 
-type OgFont = { name: string; data: ArrayBuffer | Buffer; weight: 200 | 400; style: 'normal' };
+type OgFont = { name: string; data: Buffer; weight: 200 | 400; style: 'normal' };
 
-/** A TrueType or OpenType file — anything else (an error page, a rate-limit answer) crashes the renderer. */
-const isFont = (data: ArrayBuffer) => {
-	if (data.byteLength < 1024) return false;
-	const tag = new DataView(data).getUint32(0);
-	return tag === 0x00010000 || tag === 0x4f54544f /* OTTO */ || tag === 0x74727565 /* true */;
-};
-
-/**
- * Outfit from Google Fonts (TTF — what the renderer reads), fetched once per
- * weight per build — every page's image shares it. When Google Fonts can't be
- * reached from the build machine (it happens on Vercel), the image is drawn in
- * Geist (below) rather than failing the build.
- */
-const loadFont = async (weight: 200 | 400): Promise<OgFont | null> => {
-	try {
-		const res = await fetch(`https://fonts.googleapis.com/css2?family=Outfit:wght@${weight}&display=swap`);
-		if (!res.ok) return null;
-		const url = (await res.text()).match(/src: url\((.+?)\) format\('(opentype|truetype)'\)/)?.[1];
-		if (!url) return null;
-		const file = await fetch(url);
-		if (!file.ok) return null;
-		const data = await file.arrayBuffer();
-		return isFont(data) ? { name: 'Outfit', data, weight, style: 'normal' } : null;
-	} catch {
-		return null;
-	}
-};
-const fontCache = new Map<number, Promise<OgFont | null>>();
+/** A font file read from disk (relative to the project root, where the build runs), or null if it's missing. */
+const fromDisk = (path: string, name: string, weight: 200 | 400) =>
+	readFile(join(process.cwd(), path))
+		.then((data): OgFont => ({ name, data, weight, style: 'normal' }))
+		.catch(() => null);
 
 /**
- * When Outfit can't be had: Geist, the font Next ships with its image renderer,
- * read from disk. The renderer's own default doesn't load during a static
- * build, and with no font at all it fails ('split' of undefined).
+ * Outfit, kept in the repo (src/assets/fonts, SIL OFL — see OFL.txt there) so
+ * the build never fetches a font: every deploy draws the same images, with no
+ * network to fail. Read once per build; every page's image shares them.
  */
-let fallback: Promise<OgFont | null> | null = null;
-const fallbackFont = () =>
-	(fallback ??= readFile(join(process.cwd(), 'node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf'))
-		.then(data => ({ name: 'Geist', data, weight: 400 as const, style: 'normal' as const }))
-		.catch(() => null));
-const font = (weight: 200 | 400) => {
-	if (!fontCache.has(weight)) fontCache.set(weight, loadFont(weight));
-	return fontCache.get(weight)!;
-};
+let outfit: Promise<OgFont[]> | null = null;
+const outfitFonts = () =>
+	(outfit ??= Promise.all([
+		fromDisk('src/assets/fonts/Outfit-ExtraLight.ttf', 'Outfit', 200),
+		fromDisk('src/assets/fonts/Outfit-Regular.ttf', 'Outfit', 400),
+	]).then(fonts => fonts.filter((f): f is OgFont => !!f)));
+
+/**
+ * If those files ever go missing: Geist, the font Next ships with its image
+ * renderer. The renderer's own default doesn't load during a static build,
+ * and with no font at all it fails ('split' of undefined).
+ */
+const geist = () => fromDisk('node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf', 'Geist', 400);
 
 const Mark = () => (
 	<svg
@@ -103,8 +84,8 @@ const Mark = () => (
 );
 
 export const og = async ({ eyebrow, title, accent }: { eyebrow: string; title: string; accent: string }) => {
-	let fonts = (await Promise.all([font(200), font(400)])).filter((f): f is OgFont => !!f);
-	if (!fonts.length) fonts = [await fallbackFont()].filter((f): f is OgFont => !!f);
+	let fonts = await outfitFonts();
+	if (!fonts.length) fonts = [await geist()].filter((f): f is OgFont => !!f);
 	const long = (title + accent).length;
 	const size = long > 70 ? 58 : long > 52 ? 68 : 78;
 
