@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-05',
+		title: 'A cart for your own site',
+		tag: 'New',
+		summary: 'Tell MINT which model is your catalogue, switch the Cart widget on, and any button on your site becomes an add-to-cart button.',
+		items: [
+			'A Shop section on the Widgets page: pick your products model and which field is the name, price, image, stock, status and variants — filled in for you if you started from the E-commerce or Products & orders template',
+			'Add-to-cart on any button, a cart button with a count and a cart drawer — or the cart itself on a /cart page',
+			'Products with sizes or colours ask which one, with each one’s price and what’s sold out',
+			'Prices, stock and the subtotal always come from your catalogue on our server — a page can’t change what something costs',
+			'Guests’ carts stay in their browser and join their account when they sign in, so a cart follows a customer from phone to laptop',
+			'Keep carts in MINT, or in a model of your own so your team sees every cart line',
+		],
+	},
+	{
+		date: '2026-10-05',
 		title: 'Widgets for your own site',
 		tag: 'New',
 		summary: 'Add MINT to a website you host yourself with one script tag, then place ready-made widgets on it — starting with customer sign-in.',
@@ -27,7 +41,7 @@ export const RELEASES: Release[] = [
 			'Your colour, font and corners on every widget, light or dark to match the page — and sealed off from your site’s CSS',
 			'Your organization now has a country: pick it from a searchable list with flags and dialling codes. It decides which payment providers your sites can use',
 			'Every new app, API and website now opens on its templates, and a template builds the whole thing: models, pages, sidebar, dashboard, roles and sample records',
-			'Coming next: cart, checkout and payments to your own merchant account — Stripe, plus SSLCommerz and bKash in Bangladesh',
+			'Coming next: checkout and payments to your own merchant account — Stripe, plus SSLCommerz and bKash in Bangladesh',
 		],
 	},
 	{
