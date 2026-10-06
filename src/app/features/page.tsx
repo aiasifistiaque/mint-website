@@ -85,7 +85,7 @@ export default function FeaturesPage() {
 								<Reveal className='mb-6 max-w-[620px]'>
 									<h3 className='text-[24px] font-extralight tracking-[-0.02em]'>A theme for your site, in light and dark</h3>
 									<p className='mt-2 text-[15px] leading-relaxed text-muted'>
-										The site builder starts you on a theme — then make it yours with your own colours, fonts, corners and buttons. Switch any time: every page restyles, nothing on it moves.
+										Seven themes to start from — then make one yours with your own colours, fonts, corners and buttons. Switch any time: every page restyles, nothing on it moves.
 									</p>
 								</Reveal>
 								<ThemesStrip />

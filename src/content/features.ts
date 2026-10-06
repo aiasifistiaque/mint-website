@@ -175,7 +175,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{
 				icon: Cursor,
 				title: 'Site builder',
-				body: 'Build your site visually: add blocks and ready-made sections, drag them into place, click any part to change it, style it for phone, tablet and desktop, pick a theme and its colours and fonts, then publish. Drafts stay private until you do.',
+				body: 'Build your site visually from more than 30 ready-made sections — heroes, prices, reviews, questions, galleries, contact — and blocks like tabs, carousels and maps. Drag them into place, style them for phone, tablet and desktop, pick one of seven themes, then publish. Drafts stay private until you do.',
 				guide: 'site-builder',
 			},
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },

@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-06',
+		title: 'Site builder: 34 ready-made sections and seven themes',
+		summary: 'Build a whole page in minutes: pick ready-made sections, then make them yours. Four new themes, and new blocks for menus, tabs, galleries and more.',
+		tag: 'New',
+		items: [
+			'34 ready-made sections, each with a picture in the Add tab: headers, heroes, features, steps, logos, numbers, reviews, prices, questions, team, gallery, contact, newsletter, blog, products, footers and a page-not-found page',
+			'New blocks: a header whose menu folds into a ☰ on phones, logo, menu, social links, breadcrumbs, cards, tabs, questions that open and close, carousels, galleries that open big, a moving logo strip, numbers, badges, reviews, a countdown, a map of your address and a contact form',
+			'Four more themes — Market for shops, Calm for bookings and care, Mono for portfolios, Bistro for restaurants — seven in all, each in light and dark and checked for readable contrast',
+			'Fast pages: blocks add no extra code to pages that don’t use them, and fonts no longer hold up the first paint',
+			'Gentle hints for missing picture descriptions and headings out of order — they never stop you publishing',
+		],
+	},
+	{
+		date: '2026-10-06',
 		title: 'Site builder: styles, themes and shared sections',
 		summary: 'The visual site builder is open: style every block for each screen size, give the whole site a look in one place, and share a header, a footer and sections across pages.',
 		tag: 'New',

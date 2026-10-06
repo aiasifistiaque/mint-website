@@ -3,8 +3,8 @@ import { SITE_THEMES, type SiteTheme } from '@/content/siteThemes';
 
 /**
  * The site builder's themes, each as the same little page in light and dark
- * (features page, after "Go live"). Drawn with plain colours — no web fonts
- * are loaded for it.
+ * (features page, after "Go live"), in a row that scrolls sideways. Drawn
+ * with plain colours — no web fonts are loaded for it.
  */
 
 const Mini = ({ t, mode }: { t: SiteTheme; mode: 'light' | 'dark' }) => {
@@ -61,12 +61,13 @@ const Mini = ({ t, mode }: { t: SiteTheme; mode: 'light' | 'dark' }) => {
 
 export default function ThemesStrip() {
 	return (
-		<div className='grid gap-4 md:grid-cols-3'>
+		// Seven themes don't fill a grid evenly: one row that scrolls sideways, each card a fixed width.
+		<div className='-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 [scrollbar-width:thin] sm:-mx-6 sm:px-6'>
 			{SITE_THEMES.map((t, i) => (
 				<Reveal
 					key={t.key}
-					className='h-full'
-					delay={i * 60}>
+					className='w-[300px] shrink-0 snap-start'
+					delay={Math.min(i, 3) * 60}>
 					<figure className='flex h-full flex-col overflow-hidden rounded-2xl border border-line shadow-panel'>
 						<div className='flex flex-1'>
 							<Mini
