@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-06',
+		title: 'A guided start for new accounts',
+		tag: 'Improved',
+		summary: 'Signing up now walks you to your first working project, step by step, with a guide for each step.',
+		items: [
+			'A welcome email with the six steps to a first project and a link to each guide',
+			'Your first home page explains what you can build (an app, a website or an API) and starts one in a click',
+			'Once you have a project, a Getting started checklist on your dashboards ticks itself off as you go',
+			'The user guides now live at docs.mintapp.shop',
+			'Simpler sign-in, sign-up and start pages, in the same look as this website',
+		],
+	},
+	{
+		date: '2026-10-06',
 		title: 'Checkout and payments on your own site',
 		tag: 'New',
 		summary: 'Your site can now take orders and card payments — straight into your own Stripe account, priced by our server.',
