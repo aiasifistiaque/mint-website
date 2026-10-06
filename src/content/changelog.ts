@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-07',
+		title: 'Site builder: your data on the page, demo sites, and your own AI',
+		summary: 'Pick a theme and start from a whole demo site. Show your services, team or products straight from your project, and let Claude or ChatGPT build the site with you.',
+		tag: 'New',
+		items: [
+			'Choosing a theme can load its demo site — pages, a list with sample records, and every text ready to rewrite',
+			'Lists of records: show any of your models on a page, with filters, order and pages, plus a page for each record',
+			'Your words live in Contents and each page’s SEO in its own record — the team edits them in the panel, no builder needed',
+			'Connect your AI from the builder’s top bar: make a key, follow the steps for Claude, ChatGPT or Cursor, and copy a ready prompt with your theme',
+			'Adding a section asks where it goes and scrolls to it; header and footer blocks can be deleted from any page',
+		],
+	},
+	{
+		date: '2026-10-07',
 		title: 'Site builder: full screen, in its own tab',
 		summary: 'The site builder now opens full screen in a tab of its own, already signed in — more room for your page, and a calmer place to work.',
 		tag: 'Improved',
