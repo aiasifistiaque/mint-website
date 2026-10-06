@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-06',
+		title: 'Site builder: add, move and pop-ups',
+		summary: 'The visual site builder — still rolling out — can now build pages, not just edit them.',
+		items: [
+			'An Add tab with every block and ready-made section: click one to add it, or drag it onto the page where a blue line shows',
+			'Move blocks by dragging them on the page or in the outline; copy, paste and duplicate them, even onto another page',
+			'Double-click a heading, a button or a paragraph to type straight onto the page',
+			'Pop-ups, side drawers and small popovers that open from any button — with Esc, a close button and screen-reader support built in',
+			'Keyboard shortcuts for undo, copy, paste, duplicate, delete and moving',
+			'Still to come before it opens: styles and themes, your data on your pages, and AI that builds a site for you',
+		],
+	},
+	{
+		date: '2026-10-06',
 		title: 'A visual site builder is on the way',
 		summary: 'Soon you’ll build and edit your website by clicking on it — no code, and nothing goes live until you publish. It’s being rolled out now.',
 		items: [

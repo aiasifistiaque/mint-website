@@ -751,17 +751,9 @@ export const RecordMock = () => (
 
 /* ------------------------------------------------------- site builder */
 
-const OUTLINE = [
-	{ t: 'Header', d: 0, muted: true },
-	{ t: 'Hero', d: 0 },
-	{ t: 'Heading', d: 1, on: true },
-	{ t: 'Text', d: 1 },
-	{ t: 'Button', d: 1 },
-	{ t: 'Our breads', d: 0 },
-	{ t: 'Footer', d: 0, muted: true },
-];
+const ADD_TILES = ['Section', 'Stack', 'Heading', 'Button', 'Image', 'Drawer'];
 
-/** The site builder (tenant panel /site-builder): pages + outline, the page in the canvas, the selected block's settings. */
+/** The site builder (tenant panel /site-builder): the Add tab, the page in the canvas with a drawer open, the drawer's settings. */
 export const SiteBuilderMock = () => (
 	<Frame
 		url='app.mintapp.shop/sweetcrumb/site-builder'
@@ -784,40 +776,36 @@ export const SiteBuilderMock = () => (
 			</span>
 			<span className='rounded-md bg-brand px-2.5 py-1 font-medium text-white'>Publish</span>
 		</div>
-		<div className='grid sm:grid-cols-[110px_1fr_150px]'>
+		<div className='grid sm:grid-cols-[118px_1fr_142px]'>
 			<div className='hidden border-r border-line p-2.5 sm:block'>
-				<p className='mb-2 font-mono text-[9.5px] uppercase tracking-[0.12em] text-faint'>Outline</p>
-				{OUTLINE.map(o => (
-					<p
-						key={o.t}
-						style={{ paddingLeft: 6 + o.d * 10 }}
-						className={cx(
-							'mb-0.5 truncate rounded py-0.5',
-							o.on && 'bg-violet-50 text-violet-700 dark:bg-violet-400/10 dark:text-violet-300',
-							o.muted && 'text-faint'
-						)}>
-						{o.t}
-					</p>
-				))}
+				<div className='mb-2 flex gap-2 text-[10.5px]'>
+					<span className='text-faint'>Pages</span>
+					<span className='text-faint'>Outline</span>
+					<span className='border-b border-fg'>Add</span>
+				</div>
+				<p className='mb-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-faint'>Blocks</p>
+				<div className='grid grid-cols-2 gap-1'>
+					{ADD_TILES.map(t => (
+						<span
+							key={t}
+							className={cx(
+								'rounded-md border px-1 py-1.5 text-center text-[9.5px]',
+								t === 'Drawer' ? 'border-violet-400 bg-violet-50 text-violet-700 dark:bg-violet-400/10 dark:text-violet-300' : 'border-line'
+							)}>
+							{t}
+						</span>
+					))}
+				</div>
 			</div>
 			<div className='bg-subtle p-3'>
-				<div className='overflow-hidden rounded-lg border border-line bg-bg'>
+				<div className='relative overflow-hidden rounded-lg border border-line bg-bg'>
 					<div className='flex items-center justify-between border-b border-line px-3 py-1.5 text-[10px] text-muted'>
 						<span className='font-medium text-fg'>Sweetcrumb</span>
-						<span className='flex gap-2'>
-							<span>Menu</span>
-							<span>About</span>
-						</span>
+						<span className='rounded-full bg-[#0d0d0d] px-2 py-0.5 text-[9px] text-white'>Menu</span>
 					</div>
 					<div className='bg-gradient-to-br from-amber-100 to-rose-100 p-4 dark:from-amber-400/15 dark:to-rose-400/15'>
-						<div className='relative rounded-sm outline outline-2 outline-offset-2 outline-violet-500'>
-							<span className='absolute -top-[19px] left-[-4px] rounded-t bg-violet-500 px-1.5 text-[9px] leading-[15px] text-white'>Heading</span>
-							<p className='text-[15px] font-light uppercase leading-tight tracking-wide'>
-								Fresh sourdough, every morning<span className='caret'>|</span>
-							</p>
-						</div>
+						<p className='text-[15px] font-light uppercase leading-tight tracking-wide'>Fresh sourdough, every morning</p>
 						<p className='mt-2 text-[10.5px] text-muted'>Baked at five, on the shelf by seven.</p>
-						<span className='mt-3 inline-flex rounded-full bg-[#0d0d0d] px-3 py-1 text-[10px] text-white'>See the menu</span>
 					</div>
 					<div className='grid grid-cols-3 gap-1.5 p-3'>
 						{['bg-amber-200 dark:bg-amber-400/25', 'bg-rose-200 dark:bg-rose-400/25', 'bg-orange-200 dark:bg-orange-400/25'].map(c => (
@@ -827,20 +815,33 @@ export const SiteBuilderMock = () => (
 							/>
 						))}
 					</div>
+					{/* the drawer, open over a dimmed page */}
+					<div className='absolute inset-0 bg-black/30' />
+					<div className='absolute inset-y-0 right-0 w-[46%] border-l-2 border-violet-500 bg-bg p-2.5'>
+						<span className='absolute -top-px left-0 rounded-br bg-violet-500 px-1.5 text-[9px] leading-[15px] text-white'>Drawer</span>
+						<p className='mt-4 mb-1.5 text-[11px] font-medium'>Menu</p>
+						{['Breads', 'Cakes', 'Visit us'].map(l => (
+							<p
+								key={l}
+								className='border-b border-line py-1 text-[10px] text-muted'>
+								{l}
+							</p>
+						))}
+					</div>
 				</div>
 			</div>
 			<div className='border-t border-line p-3 sm:border-t-0 sm:border-l'>
-				<p className='mb-2 font-medium'>Heading</p>
-				<p className='mb-1 text-[10px] text-faint'>Text</p>
-				<div className='mb-2 rounded-md border-2 border-violet-400 px-2 py-1 leading-snug'>Fresh sourdough, every morning</div>
-				<p className='mb-1 text-[10px] text-faint'>Level</p>
+				<p className='mb-2 font-medium'>Drawer</p>
+				<p className='mb-1 text-[10px] text-faint'>Side</p>
 				<div className='mb-2 flex items-center justify-between rounded-md border border-line px-2 py-1'>
-					H1 — page title <ChevronDown className='size-3 text-faint' />
+					Right <ChevronDown className='size-3 text-faint' />
 				</div>
-				<p className='mb-1 text-[10px] text-faint'>Size</p>
-				<div className='flex items-center justify-between rounded-md border border-line px-2 py-1 text-muted'>
-					Auto (by level) <ChevronDown className='size-3 text-faint' />
+				<p className='mb-1 text-[10px] text-faint'>Width</p>
+				<div className='mb-2 flex items-center justify-between rounded-md border border-line px-2 py-1'>
+					Narrow <ChevronDown className='size-3 text-faint' />
 				</div>
+				<p className='mb-1 text-[10px] text-faint'>Opened by</p>
+				<div className='rounded-md border border-line px-2 py-1 text-muted'>Menu button</div>
 			</div>
 		</div>
 	</Frame>

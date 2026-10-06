@@ -185,10 +185,11 @@ export const FLOWS: Flow[] = [
 				where: 'Website → Site builder',
 				who: ['you'],
 				soon: true,
-				body: 'Rather see what you’re changing? Open the site builder: your page appears as visitors will see it. Click any part of it — a heading, a picture, a button — and change it in the panel beside it. Every change saves itself as a draft.',
+				body: 'Rather see what you’re changing? Open the site builder: your page appears as visitors will see it. Click any part of it — a heading, a picture, a button — and change it in the panel beside it, or type straight onto the page. Add blocks and ready-made sections by clicking or dragging them in. Every change saves itself as a draft.',
 				points: [
-					'Your pages, and an outline of every block on the page',
+					'Your pages, and an outline of every block on the page — drag to rearrange',
 					'Words, pictures, links, icons and what a button does — each with its own picker',
+					'Pop-ups and side drawers that open from any button',
 					'Phone, tablet and desktop widths, in light and dark',
 					'Undo and redo, and a warning if a teammate changed the same page',
 				],
