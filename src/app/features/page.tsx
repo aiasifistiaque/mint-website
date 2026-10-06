@@ -3,6 +3,7 @@ import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { Container, IconTile, PageHero, Reveal, cx } from '@/components/ui';
 import CtaBand from '@/components/site/CtaBand';
+import ThemesStrip from '@/components/site/ThemesStrip';
 import { FEATURE_GROUPS } from '@/content/features';
 import { tone } from '@/lib/tones';
 
@@ -79,6 +80,17 @@ export default function FeaturesPage() {
 								{g.features.length % 2 === 1 && <div className='hidden bg-panel sm:block' />}
 							</div>
 						</div>
+						{g.id === 'live' && (
+							<div className='mt-16'>
+								<Reveal className='mb-6 max-w-[620px]'>
+									<h3 className='text-[24px] font-extralight tracking-[-0.02em]'>A theme for your site, in light and dark</h3>
+									<p className='mt-2 text-[15px] leading-relaxed text-muted'>
+										The site builder starts you on a theme — then make it yours with your own colours, fonts, corners and buttons. Switch any time: every page restyles, nothing on it moves.
+									</p>
+								</Reveal>
+								<ThemesStrip />
+							</div>
+						)}
 					</Container>
 				</section>
 			))}

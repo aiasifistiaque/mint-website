@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-06',
+		title: 'Site builder: styles, themes and shared sections',
+		summary: 'The visual site builder is open: style every block for each screen size, give the whole site a look in one place, and share a header, a footer and sections across pages.',
+		tag: 'New',
+		items: [
+			'A Style tab for every block — spacing, size, background, border, text and more — with different values for phone, tablet and desktop',
+			'A Design tab: three themes to start from, then your own colours for light and dark, fonts from about 50 Google Fonts, corners, shadows and buttons',
+			'Edit the header and footer once and every page shows it; give landing pages a layout of their own',
+			'Save any part of a page as a section, place it on other pages, and change it everywhere at once — or detach a copy for one page',
+		],
+	},
+	{
+		date: '2026-10-06',
 		title: 'Site builder: add, move and pop-ups',
 		summary: 'The visual site builder — still rolling out — can now build pages, not just edit them.',
 		items: [

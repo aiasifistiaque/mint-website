@@ -184,13 +184,13 @@ export const FLOWS: Flow[] = [
 				title: 'Or build it visually',
 				where: 'Website → Site builder',
 				who: ['you'],
-				soon: true,
 				body: 'Rather see what you’re changing? Open the site builder: your page appears as visitors will see it. Click any part of it — a heading, a picture, a button — and change it in the panel beside it, or type straight onto the page. Add blocks and ready-made sections by clicking or dragging them in. Every change saves itself as a draft.',
 				points: [
 					'Your pages, and an outline of every block on the page — drag to rearrange',
 					'Words, pictures, links, icons and what a button does — each with its own picker',
 					'Pop-ups and side drawers that open from any button',
-					'Phone, tablet and desktop widths, in light and dark',
+					'Styles for phone, tablet and desktop — spacing, colours, type — and a theme with your own colours and fonts',
+					'One header and footer for every page, and sections you save once and reuse',
 					'Undo and redo, and a warning if a teammate changed the same page',
 				],
 				art: 'builder',
@@ -200,7 +200,6 @@ export const FLOWS: Flow[] = [
 				title: 'Publish when it’s ready',
 				where: 'Site builder → Publish',
 				who: ['you', 'mint'],
-				soon: true,
 				body: 'Visitors keep seeing the last published version while you work. Publish lists what changed and anything to fix first, then puts it all live at once — with each page’s title, description and share image, the sitemap and your analytics.',
 				points: [
 					'Exactly what changed since the last publish, page by page',

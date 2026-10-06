@@ -175,9 +175,8 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{
 				icon: Cursor,
 				title: 'Site builder',
-				body: 'Build your site visually: add blocks and ready-made sections, drag them into place, click any part to change it, add pop-ups and drawers, then publish. Drafts stay private until you do.',
+				body: 'Build your site visually: add blocks and ready-made sections, drag them into place, click any part to change it, style it for phone, tablet and desktop, pick a theme and its colours and fonts, then publish. Drafts stay private until you do.',
 				guide: 'site-builder',
-				soon: true,
 			},
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
 			{ icon: ChartLine, title: 'Analytics', body: 'Visitors, pages, sources and events — without cookies.', guide: 'analytics' },
