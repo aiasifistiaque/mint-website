@@ -17,6 +17,17 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-07',
+		title: 'Site builder: full screen, in its own tab',
+		summary: 'The site builder now opens full screen in a tab of its own, already signed in — more room for your page, and a calmer place to work.',
+		tag: 'Improved',
+		items: [
+			'Open it from Site builder or Edit site in your website project: a new tab opens, signed in as you, with nothing to log in to',
+			'More room: your pages on the left, the page itself in the middle, and the block you clicked in a panel on the right that closes when you’re done',
+			'Save status, phone / tablet / desktop preview, undo and Publish always in the bar at the top; Exit saves and takes you back',
+		],
+	},
+	{
 		date: '2026-10-06',
 		title: 'Site builder: 34 ready-made sections and seven themes',
 		summary: 'Build a whole page in minutes: pick ready-made sections, then make them yours. Four new themes, and new blocks for menus, tabs, galleries and more.',
