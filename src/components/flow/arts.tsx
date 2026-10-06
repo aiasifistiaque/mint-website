@@ -25,7 +25,7 @@ import {
 } from '@/components/ui/icons';
 import { cx } from '@/components/ui';
 import Frame, { Chip } from '@/components/mock/Frame';
-import { ApiMock, DashboardMock, ModelMock, PagesMock, ProjectMock, RecordMock, SignInMock, TeamMock } from '@/components/mock/mocks';
+import { ApiMock, DashboardMock, ModelMock, PagesMock, ProjectMock, RecordMock, SignInMock, SiteBuilderMock, TeamMock } from '@/components/mock/mocks';
 import type { ArtKey } from '@/content/flows';
 
 /*
@@ -253,6 +253,55 @@ const EditLiveArt = () => (
 				))}
 			</div>
 			<p className='mt-2 text-center text-[10px] text-faint'>No code change · no redeploy</p>
+		</Frame>
+	</div>
+);
+
+const CHANGES = [
+	{ page: 'Our breads', what: 'New page', tone: 'blue' as const },
+	{ page: 'Home', what: 'Changed', tone: 'amber' as const },
+	{ page: 'Old menu', what: 'Removed', tone: 'neutral' as const },
+];
+
+const PublishSiteArt = () => (
+	<div className='grid items-center gap-3 sm:grid-cols-[1fr_auto_1fr]'>
+		<Frame bodyClassName='p-4'>
+			<Label>Publish your site</Label>
+			{CHANGES.map(c => (
+				<div
+					key={c.page}
+					className='flex items-center justify-between border-b border-line py-1.5 last:border-b-0'>
+					<span>{c.page}</span>
+					<Chip tone={c.tone}>{c.what}</Chip>
+				</div>
+			))}
+			<p className='mt-3 mb-1 text-[10.5px] text-faint'>Note (optional)</p>
+			<div className='mb-3 rounded-lg border border-line px-2.5 py-1.5'>New breads page</div>
+			<div className='flex items-center justify-end gap-2'>
+				<span className='inline-flex rounded-full border border-line px-3 py-1 text-[10.5px] text-muted'>Cancel</span>
+				<span className='inline-flex rounded-full bg-fg px-3 py-1 text-[10.5px] font-medium text-bg'>Publish</span>
+			</div>
+		</Frame>
+		<div className='flex flex-col items-center gap-1 text-faint'>
+			<ArrowRight className='size-4 rotate-90 sm:rotate-0' />
+			<span className='font-mono text-[9.5px]'>live</span>
+		</div>
+		<Frame
+			url='sweetcrumb.com'
+			bodyClassName='p-4'>
+			<p className='mb-2 text-[13px] font-light uppercase tracking-wide'>Our breads</p>
+			<div className='grid grid-cols-3 gap-1.5'>
+				{['bg-amber-200 dark:bg-amber-400/25', 'bg-rose-200 dark:bg-rose-400/25', 'bg-orange-200 dark:bg-orange-400/25'].map(c => (
+					<span
+						key={c}
+						className={cx('h-12 rounded-md', c)}
+					/>
+				))}
+			</div>
+			<div className='mt-3 rounded-lg border border-line p-2 font-mono text-[9.5px] leading-relaxed text-faint'>
+				<p>title · description · share image</p>
+				<p>sitemap · analytics</p>
+			</div>
 		</Frame>
 	</div>
 );
@@ -825,6 +874,10 @@ const FlowArt = ({ art }: { art: ArtKey }) => {
 			return <ScopeArt />;
 		case 'webhooks':
 			return <WebhooksArt />;
+		case 'builder':
+			return <SiteBuilderMock />;
+		case 'publish-site':
+			return <PublishSiteArt />;
 	}
 };
 

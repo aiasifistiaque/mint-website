@@ -6,6 +6,7 @@ import {
 	Building2,
 	ChartLine,
 	Code,
+	Cursor,
 	Database,
 	Eye,
 	FileUp,
@@ -47,7 +48,8 @@ import type { Tone } from '@/lib/tones';
  * to content/changelog.ts).
  */
 
-export type Feature = { icon: IconType; title: string; body: string; guide?: string };
+/** `soon`: being built — shown with a Coming soon badge until it ships. */
+export type Feature = { icon: IconType; title: string; body: string; guide?: string; soon?: boolean };
 export type FeatureGroup = { id: string; title: string; lead: string; color: Tone; features: Feature[] };
 
 export const FEATURE_GROUPS: FeatureGroup[] = [
@@ -170,6 +172,13 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{ icon: Zap, title: 'Webhooks', body: 'Your server hears about every new, changed or deleted record — signed, retried and logged.', guide: 'public-api#webhooks' },
 			{ icon: UserRound, title: 'Customer accounts', body: 'Sign-up and sign-in for your customers; they see only their own records.', guide: 'customers' },
 			{ icon: Blocks, title: 'Site widgets', body: 'One script tag puts sign-in, a cart and checkout on your own site — styled to match, priced by our server, paid into your own Stripe.', guide: 'widgets' },
+			{
+				icon: Cursor,
+				title: 'Site builder',
+				body: 'Build your site visually: click any part of a page to change its words, pictures and links, see it on phone and desktop, then publish. Drafts stay private until you do.',
+				guide: 'site-builder',
+				soon: true,
+			},
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
 			{ icon: ChartLine, title: 'Analytics', body: 'Visitors, pages, sources and events — without cookies.', guide: 'analytics' },
 		],

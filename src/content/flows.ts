@@ -58,7 +58,9 @@ export type ArtKey =
 	| 'read-key'
 	| 'ask'
 	| 'scope'
-	| 'webhooks';
+	| 'webhooks'
+	| 'builder'
+	| 'publish-site';
 
 export type FlowStep = {
 	title: string;
@@ -70,6 +72,8 @@ export type FlowStep = {
 	art: ArtKey;
 	/** User guide slug in the app — not linked until the user docs are public. */
 	guide?: string;
+	/** Being built — the step shows a Coming soon badge. */
+	soon?: boolean;
 };
 
 export type Included = { icon: IconType; title: string; items: string[] };
@@ -175,6 +179,36 @@ export const FLOWS: Flow[] = [
 				points: ['Draft, Published and Archived pages — take one down without deleting it', 'The menu comes from published pages, with dropdowns from parent pages', 'Blogs, products, members’ areas: one more model each'],
 				art: 'edit-live',
 				guide: 'websites#build-a-page',
+			},
+			{
+				title: 'Or build it visually',
+				where: 'Website → Site builder',
+				who: ['you'],
+				soon: true,
+				body: 'Rather see what you’re changing? Open the site builder: your page appears as visitors will see it. Click any part of it — a heading, a picture, a button — and change it in the panel beside it. Every change saves itself as a draft.',
+				points: [
+					'Your pages, and an outline of every block on the page',
+					'Words, pictures, links, icons and what a button does — each with its own picker',
+					'Phone, tablet and desktop widths, in light and dark',
+					'Undo and redo, and a warning if a teammate changed the same page',
+				],
+				art: 'builder',
+				guide: 'site-builder',
+			},
+			{
+				title: 'Publish when it’s ready',
+				where: 'Site builder → Publish',
+				who: ['you', 'mint'],
+				soon: true,
+				body: 'Visitors keep seeing the last published version while you work. Publish lists what changed and anything to fix first, then puts it all live at once — with each page’s title, description and share image, the sitemap and your analytics.',
+				points: [
+					'Exactly what changed since the last publish, page by page',
+					'Problems — like a button pointing at a deleted page — stop Publish and take you to the block',
+					'Redirects and a page-not-found page in your site’s own look',
+					'Every publish is kept as a version of the site',
+				],
+				art: 'publish-site',
+				guide: 'site-builder#publish',
 			},
 		],
 		includedTitle: 'Included. No headache.',

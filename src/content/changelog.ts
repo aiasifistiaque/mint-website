@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-06',
+		title: 'A visual site builder is on the way',
+		summary: 'Soon you’ll build and edit your website by clicking on it — no code, and nothing goes live until you publish. It’s being rolled out now.',
+		items: [
+			'Your page as visitors see it: click a heading, a picture or a button and change it in the panel beside it',
+			'An outline of every block on the page, and widths for phone, tablet and desktop, in light and dark',
+			'Changes save themselves as a draft, with undo and redo — your live site doesn’t change while you work',
+			'Publish shows exactly what changed and anything to fix first, then puts it all live at once',
+			'MINT hosts the published site for you, with each page’s SEO, a sitemap, redirects and a page-not-found page',
+			'Still to come before it opens: adding and moving blocks, styles and themes, your data on your pages, and AI that builds a site for you',
+		],
+	},
+	{
+		date: '2026-10-06',
 		title: 'A guided start for new accounts',
 		tag: 'Improved',
 		summary: 'Signing up now walks you to your first working project, step by step, with a guide for each step.',

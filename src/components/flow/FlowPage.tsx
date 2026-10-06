@@ -133,6 +133,11 @@ const FlowPage = ({ flow, children }: { flow: Flow; children?: ReactNode }) => {
 													who={w}
 												/>
 											))}
+											{s.soon && (
+												<span className='rounded-full border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-faint'>
+													Coming soon
+												</span>
+											)}
 											{s.where && (
 												<span className='inline-flex items-center gap-1.5 font-mono text-[11.5px] text-faint'>
 													<MapPin className='size-3.5' />

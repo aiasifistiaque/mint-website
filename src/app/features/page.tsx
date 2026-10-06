@@ -58,6 +58,11 @@ export default function FeaturesPage() {
 												<IconTile color={g.color}>
 													<f.icon />
 												</IconTile>
+												{f.soon && (
+													<span className='rounded-full border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-faint'>
+														Coming soon
+													</span>
+												)}
 											</div>
 											<h3 className='mt-5 text-[15px] font-normal'>{f.title}</h3>
 											<p className='mt-1.5 text-[14px] leading-relaxed text-muted'>{f.body}</p>

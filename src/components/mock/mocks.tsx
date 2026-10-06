@@ -748,3 +748,100 @@ export const RecordMock = () => (
 		</div>
 	</Frame>
 );
+
+/* ------------------------------------------------------- site builder */
+
+const OUTLINE = [
+	{ t: 'Header', d: 0, muted: true },
+	{ t: 'Hero', d: 0 },
+	{ t: 'Heading', d: 1, on: true },
+	{ t: 'Text', d: 1 },
+	{ t: 'Button', d: 1 },
+	{ t: 'Our breads', d: 0 },
+	{ t: 'Footer', d: 0, muted: true },
+];
+
+/** The site builder (tenant panel /site-builder): pages + outline, the page in the canvas, the selected block's settings. */
+export const SiteBuilderMock = () => (
+	<Frame
+		url='app.mintapp.shop/sweetcrumb/site-builder'
+		bodyClassName='text-[11.5px]'>
+		<div className='flex items-center gap-2 border-b border-line px-3 py-2'>
+			<span className='inline-flex items-center gap-1 rounded-md border border-line px-2 py-0.5'>
+				Home <ChevronDown className='size-3 text-faint' />
+			</span>
+			<span className='hidden gap-0.5 rounded-md bg-subtle p-0.5 font-mono text-[10px] sm:inline-flex'>
+				{['390', '768', '1280'].map(w => (
+					<span
+						key={w}
+						className={cx('rounded px-1.5 py-px', w === '1280' ? 'bg-bg text-fg shadow-panel' : 'text-faint')}>
+						{w}
+					</span>
+				))}
+			</span>
+			<span className='ml-auto inline-flex items-center gap-1 text-faint'>
+				<Check className='size-3 text-emerald-500' /> Saved
+			</span>
+			<span className='rounded-md bg-brand px-2.5 py-1 font-medium text-white'>Publish</span>
+		</div>
+		<div className='grid sm:grid-cols-[110px_1fr_150px]'>
+			<div className='hidden border-r border-line p-2.5 sm:block'>
+				<p className='mb-2 font-mono text-[9.5px] uppercase tracking-[0.12em] text-faint'>Outline</p>
+				{OUTLINE.map(o => (
+					<p
+						key={o.t}
+						style={{ paddingLeft: 6 + o.d * 10 }}
+						className={cx(
+							'mb-0.5 truncate rounded py-0.5',
+							o.on && 'bg-violet-50 text-violet-700 dark:bg-violet-400/10 dark:text-violet-300',
+							o.muted && 'text-faint'
+						)}>
+						{o.t}
+					</p>
+				))}
+			</div>
+			<div className='bg-subtle p-3'>
+				<div className='overflow-hidden rounded-lg border border-line bg-bg'>
+					<div className='flex items-center justify-between border-b border-line px-3 py-1.5 text-[10px] text-muted'>
+						<span className='font-medium text-fg'>Sweetcrumb</span>
+						<span className='flex gap-2'>
+							<span>Menu</span>
+							<span>About</span>
+						</span>
+					</div>
+					<div className='bg-gradient-to-br from-amber-100 to-rose-100 p-4 dark:from-amber-400/15 dark:to-rose-400/15'>
+						<div className='relative rounded-sm outline outline-2 outline-offset-2 outline-violet-500'>
+							<span className='absolute -top-[19px] left-[-4px] rounded-t bg-violet-500 px-1.5 text-[9px] leading-[15px] text-white'>Heading</span>
+							<p className='text-[15px] font-light uppercase leading-tight tracking-wide'>
+								Fresh sourdough, every morning<span className='caret'>|</span>
+							</p>
+						</div>
+						<p className='mt-2 text-[10.5px] text-muted'>Baked at five, on the shelf by seven.</p>
+						<span className='mt-3 inline-flex rounded-full bg-[#0d0d0d] px-3 py-1 text-[10px] text-white'>See the menu</span>
+					</div>
+					<div className='grid grid-cols-3 gap-1.5 p-3'>
+						{['bg-amber-200 dark:bg-amber-400/25', 'bg-rose-200 dark:bg-rose-400/25', 'bg-orange-200 dark:bg-orange-400/25'].map(c => (
+							<span
+								key={c}
+								className={cx('h-8 rounded-md', c)}
+							/>
+						))}
+					</div>
+				</div>
+			</div>
+			<div className='border-t border-line p-3 sm:border-t-0 sm:border-l'>
+				<p className='mb-2 font-medium'>Heading</p>
+				<p className='mb-1 text-[10px] text-faint'>Text</p>
+				<div className='mb-2 rounded-md border-2 border-violet-400 px-2 py-1 leading-snug'>Fresh sourdough, every morning</div>
+				<p className='mb-1 text-[10px] text-faint'>Level</p>
+				<div className='mb-2 flex items-center justify-between rounded-md border border-line px-2 py-1'>
+					H1 — page title <ChevronDown className='size-3 text-faint' />
+				</div>
+				<p className='mb-1 text-[10px] text-faint'>Size</p>
+				<div className='flex items-center justify-between rounded-md border border-line px-2 py-1 text-muted'>
+					Auto (by level) <ChevronDown className='size-3 text-faint' />
+				</div>
+			</div>
+		</div>
+	</Frame>
+);
