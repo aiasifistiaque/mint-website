@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-07',
+		title: 'Site builder: every word connected, from the first page',
+		summary: 'A new site opens as a full demo — every page, its SEO and a list of your services — and every word on it lives in your Contents, ready to change in the builder or the panel.',
+		tag: 'Improved',
+		items: [
+			'A new site (or one made from a template) opens with all its pages, each with its SEO, named after your business',
+			'Every heading, text, button and picture is kept in Contents — and so is everything you add, with demo words to start from',
+			'Features, team, reviews and numbers are lists of cards you edit in one place; switch any list to your Services, Team or Products',
+			'Copies get their own words, and changes made in the panel show up in the builder',
+		],
+	},
+	{
+		date: '2026-10-07',
 		title: 'Site builder: your data on the page, demo sites, and your own AI',
 		summary: 'Pick a theme and start from a whole demo site. Show your services, team or products straight from your project, and let Claude or ChatGPT build the site with you.',
 		tag: 'New',
