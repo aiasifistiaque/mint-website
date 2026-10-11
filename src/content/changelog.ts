@@ -31,6 +31,7 @@ export const RELEASES: Release[] = [
 			'The form shows it before you save: “Will also update Invoice A: Status → Paid, Payment date → 20 Oct 2026”, and Payment date gets its asterisk the moment you tick Mark as paid',
 			'Every change shows in the invoice’s history with the rule and the payment that made it',
 			'Make rules in the new green Linked Relationships tab of each page: fill in the sentence from dropdowns, and see which other pages change this one',
+			'Or ask your own AI: over MCP it reads a page’s rules and sets new ones, checked the same way before they go live',
 		],
 	},
 	{
