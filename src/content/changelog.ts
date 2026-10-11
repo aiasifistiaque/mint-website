@@ -17,6 +17,20 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-12',
+		title: 'Linked Relationships: transfers, limits and the new-model wizard',
+		summary: 'Move an amount from one record to another — a transfer takes money from one account and gives it to the other — and refuse it when there isn’t enough. Rules can now be set up while you create a model.',
+		tag: 'Improved',
+		items: [
+			'“Take off” joins “Add”: a transfer takes its amount off the sending account’s balance and adds it to the receiving one',
+			'“Never below”: a balance that would go under 0 refuses the save with your own message, shown right under Amount — nothing moves',
+			'Edits move only the difference, deleting a transfer gives the money back, and two transfers at the same moment can’t both spend the same balance',
+			'Conditions can compare with this record’s own fields: refuse a transfer when the To account is the same as the From account',
+			'The new-model wizard ends with a Linked Relationships step, so a Transfers model can be made with its rules in one go',
+			'The rule window scrolls inside itself, so long rules and the Save button are always in reach',
+		],
+	},
+	{
 		date: '2026-10-11',
 		title: 'Linked Relationships: one save updates the records it links to',
 		summary: 'Record a payment and tick “Mark as paid” — its invoice turns Paid and takes the payment’s date. Build rules like this in the page builder’s new Linked Relationships tab; they run on every save, safely, and take themselves back when the payment goes.',

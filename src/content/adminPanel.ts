@@ -75,7 +75,7 @@ export const PANEL_GROUPS: PanelGroup[] = [
 			{
 				icon: Workflow,
 				title: 'Linked Relationships',
-				body: 'Saving one record updates the ones it links to — a payment marks its invoice paid — and the form says so before you save.',
+				body: 'Saving one record updates the ones it links to — a payment marks its invoice paid, a transfer moves money between accounts and is refused when the balance is too low — and the form says so before you save.',
 				guide: 'pages#linked-relationships',
 			},
 		],

@@ -68,7 +68,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{
 				icon: Workflow,
 				title: 'Linked Relationships',
-				body: 'Rules that update linked records on save — checked first, all or nothing, and taken back when the record goes.',
+				body: 'Rules that update linked records on save — transfers between accounts with a “never below 0” limit — checked first, all or nothing, and taken back when the record goes.',
 				guide: 'pages#linked-relationships',
 			},
 			{ icon: Plug, title: 'MCP for AI', body: 'Your AI assistant builds and queries the backend through a scoped key.', guide: 'connect-ai' },
