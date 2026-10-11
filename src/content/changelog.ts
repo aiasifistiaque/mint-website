@@ -28,6 +28,7 @@ export const RELEASES: Release[] = [
 			'Delete the payment or untick the box and the invoice goes back — only the fields that still hold what the rule set',
 			'Works wherever records are saved: bulk edits, status changes, bulk delete and undo, copies and bulk uploads — all checked before anything is saved',
 			'Saves from your website or app run a rule only when you switch on “Also for website and API saves”, and never reach another project',
+			'The form shows it before you save: “Will also update Invoice A: Status → Paid, Payment date → 20 Oct 2026”, and Payment date gets its asterisk the moment you tick Mark as paid',
 			'Every change shows in the invoice’s history with the rule and the payment that made it. The Linked Relationships tab in the page builder is next',
 		],
 	},
