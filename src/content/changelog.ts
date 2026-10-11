@@ -17,6 +17,19 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-11',
+		title: 'Linked Relationships: one save updates the records it links to',
+		summary: 'Record a payment and tick “Mark as paid” — its invoice turns Paid and takes the payment’s date. Rules like this now run on every save, safely, and take themselves back when the payment goes.',
+		tag: 'New',
+		items: [
+			'Rules read like a sentence: when a payment is saved, if Mark as paid is ticked, set the invoice’s status to Paid and its payment date to this one’s',
+			'Set a value, copy a field, work out a formula or add an amount — and refuse a save outright, like a payment on a cancelled invoice',
+			'Everything is checked before anything is saved: a missing date or an invoice that can’t change stops the save with a clear message',
+			'Delete the payment or untick the box and the invoice goes back — only the fields that still hold what the rule set',
+			'Every change shows in the invoice’s history with the rule and the payment that made it. The Linked Relationships tab in the page builder is next',
+		],
+	},
+	{
 		date: '2026-10-07',
 		title: 'Site builder: every word connected, from the first page',
 		summary: 'A new site opens as a full demo — every page, its SEO and a list of your services — and every word on it lives in your Contents, ready to change in the builder or the panel.',
