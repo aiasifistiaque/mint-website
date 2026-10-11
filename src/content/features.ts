@@ -38,6 +38,7 @@ import {
 	Webhook,
 	Server,
 	Zap,
+	Workflow,
 	type IconType,
 } from '@/components/ui/icons';
 import type { Tone } from '@/lib/tones';
@@ -64,6 +65,12 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{ icon: UserRound, title: 'Auth', body: 'Accounts for your team, and sign-up and sign-in for your customers.', guide: 'customers' },
 			{ icon: Images, title: 'Storage', body: 'Images, videos and files in a media library, per project or shared.', guide: 'media' },
 			{ icon: Pencil, title: 'Visual data editor', body: 'Tables and forms for every model; bulk edits, import, export and undo.', guide: 'records' },
+			{
+				icon: Workflow,
+				title: 'Linked Relationships',
+				body: 'Rules that update linked records on save — checked first, all or nothing, and taken back when the record goes.',
+				guide: 'pages#linked-relationships',
+			},
 			{ icon: Plug, title: 'MCP for AI', body: 'Your AI assistant builds and queries the backend through a scoped key.', guide: 'connect-ai' },
 		],
 	},

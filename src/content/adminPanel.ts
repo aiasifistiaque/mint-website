@@ -33,6 +33,7 @@ import {
 	Stamp,
 	Table2,
 	Users,
+	Workflow,
 	type IconType,
 } from '@/components/ui/icons';
 import type { Tone } from '@/lib/tones';
@@ -71,6 +72,12 @@ export const PANEL_GROUPS: PanelGroup[] = [
 			{ icon: Link2, title: 'Linked-record pickers', body: 'Pick a guest or a room from a searchable list, narrowed the way the page says.', guide: 'pages' },
 			{ icon: ShieldCheck, title: 'Validation', body: 'Required fields, allowed values, min and max, unique — checked in the form and on the server.', guide: 'models#models-fields' },
 			{ icon: Sigma, title: 'Live formulas', body: 'Calculated fields show their result as you type.', guide: 'models#formulas' },
+			{
+				icon: Workflow,
+				title: 'Linked Relationships',
+				body: 'Saving one record updates the ones it links to — a payment marks its invoice paid — and the form says so before you save.',
+				guide: 'pages#linked-relationships',
+			},
 		],
 	},
 	{

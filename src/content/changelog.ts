@@ -19,7 +19,7 @@ export const RELEASES: Release[] = [
 	{
 		date: '2026-10-11',
 		title: 'Linked Relationships: one save updates the records it links to',
-		summary: 'Record a payment and tick “Mark as paid” — its invoice turns Paid and takes the payment’s date. Rules like this now run on every save, safely, and take themselves back when the payment goes.',
+		summary: 'Record a payment and tick “Mark as paid” — its invoice turns Paid and takes the payment’s date. Build rules like this in the page builder’s new Linked Relationships tab; they run on every save, safely, and take themselves back when the payment goes.',
 		tag: 'New',
 		items: [
 			'Rules read like a sentence: when a payment is saved, if Mark as paid is ticked, set the invoice’s status to Paid and its payment date to this one’s',
@@ -29,7 +29,8 @@ export const RELEASES: Release[] = [
 			'Works wherever records are saved: bulk edits, status changes, bulk delete and undo, copies and bulk uploads — all checked before anything is saved',
 			'Saves from your website or app run a rule only when you switch on “Also for website and API saves”, and never reach another project',
 			'The form shows it before you save: “Will also update Invoice A: Status → Paid, Payment date → 20 Oct 2026”, and Payment date gets its asterisk the moment you tick Mark as paid',
-			'Every change shows in the invoice’s history with the rule and the payment that made it. The Linked Relationships tab in the page builder is next',
+			'Every change shows in the invoice’s history with the rule and the payment that made it',
+			'Make rules in the new green Linked Relationships tab of each page: fill in the sentence from dropdowns, and see which other pages change this one',
 		],
 	},
 	{
