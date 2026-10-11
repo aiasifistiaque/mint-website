@@ -26,6 +26,8 @@ export const RELEASES: Release[] = [
 			'Set a value, copy a field, work out a formula or add an amount — and refuse a save outright, like a payment on a cancelled invoice',
 			'Everything is checked before anything is saved: a missing date or an invoice that can’t change stops the save with a clear message',
 			'Delete the payment or untick the box and the invoice goes back — only the fields that still hold what the rule set',
+			'Works wherever records are saved: bulk edits, status changes, bulk delete and undo, copies and bulk uploads — all checked before anything is saved',
+			'Saves from your website or app run a rule only when you switch on “Also for website and API saves”, and never reach another project',
 			'Every change shows in the invoice’s history with the rule and the payment that made it. The Linked Relationships tab in the page builder is next',
 		],
 	},
