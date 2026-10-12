@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-12',
+		title: 'Row menu: add a linked record, only where it fits',
+		summary: 'A bill’s ⋯ menu can offer “Add payment” — only while the bill isn’t paid — and open the Payment form with the bill already filled in. Set it up for any page in the page builder.',
+		tag: 'New',
+		items: [
+			'“Add a linked record”: a row menu item that opens another page’s add form, with fields filled in from the row or set to a value',
+			'Filled-in fields can be locked, so the bill a payment is for can’t be changed by mistake',
+			'“Show only when” on every row menu item: offer an option only on rows that match, like Status is not Paid',
+			'Saving refreshes the list you’re on, so a bill marked paid by its payment shows Paid straight away',
+			'A balance’s “Never below” now also holds when a transfer is taken back, and the form keeps quiet until you’ve filled it in',
+		],
+	},
+	{
+		date: '2026-10-12',
 		title: 'Linked Relationships: transfers, limits and the new-model wizard',
 		summary: 'Move an amount from one record to another — a transfer takes money from one account and gives it to the other — and refuse it when there isn’t enough. Rules can now be set up while you create a model.',
 		tag: 'Improved',
