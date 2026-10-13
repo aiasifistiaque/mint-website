@@ -32,6 +32,8 @@ export const RELEASES: Release[] = [
 			'Saved texts like your terms and conditions, printed on every template that uses them',
 			'A full-page designer: add blocks or ready-made pieces (signature, “no signature required”, terms), fill in your logo and address right on the page',
 			'Preview any template as the real PDF in a new tab, every field filled with sample data',
+			'Rows and boxes that work like flexbox: side by side, centred or spread apart, and a Space that fills the room left — push a signature to the bottom of the page',
+			'Drag blocks on the page — into a box, left or right in a row — and copy / paste one inside a box, or into another template',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
