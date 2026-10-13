@@ -30,6 +30,8 @@ export const RELEASES: Release[] = [
 			'Have your own AI — Claude, ChatGPT, Cursor — build a template from a sentence, or change one (“make the totals bigger”)',
 			'Business details — logo, address, phone, tax number — on your organization, copied into each new project and changeable per project',
 			'Saved texts like your terms and conditions, printed on every template that uses them',
+			'A full-page designer: add blocks or ready-made pieces (signature, “no signature required”, terms), fill in your logo and address right on the page',
+			'Preview any template as the real PDF in a new tab, every field filled with sample data',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
