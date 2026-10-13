@@ -50,6 +50,7 @@ export const RELEASES: Release[] = [
 			'Full-width header and footer bands, columns whose blocks sit side by side, and boxes with padding and lines on the sides you choose',
 			'A gallery by category — Invoices, Receipts, Quotations — with new designs: Minimal and Banner invoices, two quotations and a money receipt',
 			'Resize logos and images by dragging their corners, and set alignment with Figma-style icons that explain themselves on hover',
+			'Fields read in plain words — “Saved text · Invoice terms” — and change from a layered menu; raw keys only when you switch them on',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
