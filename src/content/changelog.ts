@@ -28,6 +28,8 @@ export const RELEASES: Release[] = [
 			'Formats for money, dates, numbers and amounts in words; your logo, address and bank details typed once',
 			'Download PDF on every record, in the row menu, and for many ticked rows at once',
 			'Have your own AI — Claude, ChatGPT, Cursor — build a template from a sentence, or change one (“make the totals bigger”)',
+			'Business details — logo, address, phone, tax number — on your organization, copied into each new project and changeable per project',
+			'Saved texts like your terms and conditions, printed on every template that uses them',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
