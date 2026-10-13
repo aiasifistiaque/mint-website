@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Invite people into one project',
+		summary: 'Bring a freelancer, a client or a developer into a single project as Member or Developer — the rest of your organization stays closed to them.',
+		tag: 'New',
+		items: [
+			'Project → People: invite by email, change someone’s role in that project, or remove them',
+			'A new Developer role: works with the records and builds the project — models, pages, AI keys',
+			'The owner, admins, and anyone whose role has “Invite to projects” can invite',
+			'Projects you’re invited to show on your dashboard and in the project menu under the inviting organization’s name',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Your own AI sets the buttons on each row',
 		summary: 'Ask your AI for “Download receipt on paid bills, Download invoice on the rest” and it sets up the row menu for you.',
 		tag: 'Improved',
