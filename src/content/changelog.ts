@@ -51,6 +51,7 @@ export const RELEASES: Release[] = [
 			'A gallery by category — Invoices, Receipts, Quotations — with new designs: Minimal and Banner invoices, two quotations and a money receipt',
 			'Resize logos and images by dragging their corners, and set alignment with Figma-style icons that explain themselves on hover',
 			'Fields read in plain words — “Saved text · Invoice terms” — and change from a layered menu; raw keys only when you switch them on',
+			'Draft and published templates: work on a design in peace — only published ones reach the page’s Download PDF',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
