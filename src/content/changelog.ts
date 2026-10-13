@@ -38,6 +38,7 @@ export const RELEASES: Release[] = [
 			'Select several blocks and move them together, or group them in a box or a row — like Figma',
 			'Full-width header and footer bands, columns whose blocks sit side by side, and boxes with padding and lines on the sides you choose',
 			'A gallery by category — Invoices, Receipts, Quotations — with new designs: Minimal and Banner invoices, two quotations and a money receipt',
+			'Resize logos and images by dragging their corners, and set alignment with Figma-style icons that explain themselves on hover',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
