@@ -17,6 +17,17 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-14',
+		title: 'Your own AI sets the buttons on each row',
+		summary: 'Ask your AI for “Download receipt on paid bills, Download invoice on the rest” and it sets up the row menu for you.',
+		tag: 'Improved',
+		items: [
+			'Over MCP your AI reads and changes a table’s ⋯ menu: Download PDF with a chosen template, Set a field, Add a linked record and the rest',
+			'Each item can show only on the rows that match — a receipt for paid bills, an invoice for due ones',
+			'Checked before it goes live: a field, page or template that doesn’t exist is refused, and nothing changes',
+		],
+	},
+	{
 		date: '2026-10-13',
 		title: 'PDF templates: invoices, receipts and quotations',
 		summary: 'Design the documents your records print as — an invoice for a bill, a receipt for a payment — and download any record as a PDF in one click.',
