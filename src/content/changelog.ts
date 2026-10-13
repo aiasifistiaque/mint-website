@@ -27,7 +27,7 @@ export const RELEASES: Release[] = [
 			'A visual designer: text, label/value rows, tables, columns, boxes, images; fields go in as {{bill.total | money}}',
 			'Formats for money, dates, numbers and amounts in words; your logo, address and bank details typed once',
 			'Download PDF on every record, in the row menu, and for many ticked rows at once',
-			'Build a template with AI from a sentence — or change one (“make the totals bigger”)',
+			'Have your own AI — Claude, ChatGPT, Cursor — build a template from a sentence, or change one (“make the totals bigger”)',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
