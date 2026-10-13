@@ -18,7 +18,7 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-13',
-		title: 'PDF templates: invoices, bills and receipts',
+		title: 'PDF templates: invoices, receipts and quotations',
 		summary: 'Design the documents your records print as — an invoice for a bill, a receipt for a payment — and download any record as a PDF in one click.',
 		tag: 'New',
 		items: [
@@ -34,6 +34,10 @@ export const RELEASES: Release[] = [
 			'Preview any template as the real PDF in a new tab, every field filled with sample data',
 			'Rows and boxes that work like flexbox: side by side, centred or spread apart, and a Space that fills the room left — push a signature to the bottom of the page',
 			'Drag blocks on the page — into a box, left or right in a row — and copy / paste one inside a box, or into another template',
+			'Place anything freely, like Canva: drag it anywhere with snap guides, turn it, fade it, or put it behind the content as a watermark',
+			'Select several blocks and move them together, or group them in a box or a row — like Figma',
+			'Full-width header and footer bands, columns whose blocks sit side by side, and boxes with padding and lines on the sides you choose',
+			'A gallery by category — Invoices, Receipts, Quotations — with new designs: Minimal and Banner invoices, two quotations and a money receipt',
 			'Bangla and the ৳ sign print correctly',
 		],
 	},
