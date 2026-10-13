@@ -17,6 +17,21 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-13',
+		title: 'PDF templates: invoices, bills and receipts',
+		summary: 'Design the documents your records print as — an invoice for a bill, a receipt for a payment — and download any record as a PDF in one click.',
+		tag: 'New',
+		items: [
+			'A gallery of designs to start from: two invoices, a bill, a receipt and a compact receipt',
+			'Use one on your page and we match its data to your fields — Total, Customer name, line items — for you to check',
+			'A visual designer: text, label/value rows, tables, columns, boxes, images; fields go in as {{bill.total | money}}',
+			'Formats for money, dates, numbers and amounts in words; your logo, address and bank details typed once',
+			'Download PDF on every record, in the row menu, and for many ticked rows at once',
+			'Build a template with AI from a sentence — or change one (“make the totals bigger”)',
+			'Bangla and the ৳ sign print correctly',
+		],
+	},
+	{
 		date: '2026-10-12',
 		title: 'Row menu: add a linked record, only where it fits',
 		summary: 'A bill’s ⋯ menu can offer “Add payment” — only while the bill isn’t paid — and open the Payment form with the bill already filled in. Set it up for any page in the page builder.',

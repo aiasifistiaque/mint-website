@@ -18,6 +18,7 @@ import {
 	BookOpenText as PhBookOpenText,
 	Briefcase as PhBriefcase,
 	Buildings as PhBuildings,
+	FilePdf as PhFilePdf,
 	CalendarBlank as PhCalendarBlank,
 	CaretDown as PhCaretDown,
 	ChartLineUp as PhChartLineUp,
@@ -150,6 +151,7 @@ export const Compass = make(PhCompass, 'duotone');
 export const Contact = make(PhAddressBook, 'duotone');
 export const Eye = make(PhEye, 'duotone');
 export const FileUp = make(PhFileArrowUp, 'duotone');
+export const FilePdf = make(PhFilePdf, 'duotone');
 export const Filter = make(PhFunnelSimple, 'duotone');
 export const Fingerprint = make(PhFingerprint, 'duotone');
 export const FolderKanban = make(PhFolderOpen, 'duotone');
