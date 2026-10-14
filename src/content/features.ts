@@ -138,7 +138,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{
 				icon: FilePdf,
 				title: 'PDF templates',
-				body: 'Design invoices, bills and receipts once — every record downloads as a ready PDF, Bangla and ৳ included.',
+				body: 'Design invoices, bills and receipts once — pick a look of colours and fonts in one click — and every record downloads as a ready PDF, Bangla and ৳ included.',
 				guide: 'pdf-templates',
 			},
 		],

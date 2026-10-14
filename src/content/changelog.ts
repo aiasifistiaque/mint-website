@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Themes for PDF templates: colours and fonts in one click',
+		summary: 'Pick a look when you make an invoice, receipt or quotation — or change it later — and the whole page’s colours and fonts change together.',
+		tag: 'New',
+		items: [
+			'Twelve ready looks, each a palette and a font pairing — Heritage, Editorial, Fresh, Bold and more — shown on your design before you pick',
+			'Mix and match: twelve colour palettes and twelve font pairings, or set each colour and the heading and text fonts yourself',
+			'Fourteen embedded fonts — Inter, Playfair Display, EB Garamond, Montserrat, Poppins, IBM Plex and more — every one checked to print accented letters and ₹ € £ ¥ in every weight',
+			'Block colours can follow the theme, so a new look recolours headers, bands, tables and totals together; older templates join in the first time they get a look',
+			'Your own AI can pick a look too when it builds a template over MCP',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Invite people into one project',
 		summary: 'Bring a freelancer, a client or a developer into a single project as Member or Developer — the rest of your organization stays closed to them.',
 		tag: 'New',
