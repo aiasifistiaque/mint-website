@@ -38,6 +38,7 @@ import {
 	Users,
 	Webhook,
 	Server,
+	ScrollText,
 	Zap,
 	Workflow,
 	type IconType,
@@ -181,6 +182,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		features: [
 			{ icon: Webhook, title: 'API builder', body: 'Generate a model’s endpoints or make your own at any address — each with who may call it and rules on its records.', guide: 'public-api#api-endpoints' },
 			{ icon: KeyRound, title: 'Server keys', body: 'Secret keys for your own server, scripts and partners — shown once, revocable, last use kept.', guide: 'public-api#api-keys' },
+			{ icon: ScrollText, title: 'API logs', body: 'Every call for 7 days — who called, which endpoint answered, the error they got — with a chart and the commonest errors.', guide: 'public-api#api-logs' },
 			{ icon: Filter, title: 'Filters & search', body: 'Paging, sorting, field filters, date ranges and search on every list.', guide: 'public-api#filters' },
 			{ icon: Code, title: 'API reference & tester', body: 'Each project documents its own API, with curl and fetch examples and a tester to try calls live.', guide: 'public-api' },
 			{ icon: Server, title: 'API projects', body: 'A project laid out as a back end: its API first, a dashboard of endpoints and recent calls.', guide: 'projects#api' },

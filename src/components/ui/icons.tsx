@@ -10,6 +10,7 @@ import {
 	AddressBook as PhAddressBook,
 	AppWindow as PhAppWindow,
 	Archive as PhArchive,
+	Scroll as PhScroll,
 	ArrowDown as PhArrowDown,
 	ArrowRight as PhArrowRight,
 	ArrowUpRight as PhArrowUpRight,
@@ -190,6 +191,7 @@ export const ReceiptText = make(PhReceipt, 'duotone');
 export const Rocket = make(PhRocketLaunch, 'duotone');
 export const Search = make(PhMagnifyingGlass, 'bold');
 export const Server = make(PhHardDrives, 'duotone');
+export const ScrollText = make(PhScroll, 'duotone');
 export const ShieldCheck = make(PhShieldCheck, 'duotone');
 export const ShoppingBag = make(PhShoppingBag, 'duotone');
 export const Sigma = make(PhFunction, 'duotone');

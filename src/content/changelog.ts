@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'API logs',
+		summary: 'See every call to your API — who called, which endpoint answered, what they got, and why it failed.',
+		tag: 'New',
+		items: [
+			'API → Logs: calls, failures and response times over the last hour, day or week, with a chart',
+			'The commonest errors at a glance — click one to see just those calls',
+			'Filter by answer, endpoint, who called, or text; turn on Live while you test',
+			'Open a call for the endpoint, the customer or key, the error, the calling site, and the call as curl',
+			'Each endpoint has its own Logs tab; your AI can read the logs through Connect AI',
+			'Kept 7 days — never what was sent, tokens, keys or IP addresses',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Replies in comments',
 		summary: 'Answer a comment right under it, like on Facebook — conversations about a record now stay in threads.',
 		tag: 'Improved',
