@@ -29,6 +29,7 @@ import {
 	ShieldCheck,
 	Sigma,
 	SlidersHorizontal,
+	Smartphone,
 	SquareStack,
 	Stamp,
 	Table2,
@@ -156,6 +157,7 @@ export const PANEL_GROUPS: PanelGroup[] = [
 			{ icon: KeyRound, title: 'Email codes and backup codes', body: 'Two-step sign-in, with backup codes for the day the phone is lost.', guide: 'account' },
 			{ icon: MonitorSmartphone, title: 'Signed-in devices', body: 'See every device on your account and sign any of them out.', guide: 'account#devices' },
 			{ icon: Moon, title: 'Themes, light and dark', body: 'Colour themes saved to your account; light, dark or system per browser.', guide: 'account' },
+			{ icon: Smartphone, title: 'The MINT app', body: 'Install MINT on your phone or computer — its own icon, full screen, always up to date.', guide: 'account#install-app' },
 		],
 	},
 	{

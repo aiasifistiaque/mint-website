@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'MINT as an app on your phone',
+		summary: 'Install the MINT panel on your phone or computer — it opens from its own icon, full screen, like any other app.',
+		tag: 'New',
+		items: [
+			'Your avatar → Install app: one tap on Android, Chrome and Edge',
+			'iPhone, iPad and Safari on a Mac get the steps for their browser, right in the window',
+			'On a computer, a QR code opens MINT on your phone to install it there',
+			'Everything the panel does, with nothing to download from an app store and nothing to update',
+			'Opened without a connection, it shows an offline page that comes back by itself when you’re online',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Project roles, model by model',
 		summary: 'Decide exactly what each person may do in a project — per model — and accept invitations from one page.',
 		tag: 'New',
