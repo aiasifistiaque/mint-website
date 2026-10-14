@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'Components',
+		summary: 'Make a group of fields once — a button, an SEO block, a card — and use it in any model, once or as a list.',
+		tag: 'New',
+		items: [
+			'Build → Components: a group of fields with its own address, like shared.button',
+			'Add one to a model as a field of the kind Component — one, or a list with at least / at most',
+			'Change it once and every model using it follows: forms, record pages and the API',
+			'Rich text, pictures, files and choices all fit inside',
+			'Your AI can list and make components through Connect AI',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'Single types and page addresses',
 		summary: 'Models for something there’s only one of, and fields that give each record its own address on your site.',
 		tag: 'New',
