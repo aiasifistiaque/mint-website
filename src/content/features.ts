@@ -62,7 +62,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		lead: 'Backend as a service — live the moment you save a model.',
 		features: [
 			{ icon: Database, title: 'Database', body: 'Every model is a real, validated collection — relations, formulas, defaults and allowed values.', guide: 'models' },
-			{ icon: Code, title: 'REST API per model', body: 'List, read, create, update and delete — you choose, per model, and who may call it.', guide: 'public-api' },
+			{ icon: Code, title: 'REST API per model', body: 'List, read, create, update and delete — generated per model or made at your own addresses, with rules on who and what.', guide: 'public-api' },
 			{ icon: UserRound, title: 'Auth', body: 'Accounts for your team, and sign-up and sign-in for your customers.', guide: 'customers' },
 			{ icon: Images, title: 'Storage', body: 'Images, videos and files in a media library, per project or shared.', guide: 'media' },
 			{ icon: Pencil, title: 'Visual data editor', body: 'Tables and forms for every model; bulk edits, import, export and undo.', guide: 'records' },
@@ -179,7 +179,8 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		title: 'Go live',
 		lead: 'Your data, on your own site and app.',
 		features: [
-			{ icon: Webhook, title: 'Public API', body: 'Turn on list, read, create, update or delete per model — no server to run.', guide: 'public-api' },
+			{ icon: Webhook, title: 'API builder', body: 'Generate a model’s endpoints or make your own at any address — each with who may call it and rules on its records.', guide: 'public-api#api-endpoints' },
+			{ icon: KeyRound, title: 'Server keys', body: 'Secret keys for your own server, scripts and partners — shown once, revocable, last use kept.', guide: 'public-api#api-keys' },
 			{ icon: Filter, title: 'Filters & search', body: 'Paging, sorting, field filters, date ranges and search on every list.', guide: 'public-api#filters' },
 			{ icon: Code, title: 'API reference & tester', body: 'Each project documents its own API, with curl and fetch examples and a tester to try calls live.', guide: 'public-api' },
 			{ icon: Server, title: 'API projects', body: 'A project laid out as a back end: its API first, a dashboard of endpoints and recent calls.', guide: 'projects#api' },

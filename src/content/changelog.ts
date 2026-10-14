@@ -18,6 +18,21 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'The API builder',
+		summary: 'Your API as endpoints you generate or make yourself — each with who may call it, rules on its records, its fields and its filters — on four clear pages.',
+		tag: 'New',
+		items: [
+			'A new API section: Overview, Endpoints, Keys and Reference',
+			'Generate a model’s endpoints in one go, or make one at any address — /products/featured, /my/orders',
+			'Who can call each: anyone, signed-in customers, or your own server with a secret key',
+			'Rules on the records it reaches: “status is published”, “owner is the signed-in customer”, “email is their email”',
+			'Choose the fields that go out and the ones a call may write; fix a list’s filters, order and page sizes',
+			'Try any endpoint on its page, and copy curl, fetch or MintAuth code for it',
+			'Every address that worked before still works, with the same rules',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'MINT as an app on your phone',
 		summary: 'Install the MINT panel on your phone or computer — it opens from its own icon, full screen, like any other app.',
 		tag: 'New',

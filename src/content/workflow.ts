@@ -116,9 +116,9 @@ export const STEPS: Step[] = [
 		n: '06',
 		title: 'Go live',
 		short: 'Open your data to your site and app, with customer sign-in.',
-		body: 'Switch on the public API for any model and read it from your website, your mobile app or a script. Let customers create accounts with a drop-in widget on your own site and see only their own records. Count visits without cookies.',
+		body: 'Generate endpoints for any model — or make your own — and call them from your website, your mobile app or your server. Let customers create accounts with a drop-in widget on your own site and see only their own records. Count visits without cookies.',
 		points: [
-			'Public API per model — list, read, create, update, delete — you choose',
+			'Endpoints per model, at any address, with who may call them and rules on their records',
 			'Paging, sorting, search and filters, with a live tester',
 			'Customer accounts with a ready widget or your own form',
 			'Cookie-free analytics for your website',
