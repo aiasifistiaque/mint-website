@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Replies in comments',
+		summary: 'Answer a comment right under it, like on Facebook — conversations about a record now stay in threads.',
+		tag: 'Improved',
+		items: [
+			'Reply under any comment; replying to a reply starts with @their name',
+			'Long threads tuck earlier replies behind “View earlier replies”',
+			'Everyone in a thread is told about new replies, and the notification opens it at the reply',
+			'Links in comments are clickable and open in a new tab',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'The API builder',
 		summary: 'Your API as endpoints you generate or make yourself — each with who may call it, rules on its records, its fields and its filters — on four clear pages.',
 		tag: 'New',
