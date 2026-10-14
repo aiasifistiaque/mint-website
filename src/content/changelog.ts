@@ -17,6 +17,18 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-15',
+		title: 'Single types and page addresses',
+		summary: 'Models for something there’s only one of, and fields that give each record its own address on your site.',
+		tag: 'New',
+		items: [
+			'A model can hold just one record — your site’s settings, an About page, a footer — and its page opens that record',
+			'Address (slug) fields: “My first post” becomes my-first-post as you type, always unique',
+			'Find a record by its address on the API: ?slug=my-first-post',
+			'Your AI can make both through Connect AI',
+		],
+	},
+	{
 		date: '2026-10-14',
 		title: 'API logs',
 		summary: 'See every call to your API — who called, which endpoint answered, what they got, and why it failed.',
