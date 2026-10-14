@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'Content blocks',
+		summary: 'Build a record from components in any order — a hero, some text, questions, a button — like a page.',
+		tag: 'New',
+		items: [
+			'A new field kind, Content blocks: pick the components it takes',
+			'Add, move, copy and remove blocks right in the form; each opens to its own fields',
+			'Every block is checked as its component, and the API sends them in order',
+			'Record pages show each block with its values',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'Components',
 		summary: 'Make a group of fields once — a button, an SEO block, a card — and use it in any model, once or as a list.',
 		tag: 'New',
