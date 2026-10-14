@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Project settings and members, side by side',
+		summary: 'Inside a project, the sidebar’s Project section is now Settings, then Members — and everyone in the project can see both.',
+		tag: 'Improved',
+		items: [
+			'About this project on Settings: its kind, its address and public API address to copy, how many people open it, its models, media library, template, and who made it and when',
+			'Project → Members lists everyone who opens the project and their role, so people know who they work with',
+			'Inviting, changing roles and pending invitations stay with the owner, admins and anyone whose role has “Invite to projects”',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Themes for PDF templates: colours and fonts in one click',
 		summary: 'Pick a look when you make an invoice, receipt or quotation — or change it later — and the whole page’s colours and fonts change together.',
 		tag: 'New',
@@ -35,7 +46,7 @@ export const RELEASES: Release[] = [
 		summary: 'Bring a freelancer, a client or a developer into a single project as Member or Developer — the rest of your organization stays closed to them.',
 		tag: 'New',
 		items: [
-			'Project → People: invite by email, change someone’s role in that project, or remove them',
+			'Project → Members: invite by email, change someone’s role in that project, or remove them',
 			'A new Developer role: works with the records and builds the project — models, pages, AI keys',
 			'The owner, admins, and anyone whose role has “Invite to projects” can invite',
 			'Projects you’re invited to show on your dashboard and in the project menu under the inviting organization’s name',
