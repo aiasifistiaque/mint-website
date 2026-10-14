@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Comments and @mentions on records',
+		summary: 'Talk about a record right on its page — and @mention the people who need to see it.',
+		tag: 'New',
+		items: [
+			'A Comments tab on every record page: write, edit or delete your own comments',
+			'Type @ to mention someone — they get a notification that opens the conversation',
+			'Mentions follow who can see the record: on a private record only its owner and the people it’s shared with, on an Only me record no one — anyone else is shown greyed out with why',
+			'Turn comments or mentions off for a whole project in Project → Settings',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Project settings and members, side by side',
 		summary: 'Inside a project, the sidebar’s Project section is now Settings, then Members — and everyone in the project can see both.',
 		tag: 'Improved',
