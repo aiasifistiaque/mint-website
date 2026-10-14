@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Project roles, model by model',
+		summary: 'Decide exactly what each person may do in a project — per model — and accept invitations from one page.',
+		tag: 'New',
+		items: [
+			'Invite into a project as Full access, Member or Developer — or a role of your own',
+			'Make a project’s own roles in Project → Members → Roles: tick View, Add, Edit or Delete for each model',
+			'Project → Settings and Members show only to the people who can manage the project',
+			'An invitation notification opens an Invitations page to accept or decline it',
+			'Comments and @mentions are switched on or off per page, on its Fields & rules tab',
+			'Fixed: inviting into a project could fail with “Something went wrong” when your organization had its own role called Developer',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Automations',
 		summary: 'When a record is created, changed or deleted — and matches your conditions — MINT does the follow-up for you: notify people, send an email, call a webhook, update or create a record.',
 		tag: 'New',
@@ -39,7 +53,7 @@ export const RELEASES: Release[] = [
 			'A Comments tab on every record page: write, edit or delete your own comments',
 			'Type @ to mention someone — they get a notification that opens the conversation',
 			'Mentions follow who can see the record: on a private record only its owner and the people it’s shared with, on an Only me record no one — anyone else is shown greyed out with why',
-			'Turn comments or mentions off for a whole project in Project → Settings',
+			'Turn comments or mentions off per page, on its Fields & rules tab',
 		],
 	},
 	{
