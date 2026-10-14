@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-14',
+		title: 'Automations',
+		summary: 'When a record is created, changed or deleted — and matches your conditions — MINT does the follow-up for you: notify people, send an email, call a webhook, update or create a record.',
+		tag: 'New',
+		items: [
+			'Build → Automations: write each one like a sentence — when a Deal is changed and its Status is Won, notify the team, update its Client and add a Task',
+			'Run only when chosen fields change, and only if conditions hold',
+			'Fill any text with the record’s fields — {{title}}, its client by name, a link back to it',
+			'Try one on a real record first: see exactly what it would do, with nothing sent or changed',
+			'Runs shows every run for 30 days, each action’s result and why one failed',
+			'Safe by default: they run after the save and never block it; chains stop at three; webhooks can’t reach private networks',
+		],
+	},
+	{
+		date: '2026-10-14',
 		title: 'Comments and @mentions on records',
 		summary: 'Talk about a record right on its page — and @mention the people who need to see it.',
 		tag: 'New',
