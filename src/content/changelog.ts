@@ -26,6 +26,7 @@ export const RELEASES: Release[] = [
 			'Put one component inside another, once or as a list — one level deep',
 			'Changing the inner component reaches every model using the outer one',
 			'Make reusable: turn a model’s section or list of rows into a component in one click — its records stay as they are',
+			'Templates bring their components along, and saving a project as a template keeps them',
 			'Edit forms now show a linked record’s name as soon as they open',
 		],
 	},
