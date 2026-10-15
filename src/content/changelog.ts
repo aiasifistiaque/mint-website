@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'Drafts and publishing',
+		summary: 'Edit records as drafts and put them live on your site and API when you press Publish.',
+		tag: 'New',
+		items: [
+			'Turn on “Records are drafts until published” for any model; what’s there already stays live',
+			'Each record shows Draft, Published or Changes not published, with Publish, Take off and Discard changes',
+			'Your site, API, filters and search use what’s published, never a half-finished edit',
+			'Publish is a permission of its own, so writers can draft and someone else puts it live',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'Content blocks',
 		summary: 'Build a record from components in any order — a hero, some text, questions, a button — like a page.',
 		tag: 'New',
