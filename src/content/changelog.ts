@@ -17,6 +17,20 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-16',
+		title: 'A content API: linked records, drafts and publish webhooks',
+		summary: 'Ask for a post with its author filled in, read drafts from your server, and hear when something goes live.',
+		tag: 'New',
+		items: [
+			'populate=author fills a link with the linked record — inside components and content blocks too, two links deep',
+			'Each endpoint picks the links it offers; a linked record never shows more than its own API does',
+			'Records of a model with drafts say when they went live (publishedAt)',
+			'status=draft reads the drafts as they are, with a server key',
+			'New webhook events: Published and Taken off',
+			'Publishing refreshes your site’s pages at once — one refresh for a bulk Publish',
+		],
+	},
+	{
 		date: '2026-10-15',
 		title: 'Components that link, nest and come from sections',
 		summary: 'A component can now link to records and hold another component — a featured product with its button.',
