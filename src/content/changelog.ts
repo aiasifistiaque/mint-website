@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'Contents, page by page',
+		summary: 'Pick a page and see everything it says. Add a hero, cards, questions or a list of your records: choose the type first, then fill in only its fields.',
+		tag: 'New',
+		items: [
+			'A page dropdown in Contents: each page’s pieces in order, plus the header and footer under Whole site',
+			'Sixteen content types — Hero, Cards, Questions, Numbers, Reviews, Gallery, Call to action, List and more',
+			'Lists of your records: pick the model, how many, the order and which ones, and see what it shows right away',
+			'Types are components, so you can add fields to them or make your own',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'Drafts and publishing',
 		summary: 'Edit records as drafts and put them live on your site and API when you press Publish.',
 		tag: 'New',
