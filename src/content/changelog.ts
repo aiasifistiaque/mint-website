@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'Site words as drafts, one piece per section',
+		summary: 'Every section the site builder adds keeps its words in one piece of its type, and changes wait for Publish.',
+		tag: 'Improved',
+		items: [
+			'A hero’s heading, text and buttons now live together in one Hero, in the page’s order in Contents',
+			'Edits in the builder or the panel are drafts until you publish — the site never shows a half-finished change',
+			'The site’s Publish puts the layout and its words live together; Contents can publish a piece or a whole page',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'Contents, page by page',
 		summary: 'Pick a page and see everything it says. Add a hero, cards, questions or a list of your records: choose the type first, then fill in only its fields.',
 		tag: 'New',
