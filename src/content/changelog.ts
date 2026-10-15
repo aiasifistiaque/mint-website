@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'All content in one place',
+		summary: 'A content home for every project: what your site and API publish, and what’s waiting to go live.',
+		tag: 'New',
+		items: [
+			'All content in the sidebar: website contents, single types and every model with drafts, with how many aren’t live',
+			'A Status column and filter in tables — Draft, Published, Changes not published',
+			'Tick rows and Publish them together',
+			'Record pages say when they were last published and by whom; ⌘S saves any form',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'Site words as drafts, one piece per section',
 		summary: 'Every section the site builder adds keeps its words in one piece of its type, and changes wait for Publish.',
 		tag: 'Improved',
