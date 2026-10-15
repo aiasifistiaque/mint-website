@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-15',
+		title: 'Components that link and nest',
+		summary: 'A component can now link to records and hold another component — a featured product with its button.',
+		tag: 'Improved',
+		items: [
+			'Link to a record (or several) inside a component, with the usual record picker; pages and the API show the names',
+			'Put one component inside another, once or as a list — one level deep',
+			'Changing the inner component reaches every model using the outer one',
+			'Edit forms now show a linked record’s name as soon as they open',
+		],
+	},
+	{
+		date: '2026-10-15',
 		title: 'All content in one place',
 		summary: 'A content home for every project: what your site and API publish, and what’s waiting to go live.',
 		tag: 'New',
