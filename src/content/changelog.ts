@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Design how your emails look',
+		summary: 'Receipts, welcomes and automation emails now go out in your own look — plain like a note you wrote, or designed with your logo, colours and footer.',
+		tag: 'New',
+		items: [
+			'Project → Email → How your emails look: pick Plain or Designed and watch a sample email change as you go, on desktop or phone',
+			'Your logo or name in the header, your colours for buttons and background, one-click colour themes to start from',
+			'A footer or signature filled with your business details — name, address, phone, website',
+			'Several designs per project: one is the default, and any automation email can use another',
+			'Send a test to yourself before your customers see it',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Automations email your customers',
 		summary: 'Send an email to the address on a linked record — when a bill is created, email its customer.',
 		tag: 'Improved',
