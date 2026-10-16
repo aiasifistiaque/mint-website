@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Your AI writes content as drafts',
+		summary: 'Ask your own AI to write posts, rewrite a page or improve its SEO — nothing goes live until you say so.',
+		tag: 'New',
+		items: [
+			'It sees what content you have and what isn’t live yet',
+			'It writes and changes entries as drafts — the site and API don’t change',
+			'Website pages: it rewrites a page’s hero, cards and questions from your brief',
+			'It gathers a page’s words to suggest a better title and description',
+			'Publishing only when you ask, with a key that can publish (new switch on Connect AI)',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Alt text and focal points for your pictures',
 		summary: 'Describe a picture once in the media library, and choose what stays in view when it’s cropped.',
 		tag: 'New',
