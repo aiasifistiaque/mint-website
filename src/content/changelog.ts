@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Yes/No fields take “No” for an answer',
+		summary: 'A required Yes/No field left unticked now saves as No, instead of stopping the form with “This field is required”.',
+		tag: 'Fixed',
+		items: [
+			'Unticked is a real answer: the record saves with No, whether you add it or edit it',
+			'The same through your API — leave a Yes/No out and it’s stored as No',
+			'Other required fields still have to be filled in',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Automations send your invoices',
 		summary: 'An automation’s email can attach the record’s PDFs — send each bill’s invoice to its customer the moment it’s ready.',
 		tag: 'New',
