@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Email accounts for each project',
+		summary: 'Connect the email accounts a project sends from, check each one before saving, and pick the one it uses.',
+		tag: 'New',
+		items: [
+			'Project → Email: connect any account with an SMTP server — Gmail, Outlook, Zoho, your own host',
+			'Give it a name for your team and the sender name your customers see',
+			'Test connection signs in without sending anything: green when it works, red with the reason when it doesn’t',
+			'Several accounts per project — pick the default, and every email the project sends goes through it',
+			'Each account shows whether it’s working; send a test through any of them, and see what went out and through which',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Find any record from the search bar',
 		summary: 'Turn on Show in search for a page and its records turn up in the search at the top of every page.',
 		tag: 'New',
