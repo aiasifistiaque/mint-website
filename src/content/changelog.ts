@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Formulas reach into linked records',
+		summary: 'A calculated field can now use the numbers of the record it links to — add the linked Tax’s amount to a bill’s total.',
+		tag: 'Improved',
+		items: [
+			'Write price * qty + tax.amount: the formula reads the amount of the Tax picked on that record',
+			'The field list offers each link’s numbers — Tax › Amount — and forms show the total as soon as you pick',
+			'Use a field as often as you need: picking Price a second time now adds it again',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Yes/No fields take “No” for an answer',
 		summary: 'A required Yes/No field left unticked now saves as No, instead of stopping the form with “This field is required”.',
 		tag: 'Fixed',
