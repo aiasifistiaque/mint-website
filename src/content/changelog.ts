@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Automations send your invoices',
+		summary: 'An automation’s email can attach the record’s PDFs — send each bill’s invoice to its customer the moment it’s ready.',
+		tag: 'New',
+		items: [
+			'In Send an email, tick the PDF templates to attach — invoice, receipt, quotation — printed for that record',
+			'Send it to the customer linked to the bill (Customer → Email), in your own email design',
+			'Try it first: the dry run names the files it would attach; Runs shows what went out',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Design how your emails look',
 		summary: 'Receipts, welcomes and automation emails now go out in your own look — plain like a note you wrote, or designed with your logo, colours and footer.',
 		tag: 'New',
