@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Schedule when content goes live',
+		summary: 'Pick a time for a post to publish, a time for it to come off, or both — MINT does it on the minute.',
+		tag: 'New',
+		items: [
+			'Schedule beside Publish on any record with drafts: publish at, take off at, in your own time zone',
+			'Edits made before the time go live with it',
+			'All content shows what’s coming up, soonest first',
+			'You get a notification when it’s done — or why it couldn’t be',
+			'Webhooks and your site update as if you’d pressed Publish; History shows it',
+			'Ask your AI: “publish it on Monday at 9”',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Your AI writes content as drafts',
 		summary: 'Ask your own AI to write posts, rewrite a page or improve its SEO — nothing goes live until you say so.',
 		tag: 'New',
