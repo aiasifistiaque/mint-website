@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Alt text and focal points for your pictures',
+		summary: 'Describe a picture once in the media library, and choose what stays in view when it’s cropped.',
+		tag: 'New',
+		items: [
+			'Alt text and a caption for every picture in the media library',
+			'Click a picture to set its focal point — banners and cards crop around it',
+			'Your site uses the library’s alt text wherever a picture has none of its own',
+			'Image fields can send each picture with its details on the API: alt, caption, size and focal point',
+			'Fix alt text once and it’s fixed everywhere the picture is used',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'A content API: linked records, drafts and publish webhooks',
 		summary: 'Ask for a post with its author filled in, read drafts from your server, and hear when something goes live.',
 		tag: 'New',
