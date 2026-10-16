@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-17',
+		title: 'Totals follow the records they read',
+		summary: 'Change a Tax’s amount and every bill that picks it gets its new total straight away — no need to open and save each one.',
+		tag: 'Improved',
+		items: [
+			'Edit a linked record — one at a time, in bulk, from your API or your AI — and the formulas reading it recalculate',
+			'It carries on down the line: a payment reading a bill’s total follows the bill',
+			'Delete the Tax and it counts as 0 on the bills that picked it',
+		],
+	},
+	{
+		date: '2026-10-17',
 		title: 'Every record shows up in your tables',
 		summary: 'A record with an empty field — a bill saved without a name — now appears in its table, instead of only in the count.',
 		tag: 'Fixed',
