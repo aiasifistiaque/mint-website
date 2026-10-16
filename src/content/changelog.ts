@@ -17,6 +17,17 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-17',
+		title: 'Every record shows up in your tables',
+		summary: 'A record with an empty field — a bill saved without a name — now appears in its table, instead of only in the count.',
+		tag: 'Fixed',
+		items: [
+			'With the search box empty, tables list every record, filled in or not',
+			'The number of records on the table matches the count again',
+			'Searching works as before: type a word and only the matching records stay',
+		],
+	},
+	{
 		date: '2026-10-16',
 		title: 'Formulas reach into linked records',
 		summary: 'A calculated field can now use the numbers of the record it links to — add the linked Tax’s amount to a bill’s total.',
