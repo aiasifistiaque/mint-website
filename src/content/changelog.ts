@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Find any record from the search bar',
+		summary: 'Turn on Show in search for a page and its records turn up in the search at the top of every page.',
+		tag: 'New',
+		items: [
+			'One switch per page, on its Fields & rules tab — off until you turn it on',
+			'Results grouped by where they come from: Customer portal › Clients',
+			'Found by name, or by any Searchable field you pick — the line under it says which matched',
+			'People only find what they could see in the table: their role, private records and archived rows all count',
+			'⌘K, type two letters, Enter opens the record',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Schedule when content goes live',
 		summary: 'Pick a time for a post to publish, a time for it to come off, or both — MINT does it on the minute.',
 		tag: 'New',
