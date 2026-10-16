@@ -18,6 +18,16 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-16',
+		title: 'Automations email your customers',
+		summary: 'Send an email to the address on a linked record — when a bill is created, email its customer.',
+		tag: 'Improved',
+		items: [
+			'In Send an email, pick the field the address comes from: the record’s own Email, or a linked record’s — Customer → Email',
+			'Only email fields are offered, so names and notes no longer show up as recipients',
+		],
+	},
+	{
+		date: '2026-10-16',
 		title: 'Email accounts for each project',
 		summary: 'Connect the email accounts a project sends from, check each one before saving, and pick the one it uses.',
 		tag: 'New',
