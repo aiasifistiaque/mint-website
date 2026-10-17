@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-17',
+		title: 'Formulas built by clicking',
+		summary: 'One simple screen: click fields, numbers and If, and each goes into the formula below — no code to type.',
+		tag: 'Improved',
+		items: [
+			'The formula is locked and built from the buttons; the line on top says what to pick next',
+			'If asks for its condition, then the value, then the otherwise — Otherwise if adds another condition',
+			'Click a part to change it, with Undo and Remove; Type it yourself unlocks it to type by hand',
+		],
+	},
+	{
+		date: '2026-10-17',
 		title: 'Build formulas with blocks',
 		summary: 'No more typing formulas like code: pick or drag blocks, and an If asks for its condition, its value and the value otherwise.',
 		tag: 'New',
