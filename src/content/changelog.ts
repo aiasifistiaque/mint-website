@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-17',
+		title: 'Build formulas with blocks',
+		summary: 'No more typing formulas like code: pick or drag blocks, and an If asks for its condition, its value and the value otherwise.',
+		tag: 'New',
+		items: [
+			'Click an empty box to choose a field, a calculation or an If — or drag one onto it',
+			'Compare a choice field and its options come up as a list: Discount type is Percentage',
+			'Add another condition for an otherwise-if; Type it shows the same formula as text',
+		],
+	},
+	{
+		date: '2026-10-17',
 		title: 'Formulas with conditions',
 		summary: 'A calculated field can now choose between two calculations — a discount that is flat or a percentage, a fee only for some records.',
 		tag: 'New',
