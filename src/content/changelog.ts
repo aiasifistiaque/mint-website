@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-17',
+		title: 'Formulas with conditions',
+		summary: 'A calculated field can now choose between two calculations — a discount that is flat or a percentage, a fee only for some records.',
+		tag: 'New',
+		items: [
+			'if(discountType = "percentage", subtotal * discount / 100, flatDiscount) — the percentage or the flat amount, by the choice picked',
+			'Compare with = ≠ < ≤ > ≥, join with and / or, and nest one if inside another for more cases',
+			'Choice, text and yes / no fields can be compared; worked out the same way in forms, on the server and over your API',
+		],
+	},
+	{
+		date: '2026-10-17',
 		title: 'Totals follow the records they read',
 		summary: 'Change a Tax’s amount and every bill that picks it gets its new total straight away — no need to open and save each one.',
 		tag: 'Improved',

@@ -103,7 +103,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 			{
 				icon: Sigma,
 				title: 'Formulas',
-				body: 'Fields that calculate themselves from other fields, kept up to date on every change.',
+				body: 'Fields that calculate themselves from other fields — with conditions, like a flat or percentage discount — kept up to date on every change.',
 				guide: 'models#models-fields',
 			},
 			{
