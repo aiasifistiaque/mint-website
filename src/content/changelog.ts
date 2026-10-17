@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-17',
+		title: 'A clearer field list',
+		summary: 'Model fields now read one line each, and the field you’re editing stands out — raised and edged in colour.',
+		tag: 'Improved',
+		items: [
+			'Click anywhere on a field to open its settings; Done or Esc puts it away',
+			'The form preview marks the open field, and a click there opens that field',
+			'A ⋯ menu on each field: duplicate, add a field below, move up or down, remove',
+		],
+	},
+	{
+		date: '2026-10-17',
 		title: 'Formulas built by clicking',
 		summary: 'One simple screen: click fields, numbers and If, and each goes into the formula below — no code to type.',
 		tag: 'Improved',
