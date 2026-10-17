@@ -25,6 +25,7 @@ export const RELEASES: Release[] = [
 			'Click anywhere on a field to open its settings; Done or Esc puts it away',
 			'The form preview marks the open field, and a click there opens that field',
 			'A ⋯ menu on each field: duplicate, add a field below, move up or down, remove',
+			'The same on a page’s Fields and their rules: open fields stand out, ⋯ moves, puts back or removes',
 		],
 	},
 	{
