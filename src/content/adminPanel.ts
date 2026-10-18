@@ -76,7 +76,7 @@ export const PANEL_GROUPS: PanelGroup[] = [
 			{ icon: Sigma, title: 'Live formulas', body: 'Calculated fields show their result as you type.', guide: 'models#formulas' },
 			{
 				icon: CalendarDays,
-				title: 'Date formulas',
+				title: 'Formula (date)',
 				body: 'Dates that work themselves out — due 30 days after the invoice, a membership renewed from its old expiry or from today.',
 				guide: 'models#date-formulas',
 			},

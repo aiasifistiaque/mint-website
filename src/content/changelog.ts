@@ -19,14 +19,14 @@ export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
 		title: 'Date formulas, and rules that read through links',
-		summary: 'A new Date formula field works out dates — due dates, expiries, renewals — and Linked Relationships can use the records a record picks.',
+		summary: 'A new Formula (date) field works out dates — due dates, expiries, renewals — and formulas and Linked Relationships can use the records a record picks.',
 		tag: 'New',
 		items: [
-			'Add a Date formula field: addDays(invoiceDate, 30), addMonths(joinedAt, plan.months), or a length and unit read from a plan',
+			'Formula (date) is a field type of its own, beside Formula (number): addDays(invoiceDate, 30), addMonths(joinedAt, plan.months), or a length and unit read from a plan',
 			'Latest of, Earliest of and Today: renew from the old expiry, or from today if it has already run out',
 			'Work it out on every save, or once when the record is added and keep it',
 			'Number formulas can count the days between two dates — days left on a membership',
-			'Linked Relationships can copy a field of a record it picks — a renewal’s fee from the plan’s price — and Work out is built by clicking, dates included',
+			'A page’s Fields & rules formulas read a linked record’s numbers (Plan › Price), as the model builder does; Linked Relationships can copy them too, and Work out is built by clicking, dates included',
 		],
 	},
 	{
