@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-18',
+		title: 'A real document editor, with tables',
+		summary: 'The full-page editor now looks and works like a document: a white page on a grey desk, page sizes, a right-click menu and tables.',
+		tag: 'New',
+		items: [
+			'The toolbar runs across the top, and the page stays white with black words in dark mode too',
+			'Write on one long page, or pick A4, Letter, Legal or A5 to see your words on separate pages',
+			'Right-click for bold, case changes, alignment, lists and more; select words for a quick formatting bar',
+			'Insert tables from the toolbar; add or remove rows and columns with a right-click',
+			'Tables show on your website and in Word, PDF, Markdown and text downloads; Word and PDF use your page size',
+		],
+	},
+	{
+		date: '2026-10-18',
 		title: 'Write on a full page, download in four formats',
 		summary: 'Open a rich-text field — a blog post’s body — on a page of its own, like a document, and download it as Word, PDF, Markdown or text.',
 		tag: 'New',
