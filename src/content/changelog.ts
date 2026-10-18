@@ -17,6 +17,29 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-18',
+		title: 'Rich text as a Word file',
+		summary: 'Download any rich-text field — a blog post’s body — as a .docx, from the row menu or straight from the record page.',
+		tag: 'New',
+		items: [
+			'Add “Download DOCX” to a page’s row menu and pick which rich-text field goes in the file',
+			'Every rich-text field on a record page has its own Download DOCX button',
+			'Headings, bold, italics, links, nested lists, quotes, code and pictures come through as Word formatting',
+		],
+	},
+	{
+		date: '2026-10-18',
+		title: 'Rich text that looks right everywhere',
+		summary: 'What you write in a rich-text field now shows the same on your website, on the record page and in tables.',
+		tag: 'Fixed',
+		items: [
+			'Bullet lists stay bullets on your site, nested lists keep their levels, and pictures and code blocks show',
+			'The editor follows dark mode and your colour theme, and grows with what you write',
+			'The toolbar offers only what your site can show, and pasted colours and fonts are left out',
+			'Tables show a rich-text column’s words instead of its HTML',
+		],
+	},
+	{
 		date: '2026-10-17',
 		title: 'A clearer field list',
 		summary: 'Model fields now read one line each, and the field you’re editing stands out — raised and edged in colour.',
