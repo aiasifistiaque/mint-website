@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-18',
+		title: 'Write on a full page, download in four formats',
+		summary: 'Open a rich-text field — a blog post’s body — on a page of its own, like a document, and download it as Word, PDF, Markdown or text.',
+		tag: 'New',
+		items: [
+			'Add “Open in editor” to a page’s row menu, or press Open editor on the record page: the field opens full screen, with no sidebar',
+			'Save changes only that field, ⌘S works, and leaving with unsaved words asks first',
+			'Export from the editor, the record page or the row menu as .docx, .pdf, .md or .txt',
+			'A row-menu download can ask each time, or always give the format you pick',
+		],
+	},
+	{
+		date: '2026-10-18',
 		title: 'Rich text as a Word file',
 		summary: 'Download any rich-text field — a blog post’s body — as a .docx, from the row menu or straight from the record page.',
 		tag: 'New',
