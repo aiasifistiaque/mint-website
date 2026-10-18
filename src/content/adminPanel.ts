@@ -4,6 +4,7 @@ import {
 	Blocks,
 	Boxes,
 	Building2,
+	CalendarDays,
 	Calculator,
 	Columns,
 	Undo,
@@ -73,6 +74,12 @@ export const PANEL_GROUPS: PanelGroup[] = [
 			{ icon: Link2, title: 'Linked-record pickers', body: 'Pick a guest or a room from a searchable list, narrowed the way the page says.', guide: 'pages' },
 			{ icon: ShieldCheck, title: 'Validation', body: 'Required fields, allowed values, min and max, unique — checked in the form and on the server.', guide: 'models#models-fields' },
 			{ icon: Sigma, title: 'Live formulas', body: 'Calculated fields show their result as you type.', guide: 'models#formulas' },
+			{
+				icon: CalendarDays,
+				title: 'Date formulas',
+				body: 'Dates that work themselves out — due 30 days after the invoice, a membership renewed from its old expiry or from today.',
+				guide: 'models#date-formulas',
+			},
 			{
 				icon: Workflow,
 				title: 'Linked Relationships',
