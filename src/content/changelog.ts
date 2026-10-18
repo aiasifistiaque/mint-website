@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-18',
+		title: 'Print from the editor, shorter record pages',
+		summary: 'Print a document straight from the full-page editor, and long text on a record page now folds after about 20 lines.',
+		tag: 'Improved',
+		items: [
+			'Print, or press ⌘P / Ctrl+P, in the full-page editor: just your words, on the page size you picked',
+			'Choose “Save as PDF” in the print window for a quick PDF',
+			'Long text on a record page shows its first 20 lines or so, with Show more to read the rest',
+		],
+	},
+	{
+		date: '2026-10-18',
 		title: 'A real document editor, with tables',
 		summary: 'The full-page editor now looks and works like a document: a white page on a grey desk, page sizes, a right-click menu and tables.',
 		tag: 'New',
