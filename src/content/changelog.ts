@@ -31,13 +31,14 @@ export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
 		title: 'Add widgets step by step, and keep sign-ups in your own customer model',
-		summary: 'The Widgets page now starts empty: add each widget with a short guided setup. Login & account can put every new account into a customers model of your own.',
+		summary: 'The Widgets page now starts empty: add each widget with a short guided setup. Login & account can keep its customers in a model of your own.',
 		tag: 'New',
 		items: [
 			'Add a widget walks you through it: pick the widget, what it needs, its options, its words, then a preview and the code to paste',
 			'Added widgets are listed with a switch to turn them on or off, Edit and Remove',
-			'Login & account: pick your own Customers or Members model and which fields hold the email, name and phone — each sign-up gets a record there, or is linked to the one with the same email',
-			'Passwords stay safely with MINT and never go into your model; older accounts get their record the next time they sign in',
+			'Login & account keeps accounts in MINT’s Customers by default — or pick your own Customers or Members model and which fields hold the email, name and phone',
+			'Choose how: keep accounts in MINT with a copy in your model, or let your model hold the accounts — every sign-up is a record, its email signs in, removing it ends the account',
+			'Passwords stay safely with MINT and never go into your model',
 			'Optional phone number on sign-up, copied to your model',
 			'Cart, checkout and the other selling widgets set up the Shop right in their setup',
 		],
