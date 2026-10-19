@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'Better automation emails: write in place, see what went, resend what didn’t',
+		summary: 'Fields go in where your cursor is, a click in the message offers bold, italic and lists, and every automation email can be opened as sent — and resent if it failed.',
+		tag: 'Improved',
+		items: [
+			'Insert a field now puts it where the cursor is (or over the words you selected), in the subject and the message',
+			'Click in an email’s message for a small menu: insert a field, make words bold or italic, or make lines a bulleted list — ⌘B and ⌘I work too',
+			'Preview the message as it will read, before you save',
+			'The eye on each email (in Runs and on Project → Email) opens it as it went out: who to, the subject, the message in your design, the files, and why it failed',
+			'Resend a failed email — the same message and files — once you’ve fixed the address or connected an account',
+			'When one of several addresses fails, the others still get their email',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'Date formulas, and rules that read through links',
 		summary: 'A new Formula (date) field works out dates — due dates, expiries, renewals — and formulas and Linked Relationships can use the records a record picks.',
 		tag: 'New',
