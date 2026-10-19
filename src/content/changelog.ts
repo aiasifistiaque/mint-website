@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'Add widgets step by step, and keep sign-ups in your own customer model',
+		summary: 'The Widgets page now starts empty: add each widget with a short guided setup. Login & account can put every new account into a customers model of your own.',
+		tag: 'New',
+		items: [
+			'Add a widget walks you through it: pick the widget, what it needs, its options, its words, then a preview and the code to paste',
+			'Added widgets are listed with a switch to turn them on or off, Edit and Remove',
+			'Login & account: pick your own Customers or Members model and which fields hold the email, name and phone — each sign-up gets a record there, or is linked to the one with the same email',
+			'Passwords stay safely with MINT and never go into your model; older accounts get their record the next time they sign in',
+			'Optional phone number on sign-up, copied to your model',
+			'Cart, checkout and the other selling widgets set up the Shop right in their setup',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'A linked record’s details in automation texts',
 		summary: 'Automations can now use any detail of a record a field links to — the member’s email or phone, not just their name.',
 		tag: 'Improved',
