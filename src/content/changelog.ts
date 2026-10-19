@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'A reference on every API endpoint',
+		summary: 'Each endpoint’s page now has a Reference tab: what to send and what comes back, as JSON you can copy.',
+		tag: 'New',
+		items: [
+			'The request: the address, the headers, and for a create or update the body with every field it takes',
+			'The response it answers with — a page of records, one record, or Deleted — with sample values for your own fields',
+			'The errors it can answer instead, each with its message and code',
+			'It follows your edits: untick a field and it leaves the sample before you save',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'Add widgets step by step, and keep sign-ups in your own customer model',
 		summary: 'The Widgets page now starts empty: add each widget with a short guided setup. Login & account can put every new account into a customers model of your own.',
 		tag: 'New',
