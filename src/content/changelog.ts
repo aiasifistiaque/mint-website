@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'A login for each customer role',
+		summary: 'A sellers’ login, a pickers’ login: each lets in only its own customer role, and signs people up as it when you allow.',
+		tag: 'New',
+		items: [
+			'Set the Login widget to one customer role, or add data-customer-role="seller" on one page',
+			'Only that customer role signs in there; anyone else is turned away',
+			'Choose which customer roles people can sign up as themselves; your team gives the rest',
+			'Pair it with endpoints for that role, such as /seller/orders, ticked for sellers only',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'Customer roles',
 		summary: 'One sign-in model per project, with a Customer role field to tell customers, sellers and pickers apart, and endpoints that let in only some customer roles.',
 		tag: 'New',
