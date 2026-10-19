@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'Forgot password, and choosing which models hold accounts',
+		summary: 'Your site’s customers can now reset a forgotten password, and you decide which of your models people can sign in as.',
+		tag: 'New',
+		items: [
+			'The Login widget has a “Forgot your password?” link: customers get an email with a link to choose a new one',
+			'The email comes from your project’s own email account, and the link works once, for an hour',
+			'The link leads back to your own site, or to a page MINT hosts — never anywhere else',
+			'Setting a new password signs the customer in and signs them out on every other device',
+			'A model’s Advanced tab has a Sign-in switch: only models switched on can hold your Login widget’s customers',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'A key for every project’s API',
 		summary: 'API addresses no longer carry the project’s name: every call sends the project’s key instead — ?apiKey=…',
 		tag: 'Improved',
