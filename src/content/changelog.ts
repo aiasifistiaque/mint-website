@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'A linked record’s details in automation texts',
+		summary: 'Automations can now use any detail of a record a field links to — the member’s email or phone, not just their name.',
+		tag: 'Improved',
+		items: [
+			'Write {{member.email}} or {{member.phone}} in a title, subject, message or value, or pick it from Insert a field under “Member’s details”',
+			'The email message’s field menu has a search box, for pages with many linked fields',
+			'A misspelt detail is caught when you save, naming the page it isn’t on',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'Better automation emails: write in place, see what went, resend what didn’t',
 		summary: 'Fields go in where your cursor is, a click in the message offers bold, italic and lists, and every automation email can be opened as sent — and resent if it failed.',
 		tag: 'Improved',
