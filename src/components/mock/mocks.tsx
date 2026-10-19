@@ -513,9 +513,9 @@ export const ApiMock = () => (
 				<span className='text-[#c792ea]'>const</span> res = <span className='text-[#c792ea]'>await</span>{' '}
 				<span className='text-[#82aaff]'>fetch</span>(
 				{'\n  '}
-				<span className='text-[#c3e88d]'>{"'https://api.mintapp.shop/public/api/seaside-inn/rooms'"}</span> +
+				<span className='text-[#c3e88d]'>{"'https://api.mintapp.shop/public/api/rooms?apiKey=mint_pk_…'"}</span> +
 				{'\n  '}
-				<span className='text-[#c3e88d]'>{"'?status=available&rate_lte=300&sort=-rating'"}</span>
+				<span className='text-[#c3e88d]'>{"'&status=available&rate_lte=300&sort=-rating'"}</span>
 				{'\n'});
 				{'\n'}
 				<span className='text-[#c792ea]'>const</span> {'{'} doc, total {'}'} = <span className='text-[#c792ea]'>await</span> res.

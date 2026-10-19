@@ -339,7 +339,7 @@ const PublicArt = () => (
 			</div>
 		))}
 		<p className='mt-3 truncate rounded-md bg-subtle px-2.5 py-1.5 font-mono text-[10.5px] text-muted'>
-			GET https://api.mintapp.shop/public/api/seaside-inn/rooms
+			GET https://api.mintapp.shop/public/api/rooms?apiKey=mint_pk_…
 		</p>
 	</Frame>
 );

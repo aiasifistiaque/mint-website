@@ -15,7 +15,9 @@ export const metadata: Metadata = pageMeta({
 	path: '/developers',
 });
 
-const PUBLIC = `${API_URL}/public/api/acme-store`;
+// The project key names the project on its API: every call sends ?apiKey=.
+const PUBLIC = `${API_URL}/public/api`;
+const KEY = 'mint_pk_…';
 
 const ENDPOINTS = [
 	{ m: 'GET', p: '/:model', d: 'List — paging, sorting, filters, search, fields', c: 'bg-emerald-100 dark:bg-emerald-400/15 text-emerald-700 dark:text-emerald-300' },
@@ -52,8 +54,8 @@ export default function DevelopersPage() {
 						label='app/products/page.tsx'
 						code={`// List products from your MINT project
 const res = await fetch(
-  '${PUBLIC}/products' +
-  '?status=active&price_lte=300&sort=-rating&limit=12'
+  '${PUBLIC}/products?apiKey=${KEY}' +
+  '&status=active&price_lte=300&sort=-rating&limit=12'
 );
 const { doc, total } = await res.json();`}
 					/>
@@ -155,7 +157,7 @@ const { doc, total } = await res.json();`}
 						/>
 						<Code
 							label='index.html'
-							code={`<script src="${API_URL}/public/mint.js" data-project="acme-store" async></script>
+							code={`<script src="${API_URL}/public/mint.js" data-key="${KEY}" async></script>
 <div data-mint="login"></div>
 
 // later, in your code
@@ -189,8 +191,8 @@ const res = await Mint.api('orders?sort=-createdAt');`}
 						/>
 						<Code
 							label='site.ts'
-							code={`const site = await fetch('${PUBLIC}/site').then(r => r.json());
-const about = await fetch('${PUBLIC}/pages/by-path?path=/about').then(r => r.json());`}
+							code={`const site = await fetch('${PUBLIC}/site?apiKey=${KEY}').then(r => r.json());
+const about = await fetch('${PUBLIC}/pages/by-path?apiKey=${KEY}&path=/about').then(r => r.json());`}
 						/>
 					</div>
 				</div>

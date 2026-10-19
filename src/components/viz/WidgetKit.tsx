@@ -13,7 +13,7 @@ import { PAYMENT_PROVIDERS, WIDGETS, WIDGET_POINTS } from '@/content/widgets';
  */
 
 const SNIPPET = `<script src="${API_URL}/public/mint.js"
-        data-project="corner-bakery" async></script>
+        data-key="mint_pk_…" async></script>
 
 <div data-mint="login" data-layout="button"></div>`;
 

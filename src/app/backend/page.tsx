@@ -196,7 +196,7 @@ const res = await MintAuth.fetch('orders?status_in=paid,shipped&sort=-createdAt'
 const { doc } = await res.json();
 
 // Anyone: the product catalogue
-fetch('${API_URL}/public/api/acme-store/products?price_lte=50')`}
+fetch('${API_URL}/public/api/products?apiKey=mint_pk_…&price_lte=50')`}
 						/>
 						<TextLink
 							href='/developers'

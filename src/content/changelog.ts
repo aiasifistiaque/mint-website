@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'A key for every project’s API',
+		summary: 'API addresses no longer carry the project’s name: every call sends the project’s key instead — ?apiKey=…',
+		tag: 'Improved',
+		items: [
+			'Each project has a project key — on API → Keys, the API Overview and Project settings, ready to copy',
+			'Every call adds ?apiKey=<key> (or the X-Api-Key header); without it the API answers 401 and says what’s missing',
+			'Regenerate makes a new key and the old one stops at once',
+			'Widgets, analytics and sign-in snippets carry the key as data-key; sites MINT hosts switch by themselves',
+			'Endpoints for server keys still need a secret server key as well',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'A reference on every API endpoint',
 		summary: 'Each endpoint’s page now has a Reference tab: what to send and what comes back, as JSON you can copy.',
 		tag: 'New',
