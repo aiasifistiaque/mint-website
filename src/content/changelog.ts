@@ -22,7 +22,7 @@ export const RELEASES: Release[] = [
 		summary: 'Automations can now use any detail of a record a field links to — the member’s email or phone, not just their name.',
 		tag: 'Improved',
 		items: [
-			'Write {{member.email}} or {{member.phone}} in a title, subject, message or value, or pick it from Insert a field under “Member’s details”',
+			'Write {{member.email}} or {{member.phone}} in a title, subject, message or value, or pick Member › Email from Insert a field, right under Member',
 			'The email message’s field menu has a search box, for pages with many linked fields',
 			'A misspelt detail is caught when you save, naming the page it isn’t on',
 		],
