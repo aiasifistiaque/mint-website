@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'Customer sign-in, right on your API',
+		summary: 'Every project’s API signs customers up and in from the start. Now you can see those endpoints, set them up, and give each customer just their own data.',
+		tag: 'Improved',
+		items: [
+			'API → Endpoints lists the built-in sign-in endpoints: sign up, sign in, their details, forgotten passwords',
+			'Set up sign-in in one click: where customers are kept, their customer roles, and the sign-in box for your site',
+			'Copy-ready code: sign in, keep the token, and send it to fetch their own records',
+			'Generate endpoints for signed-in customers with Only their own records, so each customer sees just theirs',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'A login for each customer role',
 		summary: 'A sellers’ login, a pickers’ login: each lets in only its own customer role, and signs people up as it when you allow.',
 		tag: 'New',
