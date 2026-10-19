@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-19',
+		title: 'Roles for the people who sign in',
+		summary: 'One sign-in model per project, with a Role field to tell customers, members and staff apart, and endpoints that let in only some roles.',
+		tag: 'New',
+		items: [
+			'Give your sign-in model an Options field such as Role (Customer, Member, Staff) and choose it in the Login widget’s setup',
+			'New sign-ups get the default role, and only your team can change it: your site and the API can’t',
+			'On an endpoint for signed-in customers, tick which roles may call it; everyone else is turned away',
+			'Rules can compare with the customer’s role, and your own code sees it as Mint.auth.user.role',
+			'A role change counts straight away, without signing in again',
+		],
+	},
+	{
+		date: '2026-10-19',
 		title: 'Forgot password, and choosing which models hold accounts',
 		summary: 'Your site’s customers can now reset a forgotten password, and you decide which of your models people can sign in as.',
 		tag: 'New',
