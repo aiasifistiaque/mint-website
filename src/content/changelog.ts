@@ -17,6 +17,19 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-20',
+		title: 'Add script, and full SEO for every page',
+		summary: 'Paste any script into Site setup and it’s on every page of your website. Each page in the site builder now has a complete SEO editor with a Google preview and checks.',
+		tag: 'New',
+		items: [
+			'Site setup → Add script: paste a tag, chat widget or verification snippet, choose head or body, switch it on or off — live within a minute',
+			'On sites made in the site builder, scripts are written into each page’s HTML, so they run on the first load and checkers can find them',
+			'A page’s SEO: a Google preview and character counters as you type, plus eight SEO checks',
+			'Separate Facebook, LinkedIn and X titles, descriptions and images; indexing switches; sitemap priority and change frequency',
+			'Structured data for rich results: pick the page’s type, add your own JSON-LD, breadcrumbs and your business details written for you',
+		],
+	},
+	{
 		date: '2026-10-19',
 		title: 'Customer sign-in, right on your API',
 		summary: 'Every project’s API signs customers up and in from the start. Now you can see those endpoints, set them up, and give each customer just their own data.',
