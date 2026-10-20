@@ -17,6 +17,20 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-21',
+		title: 'Contents: plain text, more blocks in one piece, and slugs you can copy',
+		summary: 'A piece of your page can now hold more than one block — a Text with a Gallery under it — its words are plain text unless you pick Rich text, and each piece shows the slug and address your own site reads it from.',
+		tag: 'Improved',
+		items: [
+			'Text is a plain text box in every type — the editor with headings and lists is only in Rich text',
+			'More in this block: add a Gallery, a Section or any other type under a piece, reorder them, up to 20 in one',
+			'A new Hero carousel type: slides with their own heading, text, picture and button',
+			'Choose each piece’s slug, see it in the list and copy it — or copy the address your own site reads it from',
+			'A new read-only call, /web-contents/by-slug/<slug>, answers one published piece with the blocks under it',
+			'A removed piece now leaves your site and API at once, even after it was published',
+		],
+	},
+	{
 		date: '2026-10-20',
 		title: 'Add script, and full SEO for every page',
 		summary: 'Paste any script into Site setup and it’s on every page of your website. Each page in the site builder now has a complete SEO editor with a Google preview and checks.',
