@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-21',
+		title: 'Find any project in a few keystrokes',
+		summary: 'Projects has a search box, and the navbar search (⌘K) now finds your projects too — in this organization and the others you work in.',
+		tag: 'Improved',
+		items: [
+			'Search on Projects narrows the cards by name, address, description or domain — Enter opens the only match',
+			'⌘K on your organization’s pages lists its projects first, before you type a thing',
+			'Inside a project, ⌘K finds your other projects as you type; one in another organization switches you there',
+		],
+	},
+	{
+		date: '2026-10-21',
 		title: 'SEO in the panel, like the builder: Google and share previews',
 		summary: 'Website → SEO now opens the full SEO editor for each page — the same one as the site builder — with a Google preview on your own domain and a preview of the card a shared link shows.',
 		tag: 'Improved',
