@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-21',
+		title: 'SEO in the panel, like the builder: Google and share previews',
+		summary: 'Website → SEO now opens the full SEO editor for each page — the same one as the site builder — with a Google preview on your own domain and a preview of the card a shared link shows.',
+		tag: 'Improved',
+		items: [
+			'Basics, Social, Indexing, Structured data and Sitemap tabs on every page’s SEO, with counters and SEO checks',
+			'A share preview on the Social tab: the image, title and description Facebook, LinkedIn, WhatsApp and X will show',
+			'Open Graph and X (Twitter) titles, descriptions, images and alt text, edited in the panel and live with the next publish',
+			'A change in the panel reaches the page in the site builder — all of it, not just the title and description',
+			'A new field type, SEO: give any model (a blog post, a product) the same editor, and read it from your API',
+		],
+	},
+	{
+		date: '2026-10-21',
 		title: 'Contents: plain text, more blocks in one piece, and slugs you can copy',
 		summary: 'A piece of your page can now hold more than one block — a Text with a Gallery under it — its words are plain text unless you pick Rich text, and each piece shows the slug and address your own site reads it from.',
 		tag: 'Improved',
