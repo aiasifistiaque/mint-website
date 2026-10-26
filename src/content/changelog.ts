@@ -17,6 +17,18 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-26',
+		title: 'Website setup: connect the site you code yourself',
+		summary: 'A new Website setup page shows how a site you build yourself — plain HTML, React or Next.js — reads its content, analytics and SEO from your website project, with the code already filled in.',
+		tag: 'New',
+		items: [
+			'Your site API address and project key in one place, and exactly where each goes: site.js, .env or .env.local',
+			'Step-by-step code for plain HTML, React (Vite) and Next.js: read your pages, show them, count visits, set SEO',
+			'robots.txt and sitemap.xml served from your project on Netlify, Vercel or Next.js',
+			'A table of every setting — which belong in your code, which stay in Site setup and reach the site without a deploy',
+		],
+	},
+	{
 		date: '2026-10-21',
 		title: 'Find any project in a few keystrokes',
 		summary: 'Projects has a search box, and the navbar search (⌘K) now finds your projects too — in this organization and the others you work in.',
