@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-26',
+		title: 'Default SEO is the full SEO editor',
+		summary: 'Site setup → SEO now has the same SEO editor as each page — Google and share previews, social cards, indexing, structured data and sitemap — and sets them for the whole site.',
+		tag: 'Improved',
+		items: [
+			'Basics, Social, Indexing, Structured data and Sitemap tabs on the site’s Default SEO, with counters and SEO checks',
+			'Share cards, robots and sitemap settings apply to every page that doesn’t set its own',
+			'Share titles, descriptions and structured data apply to the home page, so pages don’t all share one',
+			'Website → SEO opens the SEO editor for older sites too, without visiting the site builder first',
+		],
+	},
+	{
+		date: '2026-10-26',
 		title: 'Website setup: connect the site you code yourself',
 		summary: 'A new Website setup page shows how a site you build yourself — plain HTML, React or Next.js — reads its content, analytics and SEO from your website project, with the code already filled in.',
 		tag: 'New',
