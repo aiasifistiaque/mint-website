@@ -18,6 +18,20 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-26',
+		title: 'Analytics: every visitor, page by page',
+		summary: 'Your website’s Analytics now shows who each visitor is, where they are, how they found you and every page they visited, in order — plus who is on the site right now.',
+		tag: 'New',
+		items: [
+			'A Visitors list: name and email for signed-in customers, city, internet provider and IP address, device, and how they first arrived',
+			'Each visitor’s journey: every visit, every page with the time spent and how far they scrolled, and the clicks and events in between',
+			'Where visits come from: Google Ads, Meta, TikTok and other ad clicks, search engines, social sites, email and campaigns',
+			'New breakdowns: landing pages, cities, internet providers, languages, device models, screen sizes and average visit length',
+			'Live: who is on the site in the last five minutes and the page they’re on',
+			'Keep visitors’ IP addresses whole, hide their last part, or don’t keep them — your choice in Site setup',
+		],
+	},
+	{
+		date: '2026-10-26',
 		title: 'Default SEO is the full SEO editor',
 		summary: 'Site setup → SEO now has the same SEO editor as each page — Google and share previews, social cards, indexing, structured data and sitemap — and sets them for the whole site.',
 		tag: 'Improved',

@@ -196,7 +196,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 				guide: 'site-builder',
 			},
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
-			{ icon: ChartLine, title: 'Analytics', body: 'Visitors, pages, sources and events — without cookies.', guide: 'analytics' },
+			{ icon: ChartLine, title: 'Analytics', body: 'Every visitor’s journey page by page, where they are and how they found you — without cookies.', guide: 'analytics' },
 		],
 	},
 	{
