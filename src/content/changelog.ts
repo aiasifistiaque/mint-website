@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'Choose which AI crawlers read your site',
+		summary: 'Site setup → SEO has a robots.txt editor: a switch per search engine and AI crawler, or write the whole file yourself.',
+		tag: 'New',
+		items: [
+			'Block GPTBot, ClaudeBot, Google-Extended, PerplexityBot, CCBot and more with one switch each, without touching search results',
+			'Or write the whole robots.txt yourself; your site serves exactly what you write',
+			'See the file as you change it, with a check for the usual mistakes, like blocking the whole site or a missing sitemap line',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'Every blog post and product in your sitemap',
 		summary: 'Your sitemap now lists each record your template pages show, not only the pages you made one by one.',
 		tag: 'Improved',
