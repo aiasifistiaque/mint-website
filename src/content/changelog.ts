@@ -18,6 +18,16 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-28',
+		title: 'Pin the projects you use most',
+		summary: 'Pin to top in a project card’s menu keeps it in a Pinned row at the top of your organization’s projects.',
+		tag: 'Improved',
+		items: [
+			'The project you pinned last comes first; Unpin puts it back with the others',
+			'Pins are your own, so everyone in the organization keeps the projects they need on top',
+		],
+	},
+	{
+		date: '2026-10-28',
 		title: 'See your link before you share it',
 		summary: 'Site setup → Link previews shows the card Facebook, LinkedIn, WhatsApp, X and Slack make for any address, and what to fix.',
 		tag: 'New',
