@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'Site SEO health',
+		summary: 'Website → SEO now checks all your published pages together and lists what to fix, page by page.',
+		tag: 'New',
+		items: [
+			'Finds pages sharing one title, description or focus keyword, so search engines can tell them apart',
+			'Catches a whole site hidden from search, hidden pages left in the menu, and canonical links to pages that don’t exist',
+			'Lists pages with no title, no description, no share image, or text too long for search results',
+			'Click a page to open its SEO, then check again',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'An SEO score for every page',
 		summary: 'Each page’s SEO now has a score from 0 to 100 and a list of what to fix, worked out as you type.',
 		tag: 'New',
