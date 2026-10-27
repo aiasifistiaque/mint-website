@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'A page for each page’s SEO',
+		summary: 'Open a row on Website → SEO to edit all of that page’s SEO on one page, with its score and previews beside it.',
+		tag: 'New',
+		items: [
+			'Search result, sharing, search engines, structured data and sitemap on one page, with buttons to jump to each',
+			'The score and the Google and shared-link previews stay beside the fields and change as you type',
+			'Shows the site-wide problems the page is part of, like another page with the same title, with links to them',
+			'Changes wait for Save (or ⌘S), with Discard, and a warning before you leave with unsaved changes',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'Site SEO health',
 		summary: 'Website → SEO now checks all your published pages together and lists what to fix, page by page.',
 		tag: 'New',
