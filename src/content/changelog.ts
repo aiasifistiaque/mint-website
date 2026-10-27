@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'Connect a website you already have',
+		summary: 'A site built anywhere — WordPress, Webflow, Wix, Shopify, or by an agency — now gets MINT Analytics and SEO from one line of code, without rebuilding it.',
+		tag: 'New',
+		items: [
+			'Paste one snippet into your site’s head: visits show in Analytics, and the pages you choose take their SEO from MINT',
+			'Pick the pages: add a page by its address and give it a title, description, share image and the rest on Website → SEO — every other page keeps its own SEO',
+			'Changes reach the site within a minute, no deploy',
+			'Want link previews on WhatsApp, Facebook and LinkedIn to show it too? Short code for PHP, Node and Next.js prints the same SEO on your server',
+			'Website setup walks you through it, with your project’s details already filled in',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'Your AI can build automations',
 		summary: 'The AI you connect to a project can now make, change, try and switch off automations for you — and automation emails can carry links.',
 		tag: 'New',
