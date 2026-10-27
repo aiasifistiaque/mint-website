@@ -17,6 +17,17 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-27',
+		title: 'Your AI can build automations',
+		summary: 'The AI you connect to a project can now make, change, try and switch off automations for you — and automation emails can carry links.',
+		tag: 'New',
+		items: [
+			'Ask your AI for “email each new subscriber a welcome” and it sets up the automation, then tries it on a record without sending anything',
+			'It can read what your automations did and tell you why one failed',
+			'Links in automation emails: write [words](https://…) — the address can hold a field, like an unsubscribe code',
+		],
+	},
+	{
 		date: '2026-10-26',
 		title: 'Analytics: every visitor, page by page',
 		summary: 'Your website’s Analytics now shows who each visitor is, where they are, how they found you and every page they visited, in order — plus who is on the site right now.',
