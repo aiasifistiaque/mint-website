@@ -27,6 +27,7 @@ export const RELEASES: Release[] = [
 			'Changes reach the site within a minute, no deploy',
 			'Want link previews on WhatsApp, Facebook and LinkedIn to show it too? Short code for PHP, Node and Next.js prints the same SEO on your server',
 			'Website setup walks you through it, with your project’s details already filled in',
+			'Test connection: type a page’s address and see whether the snippet is on it, visits are arriving, and where that page’s SEO comes from',
 		],
 	},
 	{
