@@ -18,6 +18,19 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'Every blog post and product in your sitemap',
+		summary: 'Your sitemap now lists each record your template pages show, not only the pages you made one by one.',
+		tag: 'Improved',
+		items: [
+			'Each blog post, product or other record gets its own address in sitemap.xml, with the date it last changed',
+			'Each address carries its main image, so pictures can turn up in image search',
+			'Anything hidden from search stays out: a page, a whole template page, or one record',
+			'Add pages MINT doesn’t know about in Site setup → SEO → Extra sitemap addresses',
+			'Big sites get a sitemap index of numbered parts past 5,000 addresses',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'A page for each page’s SEO',
 		summary: 'Open a row on Website → SEO to edit all of that page’s SEO on one page, with its score and previews beside it.',
 		tag: 'New',
