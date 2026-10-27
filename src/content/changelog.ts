@@ -18,6 +18,18 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'An SEO score for every page',
+		summary: 'Each page’s SEO now has a score from 0 to 100 and a list of what to fix, worked out as you type.',
+		tag: 'New',
+		items: [
+			'Type the phrase people would search for, and the checks look for it in the title, description, address, main heading and opening words',
+			'Reads the page’s own words, from the site builder or from your live site, to check its length, how often the phrase is used and how easy it is to read',
+			'Warns when two pages chase the same phrase, or when a page is hidden from search engines',
+			'Problems come first, each with what to do about it',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'Connect a website you already have',
 		summary: 'A site built anywhere — WordPress, Webflow, Wix, Shopify, or by an agency — now gets MINT Analytics and SEO from one line of code, without rebuilding it.',
 		tag: 'New',
