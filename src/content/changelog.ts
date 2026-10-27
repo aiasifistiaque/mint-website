@@ -24,7 +24,7 @@ export const RELEASES: Release[] = [
 		items: [
 			'Each app’s card drawn from the HTML your server sends, the way the app reads it: big picture, small thumbnail or text only',
 			'Catches what breaks a share: no image, one too small or too heavy for WhatsApp, a title cut off, tags only added by JavaScript',
-			'Edit SEO opens the page’s SEO in one click, and every page’s SEO has a Link previews button',
+			'Every page’s SEO has a Link preview tab that checks it straight away, and Edit SEO opens a page’s SEO in one click',
 		],
 	},
 	{
