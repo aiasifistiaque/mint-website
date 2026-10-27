@@ -18,6 +18,17 @@ export type Release = {
 export const RELEASES: Release[] = [
 	{
 		date: '2026-10-27',
+		title: 'Rich results from a short form',
+		summary: 'A page’s Structured data now asks plain questions for its type instead of a box of JSON: prices and stock, opening hours, FAQs, events and more.',
+		tag: 'New',
+		items: [
+			'Forms for organisations, local businesses, products, articles, FAQs, events and services, with what Google still needs listed as you fill them in',
+			'On a page per product or post, fill any field from the record, like each shoe’s price',
+			'Your own JSON-LD still works under Advanced, and a link opens Google’s Rich Results Test for the page',
+		],
+	},
+	{
+		date: '2026-10-27',
 		title: 'Choose which AI crawlers read your site',
 		summary: 'Site setup → SEO has a robots.txt editor: a switch per search engine and AI crawler, or write the whole file yourself.',
 		tag: 'New',
