@@ -17,6 +17,17 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-28',
+		title: 'See your link before you share it',
+		summary: 'Site setup → Link previews shows the card Facebook, LinkedIn, WhatsApp, X and Slack make for any address, and what to fix.',
+		tag: 'New',
+		items: [
+			'Each app’s card drawn from the HTML your server sends, the way the app reads it: big picture, small thumbnail or text only',
+			'Catches what breaks a share: no image, one too small or too heavy for WhatsApp, a title cut off, tags only added by JavaScript',
+			'Edit SEO opens the page’s SEO in one click, and every page’s SEO has a Link previews button',
+		],
+	},
+	{
 		date: '2026-10-27',
 		title: 'Rich results from a short form',
 		summary: 'A page’s Structured data now asks plain questions for its type instead of a box of JSON: prices and stock, opening hours, FAQs, events and more.',
