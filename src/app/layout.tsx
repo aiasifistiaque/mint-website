@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
 import Fabs from '@/components/site/Fabs';
@@ -77,6 +78,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				</main>
 				<Footer />
 				<Fabs />
+				{/* MINT's own visitor analytics, read in the "MINT" project (mintapp.shop). The key is publishable. */}
+				<Script
+					src='https://mint-c5e1255519fc.herokuapp.com/public/track.js'
+					data-key='mint_pk_5d363dac497dc0f3e5fe7c39a2d09105'
+					strategy='afterInteractive'
+				/>
 			</body>
 		</html>
 	);
