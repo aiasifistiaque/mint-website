@@ -17,6 +17,19 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-10-31',
+		title: 'Couriers for your store: Steadfast, Pathao and RedX',
+		summary: 'Connect your own courier accounts, send orders to them from the order page, and every parcel keeps its order up to date by itself.',
+		tag: 'New',
+		items: [
+			'Delivery settings has a card per courier: paste your own Steadfast, Pathao or RedX keys, test them, and copy the webhook address into the courier’s panel',
+			'Send to courier books the parcel with the cash to collect — Pathao and RedX areas matched from the address and remembered for next time',
+			'The courier’s updates move the parcel and its order: shipped, delivered and paid by cash on delivery, or coming back and received into stock',
+			'A Deliveries page with every parcel by where it is, and the cash couriers hold for you',
+			'Send many orders at once, print parcel labels, check a buyer’s delivery record, and track couriers without an API by hand',
+		],
+	},
+	{
 		date: '2026-10-28',
 		title: 'Pin the projects you use most',
 		summary: 'Pin to top in a project card’s menu keeps it in a Pinned row at the top of your organization’s projects.',
