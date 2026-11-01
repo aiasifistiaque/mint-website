@@ -17,6 +17,19 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-02',
+		title: 'Taxes that keep your prices right',
+		summary: 'Set a tax on a category and every product in it follows — with the right price after tax, in whichever way your store charges tax.',
+		tag: 'New',
+		items: [
+			'A category’s Tax / VAT goes to all its products, a product moved to another category takes that category’s tax, and a variant always has its product’s tax',
+			'Edit a rate, the default rate or your tax mode and every Price after tax follows — it is always the price the till charges',
+			'Switch a tax to Inactive and it comes off everything that had it; switch it back on and it returns',
+			'A tax in use can’t be deleted by accident — Replace with… moves its products and categories to another tax first',
+			'System automations: the store’s own rules, shown in Automations with an on/off switch. Automations can also now update every record that picks another one',
+		],
+	},
+	{
 		date: '2026-10-31',
 		title: 'Couriers for your store: Steadfast, Pathao and RedX',
 		summary: 'Connect your own courier accounts, send orders to them from the order page, and every parcel keeps its order up to date by itself.',
