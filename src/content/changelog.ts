@@ -19,16 +19,18 @@ export const RELEASES: Release[] = [
 	{
 		date: '2026-11-02',
 		title: 'Autofill: copy a field from the record you pick',
-		summary: 'Pick a customer on an order and its phone and email fill themselves in — editable, or locked and kept up to date.',
+		summary: 'Pick a customer on an order and its phone and email fill themselves in — on any field, editable or locked and kept up to date.',
 		tag: 'New',
 		items: [
-			'Autofill fills a field the moment you pick a linked record — an order’s customer phone — and you can still change it for that order; picking another customer fills it again',
-			'Autofill (read-only) is a copy nobody types: it is set from the picked record every time you save, empties with the pick, and follows that record — change a customer’s email and every order shows the new one',
-			'It copies text, numbers, dates and yes/no, shows and sorts like the field it copies, and read-only numbers work in formulas (quantity × rate)',
+			'Autofill is a setting on any field, not a field type: a Phone stays a Phone. Turn on “Fill this from a linked record” in the field’s Advanced settings, pick the link and what to copy',
+			'Left editable it fills the moment you pick a linked record — an order’s customer phone — and you can still change it for that order; picking another customer fills it again',
+			'Switch on Read-only and nobody types it: it is set from the picked record every time you save, empties with the pick, and follows that record — change a customer’s email and every order shows the new one',
+			'“Only when” limits it to a case — the delivery phone only when Delivery is Home, or only for wholesale customers. When the case stops, a read-only copy clears and stays locked',
+			'It copies text, numbers, dates, yes/no, options and links, and read-only numbers work in formulas (quantity × rate)',
 			'Inside a list’s rows it works per row — pick a product on an invoice item and its rate and unit fill in',
-			'Add it in the model builder (two new field types), or in a page’s Fields & rules as the way a field is asked for',
 		],
 	},
+
 	{
 		date: '2026-11-02',
 		title: 'Taxes that keep your prices right',
