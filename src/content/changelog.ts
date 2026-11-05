@@ -17,6 +17,22 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-05',
+		title: 'Discounts and collections for your store',
+		summary: 'Put a percentage off products, a whole category or a collection — with a start and an end date — and every price, receipt and your website follow.',
+		tag: 'New',
+		items: [
+			'Collections group products for your website — Sale, Featured, New in — and a product can be in as many as you like. Add or remove products right from a collection’s page',
+			'A discount takes a percentage off the products you name, every product in a category (and the ones under it) or in a collection. A product reached by two gets the bigger one — they never add up',
+			'Prices are never overwritten: each product shows its Sale price beside its Price, and Price after tax follows the sale. Switch a discount off and products go back to exactly their price',
+			'Give it a start and an end day — it starts and switches itself off at midnight in your store’s time zone. One that has ended can’t be switched on by mistake',
+			'While you fill in a discount, a note tells you what saving will do: “Saving gives 20% off to 48 products — 3 keep a bigger discount”',
+			'The POS and website orders charge the sale price; receipts and the order page show “Eid sale −20%” and the price before it. Choose whether coupons come off the discounted or the original price',
+			'Your website gets the sale price and the discount’s name and end date from the API, to strike the old price out and show when the sale ends',
+		],
+	},
+
+	{
 		date: '2026-11-02',
 		title: 'Autofill: copy a field from the record you pick',
 		summary: 'Pick a customer on an order and its phone and email fill themselves in — on any field, editable or locked and kept up to date.',
