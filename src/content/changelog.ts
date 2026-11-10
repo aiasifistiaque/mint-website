@@ -30,6 +30,7 @@ export const RELEASES: Release[] = [
 			'Out-of-stock products listed last or hidden, your choice; best sellers, new products and sales get a small lift that never beats a better match',
 			'Search words on each product for the other words people type for it — “eid”, “party wear”, “kurta”',
 			'Fast on big catalogues: about a tenth of a second on 20,000 products, and a product you change reaches search in seconds',
+			'Store → Search settings: switch search on, choose how forgiving typos are, show or hide out-of-stock products, and turn each lift up or down — with the search index’s health and a Rebuild',
 		],
 	},
 
