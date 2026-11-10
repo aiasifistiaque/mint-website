@@ -17,6 +17,23 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-11',
+		title: 'Search that understands your shoppers',
+		summary: 'Your store now ranks website searches itself — typos forgiven, Bangla and Banglish understood, filters with counts — and your site just asks.',
+		tag: 'New',
+		items: [
+			'Best matches first: a match in the name counts most, products with every word come first, and the words side by side in the name before that',
+			'Typos forgiven — “jaket” finds jackets, “emrald” the emerald ring — and word forms too: “shirts”, “t shirt”, “500 ml”',
+			'Bangla and Banglish: “শাড়ি”, “saree”, “sari” and “shari” all find each other',
+			'Filters with counts for categories, collections, brands, price, sizes and colours, in stock and on sale — and category pages get the same filters',
+			'Suggestions as shoppers type: finished searches, products with their pictures and prices, categories and brands',
+			'Out-of-stock products listed last or hidden, your choice; best sellers, new products and sales get a small lift that never beats a better match',
+			'Search words on each product for the other words people type for it — “eid”, “party wear”, “kurta”',
+			'Fast on big catalogues: about a tenth of a second on 20,000 products, and a product you change reaches search in seconds',
+		],
+	},
+
+	{
 		date: '2026-11-05',
 		title: 'Discounts and collections for your store',
 		summary: 'Put a percentage off products, a whole category or a collection — with a start and an end date — and every price, receipt and your website follow.',
