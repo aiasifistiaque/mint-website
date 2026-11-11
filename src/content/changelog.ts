@@ -34,6 +34,7 @@ export const RELEASES: Release[] = [
 			'Your own words: say “kicks” means sneakers, or switch on a starter pack for fashion, electronics, groceries or Bangla — and send searches like “returns” straight to a page. Store → Search has a box to try any search and see why each product is where it is',
 			'No dead ends: when nothing has every word, search says what it shows instead — “No exact results for ‘blue linen shirt’. Showing results for ‘linen shirt’” — and when nothing matches at all, it asks “Did you mean …?” and shows popular products',
 			'What shoppers searched for, what they opened, and the sales that came from search, counted per order line — with popular searches for your search page and suggestions. Emails and phone numbers typed into search are never kept',
+			'Each search added up by day and kept for 13 months, and every product shows what it sold and how often it was opened from search in the last 30 days — best sellers and much-viewed products rise in search',
 		],
 	},
 
