@@ -35,6 +35,7 @@ export const RELEASES: Release[] = [
 			'No dead ends: when nothing has every word, search says what it shows instead — “No exact results for ‘blue linen shirt’. Showing results for ‘linen shirt’” — and when nothing matches at all, it asks “Did you mean …?” and shows popular products',
 			'What shoppers searched for, what they opened, and the sales that came from search, counted per order line — with popular searches for your search page and suggestions. Emails and phone numbers typed into search are never kept',
 			'Each search added up by day and kept for 13 months, and every product shows what it sold and how often it was opened from search in the last 30 days — best sellers and much-viewed products rise in search',
+			'Store → Search insights: your top searches, the ones that found nothing — with a synonym, a redirect or the product one tap away — the ones nobody clicks, and what’s trending; open any search to see what shoppers opened and searched next. Each product gets a Search tab, and your dashboard a “Website search this week” card',
 		],
 	},
 
