@@ -33,6 +33,7 @@ export const RELEASES: Release[] = [
 			'Store → Search settings: switch search on, choose how forgiving typos are, show or hide out-of-stock products, and turn each lift up or down — with the search index’s health and a Rebuild',
 			'Your own words: say “kicks” means sneakers, or switch on a starter pack for fashion, electronics, groceries or Bangla — and send searches like “returns” straight to a page. Store → Search has a box to try any search and see why each product is where it is',
 			'No dead ends: when nothing has every word, search says what it shows instead — “No exact results for ‘blue linen shirt’. Showing results for ‘linen shirt’” — and when nothing matches at all, it asks “Did you mean …?” and shows popular products',
+			'What shoppers searched for, what they opened, and the sales that came from search, counted per order line — with popular searches for your search page and suggestions. Emails and phone numbers typed into search are never kept',
 		],
 	},
 
