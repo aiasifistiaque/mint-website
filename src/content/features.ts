@@ -195,6 +195,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 				body: 'Build your site visually from more than 30 ready-made sections — heroes, prices, reviews, questions, galleries, contact — and blocks like tabs, carousels and maps. Drag them into place, style them for phone, tablet and desktop, pick one of seven themes, then publish. Drafts stay private until you do.',
 				guide: 'site-builder',
 			},
+			{ icon: Search, title: 'Store search', body: 'Your store’s website search ranks products itself — typos, Bangla and Banglish, meaning (“party wear” finds the gown), filters with counts — learns from shoppers, and shows what they look for and don’t find.', guide: 'store#store-search' },
 			{ icon: Globe, title: 'Website kit', body: 'Pages, per-page SEO and content blocks — rendered on your site in two calls.', guide: 'websites' },
 			{ icon: ChartLine, title: 'Analytics', body: 'Every visitor’s journey page by page, where they are and how they found you — without cookies.', guide: 'analytics' },
 		],

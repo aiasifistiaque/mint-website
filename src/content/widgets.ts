@@ -19,7 +19,7 @@ export const WIDGETS: SiteWidget[] = [
 	{ icon: CalendarDays, name: 'Booking', body: 'Free slots worked out on the server — no double bookings', tone: 'cyan' },
 	{ icon: WhatsApp, name: 'WhatsApp button', body: 'A floating chat button with a ready message', tone: 'emerald' },
 	{ icon: Cookie, name: 'Cookie consent', body: 'Tracking tags fire only after visitors agree', tone: 'amber' },
-	{ icon: Search, name: 'Search', body: 'Instant results from products, posts and pages', tone: 'sky' },
+	{ icon: Search, name: 'Search', body: 'Your store’s products as shoppers type — typos, Bangla and meaning understood, with filters', tone: 'sky' },
 ];
 
 /** What every widget gets from the panel. */
