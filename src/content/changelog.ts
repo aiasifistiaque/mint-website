@@ -37,6 +37,7 @@ export const RELEASES: Release[] = [
 			'Each search added up by day and kept for 13 months, and every product shows what it sold and how often it was opened from search in the last 30 days — best sellers and much-viewed products rise in search',
 			'Store → Search insights: your top searches, the ones that found nothing — with a synonym, a redirect or the product one tap away — the ones nobody clicks, and what’s trending; open any search to see what shoppers opened and searched next. Each product gets a Search tab, and your dashboard a “Website search this week” card',
 			'Store → Search rules: pin your best dress to the top of “dress”, boost the Eid collection during Eid, bury or hide what’s going away, or show only one collection — on a search or a category page, with dates if you like. Write a rule as a sentence and see your real results before and after',
+			'A Search widget for your store: a search icon in your header, suggestions as shoppers type, and a results page with filters — on any website, or as Search blocks in the site builder. It works with the keyboard and screen readers, tells your Google, Meta and TikTok pixels about each search, and counts the sales that came from it',
 		],
 	},
 
