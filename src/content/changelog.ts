@@ -40,6 +40,7 @@ export const RELEASES: Release[] = [
 			'A Search widget for your store: a search icon in your header, suggestions as shoppers type, and a results page with filters — on any website, or as Search blocks in the site builder. It works with the keyboard and screen readers, tells your Google, Meta and TikTok pixels about each search, and counts the sales that came from it',
 			'Search learns from your shoppers: products they choose for a search more than their place would say rise a little, once enough different people have shown it — and Search insights suggests fixes it noticed, like a synonym from searches shoppers retype or a pin for a product they keep picking from far down. Accept or dismiss each',
 			'Store → Try search: any search exactly as shoppers get it, with Why on every result — the words it matched and where, each lift and the score — plus what it understood, the synonyms it used and the rules that fired',
+			'Fix search with your own AI: copy a prompt from Search insights into Claude, ChatGPT or another AI with your project connected — it reads what shoppers search for, tries the searches that go wrong, and suggests synonyms, redirects and rules for you to accept, or adds search words to products after showing you the change',
 		],
 	},
 
