@@ -41,6 +41,7 @@ export const RELEASES: Release[] = [
 			'Search learns from your shoppers: products they choose for a search more than their place would say rise a little, once enough different people have shown it — and Search insights suggests fixes it noticed, like a synonym from searches shoppers retype or a pin for a product they keep picking from far down. Accept or dismiss each',
 			'Store → Try search: any search exactly as shoppers get it, with Why on every result — the words it matched and where, each lift and the score — plus what it understood, the synonyms it used and the rules that fired',
 			'Fix search with your own AI: copy a prompt from Search insights into Claude, ChatGPT or another AI with your project connected — it reads what shoppers search for, tries the searches that go wrong, and suggests synonyms, redirects and rules for you to accept, or adds search words to products after showing you the change',
+			'Search by meaning, in Bangla and English: “party wear” finds an evening gown and “শাড়ি” a saree, even when no product uses those words. Products that match the words still come first; a small model on Mint’s own servers does it, so nothing is sent to an AI service and searches cost nothing extra. Switch it off in Search settings',
 		],
 	},
 
