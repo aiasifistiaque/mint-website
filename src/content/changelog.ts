@@ -17,6 +17,22 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-13',
+		title: 'Check a buyer before you send',
+		summary: 'Every website and phone order now shows how often the buyer’s number takes its parcels — from Steadfast, RedX, Pathao and your own orders — as Safe, Check first, Risky or New buyer.',
+		tag: 'New',
+		items: [
+			'Orders are checked by themselves as they come in, and checkout never waits for a courier',
+			'One rate from every source, with a row per courier and your own orders to that number, fraud reports in red, and a plain next step — “Call first, or ask for the delivery charge in advance”',
+			'A Buyer column and filter on Orders and Website orders, a Buyer check card on each order, and the same answer in Send to courier',
+			'RedX and Pathao: add your own merchant login under each courier’s Buyer checks — it works even if you don’t send with them',
+			'Store → Check a buyer: look up any number, see its orders in your store, and every recent lookup with who did it',
+			'Set your own levels for Safe and Check first, or switch the automatic checks off',
+			'Ask your own AI: check_buyer over MCP answers for any number',
+		],
+	},
+
+	{
 		date: '2026-11-11',
 		title: 'Search that understands your shoppers',
 		summary: 'Your store now ranks website searches itself — typos forgiven, Bangla and Banglish understood, filters with counts — and your site just asks.',
