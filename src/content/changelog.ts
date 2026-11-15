@@ -17,6 +17,20 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-16',
+		title: 'Key-value pairs: specifications by category',
+		summary: 'Set up labelled groups once — Display: Size, Resolution, Panel — and any model can fill them in as sections, picked by a category, a choice or always.',
+		tag: 'New',
+		items: [
+			'A Key values page in every new project: each group has a name, a description and the keys to fill in',
+			'A Key-value pairs field for any model: each group is a section in the form, with its name, description and a box per key',
+			'Choose which groups show: always, through a picked record (a product’s category and its specifications), or for each value of an option',
+			'Change the category while adding a product and the sections follow — what you typed comes back if you switch back',
+			'The record page shows the filled values in the same sections',
+		],
+	},
+
+	{
 		date: '2026-11-13',
 		title: 'Check a buyer before you send',
 		summary: 'Every website and phone order now shows how often the buyer’s number takes its parcels — from Steadfast, RedX, Pathao, Paperfly, CarryBee and your own orders — as Safe, Check first, Risky or New buyer.',

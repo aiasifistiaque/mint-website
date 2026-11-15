@@ -10,6 +10,7 @@ import {
 	Database,
 	Eye,
 	FilePdf,
+	ListTree,
 	FileUp,
 	Filter,
 	FolderKanban,
@@ -105,6 +106,12 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 				title: 'Formulas',
 				body: 'Fields that calculate themselves from other fields — with conditions, like a flat or percentage discount — kept up to date on every change.',
 				guide: 'models#models-fields',
+			},
+			{
+				icon: ListTree,
+				title: 'Key-value pairs',
+				body: 'Specifications by category: set up groups like Display — Size, Resolution — once, and products fill in the ones their category picks.',
+				guide: 'models#key-values',
 			},
 			{
 				icon: LayoutTemplate,
