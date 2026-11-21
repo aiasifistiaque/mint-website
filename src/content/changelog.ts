@@ -17,6 +17,22 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-21',
+		title: 'Reports, panel users and panel roles',
+		summary: 'Save reports your team runs and downloads, and give the people who use a project their own panel app — with roles for exactly what each may do.',
+		tag: 'New',
+		items: [
+			'Reports on any model: a list with totals, a summary per shed, category or status, or totals per day, week, month or year',
+			'Pick the dates, read the rows and totals, download as CSV, Excel or PDF — when the report allows it',
+			'A report never shows more than the reader could see in the table itself',
+			'Panel users sign in to their own panel app at panel.tcrypt.site: the tables, dashboard and reports their role allows, never building',
+			'Panel roles: per model view, add, edit, delete and publish, plus view and download reports',
+			'A super admin panel user makes the other panel roles and users, so the team runs itself',
+			'Panel users can connect their own AI, limited to their role; your AI can make reports and panel logins over MCP',
+		],
+	},
+
+	{
 		date: '2026-11-16',
 		title: 'Key-value pairs: specifications by category',
 		summary: 'Set up labelled groups once — Display: Size, Resolution, Panel — and any model can fill them in as sections, picked by a category, a choice or always.',

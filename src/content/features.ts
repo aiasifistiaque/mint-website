@@ -157,6 +157,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		title: 'Work',
 		lead: 'The everyday tools your team uses in every table.',
 		features: [
+			{ icon: ChartLine, title: 'Reports', body: 'Saved lists, summaries and totals over time — pick the dates, download CSV, Excel or PDF.', guide: 'reports' },
 			{ icon: Search, title: 'Search & filters', body: 'Find anything fast and filter by any field — dates, options, links and more.', guide: 'records#find' },
 			{ icon: SquareStack, title: 'Bulk actions', body: 'Edit, archive or merge many rows at once — merges repoint every link.', guide: 'records#bulk' },
 			{ icon: FileUp, title: 'Import & export', body: 'Bring a spreadsheet in, all-or-nothing, and export any view.', guide: 'records' },
@@ -175,6 +176,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 		features: [
 			{ icon: Building2, title: 'Organizations', body: 'One for your company, with as many projects as you need.', guide: 'organization' },
 			{ icon: Users, title: 'Roles', body: 'Standard permissions — view, add, edit, delete, build — in plain words.', guide: 'organization#roles' },
+			{ icon: KeyRound, title: 'Panel users', body: 'Logins for the people who use a project, in their own panel app — with panel roles and a super admin who runs the team.', guide: 'reports#panel-users' },
 			{ icon: FolderKanban, title: 'Project access', body: 'Give someone every project, or only the ones they work in.', guide: 'organization#project-access' },
 			{ icon: Fingerprint, title: 'Passkeys & two-step', body: 'Sign in with a passkey or an email code on top of a password.', guide: 'account#overview' },
 			{ icon: MonitorSmartphone, title: 'Signed-in devices', body: 'See every device on your account and sign any of them out.', guide: 'account#devices' },
