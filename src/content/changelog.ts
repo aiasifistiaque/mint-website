@@ -17,6 +17,19 @@ export type Release = {
 
 export const RELEASES: Release[] = [
 	{
+		date: '2026-11-24',
+		title: 'Report rules: pairs, linked values and calculated columns',
+		summary: 'Summary reports can now answer questions like “how many days of each leave type has every employee got left this year?”.',
+		tag: 'Improved',
+		items: [
+			'One row per pair of fields — an employee and a leave type, a shed and a breed',
+			'Show values of the linked record on each row, such as a leave type’s days per year',
+			'List every pair, even ones with no records yet, so nothing is missing from a balance',
+			'Calculated columns with a formula — Left = days per year − days taken — on every row and the Total',
+		],
+	},
+
+	{
 		date: '2026-11-21',
 		title: 'Reports, panel users and panel roles',
 		summary: 'Save reports your team runs and downloads, and give the people who use a project their own panel app — with roles for exactly what each may do.',
